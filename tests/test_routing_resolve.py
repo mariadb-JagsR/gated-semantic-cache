@@ -1,6 +1,6 @@
-from gatecache.models.context import RequestContext
-from gatecache.routing.labels import RoutingLabel
-from gatecache.serving.routing_resolve import resolve_effective_route_label
+from gated_semantic_cache.models.context import RequestContext
+from gated_semantic_cache.routing.labels import RoutingLabel
+from gated_semantic_cache.serving.routing_resolve import resolve_effective_route_label
 
 
 def test_low_confidence_exact_only_without_anchor_downgrades() -> None:

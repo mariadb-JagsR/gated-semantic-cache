@@ -23,8 +23,8 @@ Second held-out sample from the Quora corpus. **Zero overlap** with the seed-42 
 
 ```bash
 cd next
-gatecache eval quora-pairs --limit 200 --seed 43 --report-json docs/quora_pairs_eval/quora_pairs_200_seed43_judge-on.json
-gatecache eval quora-pairs --limit 200 --seed 43 --no-judge --report-json docs/quora_pairs_eval/quora_pairs_200_seed43_no-judge.json
+gated-semantic-cache eval quora-pairs --limit 200 --seed 43 --report-json docs/quora_pairs_eval/quora_pairs_200_seed43_judge-on.json
+gated-semantic-cache eval quora-pairs --limit 200 --seed 43 --no-judge --report-json docs/quora_pairs_eval/quora_pairs_200_seed43_no-judge.json
 ```
 
 ## A/B results (seed 43)

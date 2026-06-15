@@ -26,8 +26,8 @@ Re-run with the same seed to reproduce the pair list:
 
 ```bash
 cd next
-gatecache eval quora-pairs --limit 200 --seed 42
-gatecache eval quora-pairs --limit 200 --seed 42 --no-judge
+gated-semantic-cache eval quora-pairs --limit 200 --seed 42
+gated-semantic-cache eval quora-pairs --limit 200 --seed 42 --no-judge
 ```
 
 Reports are saved automatically under `docs/quora_pairs_eval/` unless `--no-save-report` is passed.

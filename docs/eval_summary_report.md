@@ -241,7 +241,7 @@ Finance adversarial pairs show **higher vector-only FPR (50%) than healthcare (4
 
 The healthcare and finance suites compare against a *vector-only routing policy* inside our own harness. This benchmark closes the loop differently: it runs a **standalone cosine-only baseline** — embed seed, embed probe, reuse iff `cosine ≥ 0.85`, no router, no gates, no judge — on the **exact same `text-embedding-3-small` vectors** the full stack uses. Same embeddings, same probes; the only variable is the control plane. This isolates what the layers above retrieval are worth, and lets us inspect the raw similarity distribution directly.
 
-The suite encodes **94 seed/probe candidates across 45 banking scenarios** (`gatecache/eval/banking_adversarial_eval.py`, `--suite full100`), rebalanced from an initial 32-candidate pass so that **every trap type carries n ≥ 8** and per-type FPR is statistically meaningful. Tagged by trap type: **27 should-reuse paraphrases** (recall) and **67 must-miss traps** — identifier swaps (wire/dispute/loan/CD/branch IDs), negation, destructive actions (cancel payment, lock card, move funds), freshness-sensitive balances and live rates, tier swaps (premium vs basic), product swaps (checking vs savings, FDIC vs SIPC), and account-holder swaps (Jack vs Jill). Each probe runs against a fresh one-entry cache seeded only with its scenario's cached query, so misses cannot leak across scenarios.
+The suite encodes **94 seed/probe candidates across 45 banking scenarios** (`gated_semantic_cache/eval/banking_adversarial_eval.py`, `--suite full100`), rebalanced from an initial 32-candidate pass so that **every trap type carries n ≥ 8** and per-type FPR is statistically meaningful. Tagged by trap type: **27 should-reuse paraphrases** (recall) and **67 must-miss traps** — identifier swaps (wire/dispute/loan/CD/branch IDs), negation, destructive actions (cancel payment, lock card, move funds), freshness-sensitive balances and live rates, tier swaps (premium vs basic), product swaps (checking vs savings, FDIC vs SIPC), and account-holder swaps (Jack vs Jill). Each probe runs against a fresh one-entry cache seeded only with its scenario's cached query, so misses cannot leak across scenarios.
 
 ### Results (94 candidates; threshold 0.86, judge ON; baseline 0.85)
 
@@ -443,34 +443,34 @@ cd next
 
 # Quora full suite (1,000 pairs)
 for seed in 42 43 44; do
-  gatecache eval quora-pairs --limit 200 --seed $seed \
+  gated-semantic-cache eval quora-pairs --limit 200 --seed $seed \
     --report-json docs/quora_pairs_eval/quora_pairs_200_seed${seed}_judge-on.json
-  gatecache eval quora-pairs --limit 200 --seed $seed --no-judge \
+  gated-semantic-cache eval quora-pairs --limit 200 --seed $seed --no-judge \
     --report-json docs/quora_pairs_eval/quora_pairs_200_seed${seed}_no-judge.json
-  gatecache eval quora-pairs --limit 200 --seed $seed --route-policy vector_only \
+  gated-semantic-cache eval quora-pairs --limit 200 --seed $seed --route-policy vector_only \
     --report-json docs/quora_pairs_eval/quora_pairs_200_seed${seed}_vector-only.json
 done
-gatecache eval quora-pairs --limit 400 --seed 45 \
+gated-semantic-cache eval quora-pairs --limit 400 --seed 45 \
   --report-json docs/quora_pairs_eval/quora_pairs_400_seed45_judge-on.json
 
 # Healthcare trap suite (12 pairs)
-gatecache eval queries-pairs --route-policy honest \
+gated-semantic-cache eval queries-pairs --route-policy honest \
   --report-json docs/queries_pairs_eval/queries_pairs_honest_judge-on.json
-gatecache eval queries-pairs --route-policy vector_only \
+gated-semantic-cache eval queries-pairs --route-policy vector_only \
   --report-json docs/queries_pairs_eval/queries_pairs_vector-only.json
 
 # Finance adversarial suite (32 pairs)
 FIXTURE=tests/fixtures/finance_adversarial_pairs.json
-gatecache eval queries-pairs --pairs-json "$FIXTURE" --route-policy honest \
+gated-semantic-cache eval queries-pairs --pairs-json "$FIXTURE" --route-policy honest \
   --report-json docs/finance_pairs_eval/finance_adversarial_honest_judge-on.json
-gatecache eval queries-pairs --pairs-json "$FIXTURE" --route-policy vector_only \
+gated-semantic-cache eval queries-pairs --pairs-json "$FIXTURE" --route-policy vector_only \
   --report-json docs/finance_pairs_eval/finance_adversarial_vector-only.json
 
 # Retail banking adversarial suite (full stack + built-in cosine-only baseline)
-python3 -m gatecache.eval.banking_adversarial_eval --suite full100 \
+python3 -m gated_semantic_cache.eval.banking_adversarial_eval --suite full100 \
   --report-json docs/banking_adversarial_report_full100.json
 # 32-candidate core subset:
-python3 -m gatecache.eval.banking_adversarial_eval --suite core32 \
+python3 -m gated_semantic_cache.eval.banking_adversarial_eval --suite core32 \
   --report-json docs/banking_adversarial_report.json
 ```
 

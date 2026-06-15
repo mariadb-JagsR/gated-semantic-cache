@@ -6,17 +6,17 @@ import re
 
 import pytest
 
-from gatecache.eval.legacy_bridge import (
+from gated_semantic_cache.eval.legacy_bridge import (
     iter_legacy_dataset_cases,
     iter_legacy_retrieval_ablation_cases,
     load_legacy_datasets_module,
     unique_legacy_dataset_messages,
     unique_user_messages_from_legacy_eval_jsons,
 )
-from gatecache.routing.classifier import train_default_classifier
-from gatecache.routing.labels import RoutingLabel
-from gatecache.eval.datasets import build_routing_dataset
-from gatecache.structured_exact.structured_query import extract_structured_query
+from gated_semantic_cache.routing.classifier import train_default_classifier
+from gated_semantic_cache.routing.labels import RoutingLabel
+from gated_semantic_cache.eval.datasets import build_routing_dataset
+from gated_semantic_cache.structured_exact.structured_query import extract_structured_query
 
 
 @pytest.fixture(scope="module")

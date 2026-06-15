@@ -1,12 +1,12 @@
-from gatecache.cache.exact_cache import ExactCache
-from gatecache.cache.semantic_store import SemanticStore
-from gatecache.embeddings.backends import embedding_dim_for_openai_model, make_constant_unit_embedder
-from gatecache.models.context import RequestContext
-from gatecache.routing.classifier import train_default_classifier
-from gatecache.routing.classifier import RoutingPrediction
-from gatecache.routing.labels import RoutingLabel
-from gatecache.serving.pipeline import SemanticCachePipeline, _neighbor_judge_preflight
-from gatecache.eval.datasets import build_routing_dataset
+from gated_semantic_cache.cache.exact_cache import ExactCache
+from gated_semantic_cache.cache.semantic_store import SemanticStore
+from gated_semantic_cache.embeddings.backends import embedding_dim_for_openai_model, make_constant_unit_embedder
+from gated_semantic_cache.models.context import RequestContext
+from gated_semantic_cache.routing.classifier import train_default_classifier
+from gated_semantic_cache.routing.classifier import RoutingPrediction
+from gated_semantic_cache.routing.labels import RoutingLabel
+from gated_semantic_cache.serving.pipeline import SemanticCachePipeline, _neighbor_judge_preflight
+from gated_semantic_cache.eval.datasets import build_routing_dataset
 
 
 def _build_pipeline() -> SemanticCachePipeline:

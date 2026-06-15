@@ -4,9 +4,9 @@ from pathlib import Path
 
 import pytest
 
-from gatecache.routing.classifier import train_default_classifier
-from gatecache.routing.labels import RoutingLabel
-from gatecache.eval.datasets import build_routing_dataset
+from gated_semantic_cache.routing.classifier import train_default_classifier
+from gated_semantic_cache.routing.labels import RoutingLabel
+from gated_semantic_cache.eval.datasets import build_routing_dataset
 
 
 def _queries() -> list[str]:

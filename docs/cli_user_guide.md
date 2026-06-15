@@ -1,15 +1,15 @@
-# `gatecache` CLI user guide
+# `gated-semantic-cache` CLI user guide
 
 Install and invoke:
 
 ```bash
-cd next && python -m pip install -e '.[dev]'
-gatecache --version
-gatecache --help
-python -m gatecache --help   # equivalent
+python -m pip install -e '.[dev]'
+gated-semantic-cache --version
+gated-semantic-cache --help
+python -m gated_semantic_cache --help   # equivalent
 ```
 
-Optional env files are loaded automatically (if `python-dotenv` is installed): `next/.env` then `./.env` (cwd wins).
+Optional env files are loaded automatically (if `python-dotenv` is installed): repo-root `.env` then `./.env` (cwd wins).
 
 ---
 
@@ -34,9 +34,9 @@ Commands **without** this requirement include `route`, `eval …`, `cache stats`
 Runs the production embedding path and returns JSON with `source`, `trace`, `payload_preview`, `total_latency_ms`.
 
 ```bash
-gatecache query -q "Explain semantic caching"
-gatecache query -f queries.txt -o out.json
-gatecache query -q "same text twice"   # second query can hit exact cache (same process)
+gated-semantic-cache query -q "Explain semantic caching"
+gated-semantic-cache query -f queries.txt -o out.json
+gated-semantic-cache query -q "same text twice"   # second query can hit exact cache (same process)
 ```
 
 Notable flags:
@@ -65,7 +65,7 @@ Notable flags:
 One pipeline per process so you can type the **same** query twice and observe `exact_cache_hit` / semantic behavior.
 
 ```bash
-gatecache repl
+gated-semantic-cache repl
 ```
 
 Supports the same embedding and threshold knobs as `query` (see `--help`). Empty line, `quit`, `exit`, or Ctrl-D exits.
@@ -75,8 +75,8 @@ Supports the same embedding and threshold knobs as `query` (see `--help`). Empty
 ## `route` — classifier only (no cache, no embeddings)
 
 ```bash
-gatecache route "question one" "question two"
-gatecache route -m /path/to/router.pkl "hello"
+gated-semantic-cache route "question one" "question two"
+gated-semantic-cache route -m /path/to/router.pkl "hello"
 ```
 
 Optional `-m` loads a saved classifier pickle. No `OPENAI_API_KEY` required.
@@ -86,15 +86,15 @@ Optional `-m` loads a saved classifier pickle. No `OPENAI_API_KEY` required.
 ## `eval` — offline benchmarks
 
 ```bash
-gatecache eval routing --folds 4
-gatecache eval shadow
-gatecache eval structured
-gatecache eval coverage
-gatecache eval queries-regression --mode routing
-gatecache eval queries-regression --mode pipeline   # uses OpenAI embeddings; needs key
+gated-semantic-cache eval routing --folds 4
+gated-semantic-cache eval shadow
+gated-semantic-cache eval structured
+gated-semantic-cache eval coverage
+gated-semantic-cache eval queries-regression --mode routing
+gated-semantic-cache eval queries-regression --mode pipeline   # uses OpenAI embeddings; needs key
 ```
 
-`queries-regression` defaults `queries-file` to `next/tests/queries.txt` in the dev tree when omitted.
+`queries-regression` defaults `queries-file` to `tests/queries.txt` in the dev tree when omitted.
 
 ---
 
@@ -102,8 +102,8 @@ gatecache eval queries-regression --mode pipeline   # uses OpenAI embeddings; ne
 
 Data persists across processes. Default database:
 
-1. `GATECACHE_DB` if set  
-2. Otherwise `./.gatecache/cache.sqlite3` under the **current working directory**
+1. `GATED_SEMANTIC_CACHE_DB` if set  
+2. Otherwise `./.gated-semantic-cache/cache.sqlite3` under the **current working directory**
 
 Override with `--db /path/to/cache.sqlite3`.
 
@@ -114,7 +114,7 @@ Namespace (`--namespace`) partitions rows in SQLite and picks the FAISS sidecar 
 Writes exact row + optional semantic row + anchors, then saves the FAISS snapshot.
 
 ```bash
-gatecache cache put \
+gated-semantic-cache cache put \
   -q "What is semantic caching?" \
   --response-json '{"answer":"Reuse of stored responses","success":true}'
 ```
@@ -133,7 +133,7 @@ gatecache cache put \
 Lookup through `SemanticCache.get` (exact + semantic per `--semantic-mode`).
 
 ```bash
-gatecache cache get -q "What is semantic caching?" --no-judge
+gated-semantic-cache cache get -q "What is semantic caching?" --no-judge
 ```
 
 | Flag | Meaning |
@@ -154,7 +154,7 @@ Interactive `cache get` loop; scope is fixed at startup from `--scope` pairs.
 Global row counts for the SQLite file. **No OpenAI calls.**
 
 ```bash
-gatecache cache stats
+gated-semantic-cache cache stats
 ```
 
 ### `cache clear`
@@ -162,7 +162,7 @@ gatecache cache stats
 Deletes all rows and the FAISS snapshot for **one** `--namespace`. Requires **`--yes`**.
 
 ```bash
-gatecache cache clear --namespace default --yes
+gated-semantic-cache cache clear --namespace default --yes
 ```
 
 ---
@@ -174,7 +174,7 @@ gatecache cache clear --namespace default --yes
 | `OPENAI_API_KEY` | Embeddings (and optional eval pipeline modes) |
 | `OPENAI_MODEL` | Default embedding model (`text-embedding-3-small`) |
 | `SEMANTIC_THRESHOLD` | Default cosine floor (`0.86`) |
-| `GATECACHE_DB` | Default SQLite path for `cache` |
+| `GATED_SEMANTIC_CACHE_DB` | Default SQLite path for `cache` |
 | `NEIGHBOR_JUDGE_ENABLED` | When `1`/`true`/`yes`, `query`/`repl` attach the noop neighbor judge from env wiring |
 | `NEIGHBOR_JUDGE_SIMILARITY_CEILING` | Fallback if `--neighbor-judge-ceiling` omitted |
 | `NEIGHBOR_JUDGE_AMBIGUITY_MARGIN` | Fallback if `--neighbor-judge-ambiguity-margin` omitted |
@@ -189,4 +189,4 @@ For optional LLM neighbor judging via OpenAI (separate from embeddings), see `se
 
 - **`query` vs `cache`**: `query` exercises an **ephemeral** pipeline (unless you only care about one-shot behavior). Use **`cache put` / `cache get`** to verify **restart-safe** behavior or multi-session workflows.
 - **Embedding dimension**: If you change `--openai-dimensions` or model, existing FAISS snapshots may be incompatible; use **`--force-rebuild-index`** or delete the namespace sidecar files after clearing data.
-- **Help**: `gatecache <command> --help` (e.g. `gatecache cache put --help`).
+- **Help**: `gated-semantic-cache <command> --help` (e.g. `gated-semantic-cache cache put --help`).

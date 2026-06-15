@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections import Counter
 
-from gatecache.eval.banking_adversarial_eval import (
+from gated_semantic_cache.eval.banking_adversarial_eval import (
     PARAPHRASE,
     SUITES,
     _category_of,

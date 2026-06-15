@@ -1,10 +1,10 @@
-from gatecache import JudgePolicy, PutPolicy, SemanticCache
-from gatecache.cache.exact_cache import ExactCache
-from gatecache.cache.semantic_store import SemanticStore
-from gatecache.embeddings.backends import embedding_dim_for_openai_model, make_constant_unit_embedder
-from gatecache.eval.datasets import build_routing_dataset
-from gatecache.routing.classifier import train_default_classifier
-from gatecache.serving.neighbor_judge import noop_allow_neighbor_judge
+from gated_semantic_cache import JudgePolicy, PutPolicy, SemanticCache
+from gated_semantic_cache.cache.exact_cache import ExactCache
+from gated_semantic_cache.cache.semantic_store import SemanticStore
+from gated_semantic_cache.embeddings.backends import embedding_dim_for_openai_model, make_constant_unit_embedder
+from gated_semantic_cache.eval.datasets import build_routing_dataset
+from gated_semantic_cache.routing.classifier import train_default_classifier
+from gated_semantic_cache.serving.neighbor_judge import noop_allow_neighbor_judge
 
 
 def _cache(

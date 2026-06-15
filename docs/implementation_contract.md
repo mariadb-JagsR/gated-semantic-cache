@@ -1,4 +1,4 @@
-# GateCache Implementation Contract
+# GatedSemanticCache Implementation Contract
 
 This checklist translates `semantic_cache_redesign_for_cursor.md` into build-time constraints for the `next/` implementation.
 

@@ -1,12 +1,12 @@
 from datetime import UTC, datetime, timedelta
 
-from gatecache.models.cache_entry import SemanticCacheEntry
-from gatecache.serving.structured_reuse_gate import (
+from gated_semantic_cache.models.cache_entry import SemanticCacheEntry
+from gated_semantic_cache.serving.structured_reuse_gate import (
     compute_structured_critical_signature,
     structured_reuse_gate,
 )
-from gatecache.structured_exact.schema import Constraint, StructuredQuery
-from gatecache.structured_exact.structured_query import extract_structured_query
+from gated_semantic_cache.structured_exact.schema import Constraint, StructuredQuery
+from gated_semantic_cache.structured_exact.structured_query import extract_structured_query
 
 
 def _entry_with_sig(sig: str) -> SemanticCacheEntry:

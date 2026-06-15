@@ -1,9 +1,9 @@
-from gatecache.eval.datasets import build_routing_dataset
-from gatecache.routing.classifier import train_default_classifier
-from gatecache.routing.features import identifier_like_token_count
-from gatecache.routing.labels import RoutingLabel
-from gatecache.routing.tech_tokens import is_dotted_tech_token, is_plausible_hostname
-from gatecache.structured_exact.structured_query import extract_structured_query
+from gated_semantic_cache.eval.datasets import build_routing_dataset
+from gated_semantic_cache.routing.classifier import train_default_classifier
+from gated_semantic_cache.routing.features import identifier_like_token_count
+from gated_semantic_cache.routing.labels import RoutingLabel
+from gated_semantic_cache.routing.tech_tokens import is_dotted_tech_token, is_plausible_hostname
+from gated_semantic_cache.structured_exact.structured_query import extract_structured_query
 
 
 def test_node_js_is_not_a_hostname() -> None:

@@ -47,11 +47,11 @@ Reports: [honest+judge](./queries_pairs_honest_judge-on.json), [semantic_ok+judg
 
 ```bash
 cd next
-gatecache eval queries-pairs --route-policy honest \
+gated-semantic-cache eval queries-pairs --route-policy honest \
   --report-json docs/queries_pairs_eval/queries_pairs_honest_judge-on.json
-gatecache eval queries-pairs --route-policy semantic_ok \
+gated-semantic-cache eval queries-pairs --route-policy semantic_ok \
   --report-json docs/queries_pairs_eval/queries_pairs_semantic_ok_judge-on.json
-gatecache eval queries-pairs --route-policy vector_only \
+gated-semantic-cache eval queries-pairs --route-policy vector_only \
   --report-json docs/queries_pairs_eval/queries_pairs_vector-only.json
 ```
 

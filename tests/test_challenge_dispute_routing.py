@@ -1,8 +1,8 @@
 import pytest
 
-from gatecache.eval.datasets import _challenge_dispute_examples, build_routing_dataset
-from gatecache.routing.classifier import train_default_classifier
-from gatecache.routing.labels import RoutingLabel
+from gated_semantic_cache.eval.datasets import _challenge_dispute_examples, build_routing_dataset
+from gated_semantic_cache.routing.classifier import train_default_classifier
+from gated_semantic_cache.routing.labels import RoutingLabel
 
 
 @pytest.fixture(scope="module")

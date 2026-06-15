@@ -1,5 +1,5 @@
-from gatecache.eval.datasets import build_routing_dataset
-from gatecache.eval.offline_benchmark import analyze_routing_errors, benchmark_routing_classifier
+from gated_semantic_cache.eval.datasets import build_routing_dataset
+from gated_semantic_cache.eval.offline_benchmark import analyze_routing_errors, benchmark_routing_classifier
 
 
 def test_error_analysis_report_has_expected_shape() -> None:

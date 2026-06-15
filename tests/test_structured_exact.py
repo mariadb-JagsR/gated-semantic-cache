@@ -1,5 +1,5 @@
-from gatecache.eval.structured_exact_benchmark import run_structured_exact_benchmark
-from gatecache.serving.structured_exact import (
+from gated_semantic_cache.eval.structured_exact_benchmark import run_structured_exact_benchmark
+from gated_semantic_cache.serving.structured_exact import (
     build_canonical_structured_key,
     critical_constraints_match,
     extract_structured_constraints,

@@ -1,10 +1,10 @@
 # Similarity is not safety: what we learned building a semantic cache for banking
 
 > Draft — engineering blog. All numbers are from a reproducible eval
-> (`gatecache/eval/banking_adversarial_eval.py`, `--suite full100`); raw report in
+> (`gated_semantic_cache/eval/banking_adversarial_eval.py`, `--suite full100`); raw report in
 > `docs/banking_adversarial_report_full100.json`. Figures are committed SVGs under
 > `docs/blog_assets/`, regenerated from the report by
-> `python3 -m gatecache.eval.generate_blog_assets`. See "Publishing this post" at the end.
+> `python3 -m gated_semantic_cache.eval.generate_blog_assets`. See "Publishing this post" at the end.
 
 ---
 
@@ -179,7 +179,7 @@ A "0% false positives" claim with no caveats is marketing. Here's the bill.
 The eval harness and datasets are inspectable, and the comparison reproduces with one command:
 
 ```bash
-python3 -m gatecache.eval.banking_adversarial_eval --suite full100 \
+python3 -m gated_semantic_cache.eval.banking_adversarial_eval --suite full100 \
   --report-json banking_report.json
 ```
 
@@ -237,9 +237,9 @@ The four figures are self-contained SVGs in `docs/blog_assets/` (`cosine_overlap
 colors and no external CSS, so they render anywhere. To regenerate them from the latest eval:
 
 ```bash
-python3 -m gatecache.eval.banking_adversarial_eval --suite full100 \
+python3 -m gated_semantic_cache.eval.banking_adversarial_eval --suite full100 \
   --report-json docs/banking_adversarial_report_full100.json
-python3 -m gatecache.eval.generate_blog_assets   # rewrites docs/blog_assets/*.svg
+python3 -m gated_semantic_cache.eval.generate_blog_assets   # rewrites docs/blog_assets/*.svg
 ```
 
 Three ways to render the finished post, in order of least effort:

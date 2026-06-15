@@ -63,11 +63,11 @@ Reports: `quora_pairs_*_vector-only.json` in this directory.
 ```bash
 cd next
 for seed in 42 43 44; do
-  gatecache eval quora-pairs --limit 200 --seed $seed \
+  gated-semantic-cache eval quora-pairs --limit 200 --seed $seed \
     --route-policy vector_only \
     --report-json docs/quora_pairs_eval/quora_pairs_200_seed${seed}_vector-only.json
 done
-gatecache eval quora-pairs --limit 400 --seed 45 \
+gated-semantic-cache eval quora-pairs --limit 400 --seed 45 \
   --route-policy vector_only \
   --report-json docs/quora_pairs_eval/quora_pairs_400_seed45_vector-only.json
 ```

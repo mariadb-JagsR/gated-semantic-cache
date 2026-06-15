@@ -21,8 +21,8 @@ Final large held-out slice. **Zero overlap** with seeds 42, 43, or 44.
 
 ```bash
 cd next
-gatecache eval quora-pairs --limit 400 --seed 45 --report-json docs/quora_pairs_eval/quora_pairs_400_seed45_judge-on.json
-gatecache eval quora-pairs --limit 400 --seed 45 --no-judge --report-json docs/quora_pairs_eval/quora_pairs_400_seed45_no-judge.json
+gated-semantic-cache eval quora-pairs --limit 400 --seed 45 --report-json docs/quora_pairs_eval/quora_pairs_400_seed45_judge-on.json
+gated-semantic-cache eval quora-pairs --limit 400 --seed 45 --no-judge --report-json docs/quora_pairs_eval/quora_pairs_400_seed45_no-judge.json
 ```
 
 Runtime (approx.): ~7 min judge ON, ~4.3 min judge OFF.

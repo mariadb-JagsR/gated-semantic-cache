@@ -7,13 +7,13 @@ Domain-specific rules stay out of the shared engine (see workspace direction).
 
 ## Persistent cache storage and pluggable backends (partially done)
 
-**Done (dev defaults):** Protocols in `gatecache/cache/ports.py`:
+**Done (dev defaults):** Protocols in `gated_semantic_cache/cache/ports.py`:
 `CacheEntryPersistence`, `VectorIndexPersistence`, `NamespaceHydrationBundle`.
 `SqliteCachePersistence` + `FaissVectorPersistence` implement SQLite rows and a
 namespace-scoped FAISS snapshot beside the DB file. `SemanticCache.from_sqlite`
 hydrates exact + semantic stores; `put` write-through updates SQLite and refreshes
-the snapshot. CLI: `gatecache cache get|put|repl|stats|clear` (default DB:
-`$GATECACHE_DB` or `.gatecache/cache.sqlite3`). Swap these
+the snapshot. CLI: `gated-semantic-cache cache get|put|repl|stats|clear` (default DB:
+`$GATED_SEMANTIC_CACHE_DB` or `.gated-semantic-cache/cache.sqlite3`). Swap these
 adapters for GridGain / HTTP / JDBC-backed implementations without changing core
 cache logic.
 
@@ -35,7 +35,7 @@ cache logic.
 **Goal:** Pick embedders (and optional second-stage scoring) that balance latency, cost,
 and precision on near-duplicate queries where a single token or attribute differs
 (e.g. color words), long agent context, and offline eval in
-`gatecache/eval/`.
+`gated_semantic_cache/eval/`.
 
 **Today:** `embeddings/backends.py` implements OpenAI (`make_openai_embedder`) plus test
 fakes. Index dimension must match the chosen model; production wiring is integration-owned.

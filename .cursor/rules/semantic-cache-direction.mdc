@@ -1,14 +1,14 @@
 ---
-description: GateCache architecture direction
+description: GatedSemanticCache architecture direction
 alwaysApply: true
 ---
 
-# GateCache Direction
+# GatedSemanticCache Direction
 
-- Production code lives at the repo root under `gatecache/`. The old prototype was archived outside this repo; regression prompts are vendored under `tests/fixtures/legacy_eval/`.
+- Production code lives at the repo root under `gated_semantic_cache/`. The old prototype was archived outside this repo; regression prompts are vendored under `tests/fixtures/legacy_eval/`.
 - Treat `MockRuleBasedGatekeeper` and similar rule-only paths as deterministic scaffolding for tests and regressions, not as the preferred product architecture.
 - Do not steer new work back toward `mock`-led design decisions unless the task is explicitly about tests, regression reproduction, or deterministic ablations.
-- Do not re-center GateCache on `provider_split`, LLM gatekeepers, rich semantic extraction, or always-on LLM judges. Treat those as archived research/comparison context.
+- Do not re-center GatedSemanticCache on `provider_split`, LLM gatekeepers, rich semantic extraction, or always-on LLM judges. Treat those as archived research/comparison context.
 - The current design is exact cache first, cheap routing classifier second, scoped FAISS/HNSW retrieval third, then lightweight metadata/structured gates with a two-threshold decision:
   - above the high-confidence threshold, return the cached answer only when scope, freshness, metadata, and margin gates pass
   - between the low watermark and high-confidence threshold, optionally invoke a bounded gray-zone LLM judge to pick a winner or skip cache

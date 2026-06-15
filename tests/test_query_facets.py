@@ -1,7 +1,7 @@
 from datetime import UTC, datetime
 
-from gatecache.models.cache_entry import SemanticCacheEntry
-from gatecache.serving.query_facets import extract_query_facets, facet_conflict_reason
+from gated_semantic_cache.models.cache_entry import SemanticCacheEntry
+from gated_semantic_cache.serving.query_facets import extract_query_facets, facet_conflict_reason
 
 
 def test_vs_maps_to_compare_mode_and_terms() -> None:
@@ -86,7 +86,7 @@ def test_contrast_conflict_requires_disjoint_alternatives_not_superset() -> None
 
 
 def _contrast_conflict(current: dict, cached: dict) -> bool:
-    from gatecache.serving import query_facets as qf
+    from gated_semantic_cache.serving import query_facets as qf
 
     return qf._contrast_conflict(current, cached)
 

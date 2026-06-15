@@ -39,11 +39,11 @@ Config constant across runs: `semantic_ok`, threshold `0.86`, low watermark `0.7
 ```bash
 cd next
 for seed in 42 43 44; do
-  gatecache eval quora-pairs --limit 200 --seed $seed --report-json docs/quora_pairs_eval/quora_pairs_200_seed${seed}_judge-on.json
-  gatecache eval quora-pairs --limit 200 --seed $seed --no-judge --report-json docs/quora_pairs_eval/quora_pairs_200_seed${seed}_no-judge.json
+  gated-semantic-cache eval quora-pairs --limit 200 --seed $seed --report-json docs/quora_pairs_eval/quora_pairs_200_seed${seed}_judge-on.json
+  gated-semantic-cache eval quora-pairs --limit 200 --seed $seed --no-judge --report-json docs/quora_pairs_eval/quora_pairs_200_seed${seed}_no-judge.json
 done
-gatecache eval quora-pairs --limit 400 --seed 45 --report-json docs/quora_pairs_eval/quora_pairs_400_seed45_judge-on.json
-gatecache eval quora-pairs --limit 400 --seed 45 --no-judge --report-json docs/quora_pairs_eval/quora_pairs_400_seed45_no-judge.json
+gated-semantic-cache eval quora-pairs --limit 400 --seed 45 --report-json docs/quora_pairs_eval/quora_pairs_400_seed45_judge-on.json
+gated-semantic-cache eval quora-pairs --limit 400 --seed 45 --no-judge --report-json docs/quora_pairs_eval/quora_pairs_400_seed45_no-judge.json
 ```
 
 Run date: 2026-05-24.

@@ -1,5 +1,5 @@
-from gatecache.eval.datasets import build_routing_dataset
-from gatecache.routing.labels import RoutingLabel
+from gated_semantic_cache.eval.datasets import build_routing_dataset
+from gated_semantic_cache.routing.labels import RoutingLabel
 
 
 def test_routing_dataset_covers_all_labels_and_slices() -> None:

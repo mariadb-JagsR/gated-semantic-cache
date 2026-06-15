@@ -3,8 +3,8 @@ import os
 from openai import APIConnectionError
 import pytest
 
-from gatecache.cli import _load_dotenv_files
-from gatecache.eval.adversarial_cache_eval import (
+from gated_semantic_cache.cli import _load_dotenv_files
+from gated_semantic_cache.eval.adversarial_cache_eval import (
     build_adversarial_cache_scenarios,
     run_adversarial_cache_eval,
 )

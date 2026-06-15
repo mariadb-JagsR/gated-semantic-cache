@@ -1,8 +1,8 @@
 from datetime import UTC, datetime
 
-from gatecache.models.cache_entry import SemanticCacheEntry
-from gatecache.models.context import RequestContext
-from gatecache.serving.llm_judge import (
+from gated_semantic_cache.models.cache_entry import SemanticCacheEntry
+from gated_semantic_cache.models.context import RequestContext
+from gated_semantic_cache.serving.llm_judge import (
     DEFAULT_JUDGE_ANSWER_PREVIEW_CHARS,
     DEFAULT_JUDGE_CHAT_MAX_TOKENS,
     DEFAULT_JUDGE_MAX_OUTPUT_TOKENS,
@@ -112,7 +112,7 @@ def test_llm_judge_paraphrase_prompt_includes_both_queries() -> None:
 
 
 def test_use_responses_api_for_gpt5_models() -> None:
-    from gatecache.serving.llm_judge import _use_responses_api
+    from gated_semantic_cache.serving.llm_judge import _use_responses_api
 
     assert _use_responses_api("gpt-5-mini") is True
     assert _use_responses_api("gpt-4o-mini") is False
@@ -147,7 +147,7 @@ def test_llm_judge_parse_decision_accepts_compact_json() -> None:
 
 
 def test_llm_judge_default_reasoning_effort_is_low() -> None:
-    from gatecache.serving.llm_judge import DEFAULT_JUDGE_REASONING_EFFORT
+    from gated_semantic_cache.serving.llm_judge import DEFAULT_JUDGE_REASONING_EFFORT
 
     assert DEFAULT_JUDGE_REASONING_EFFORT == "low"
 

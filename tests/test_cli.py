@@ -1,7 +1,7 @@
 import argparse
 
-from gatecache.cli import _ensure_repl_thread_scope, build_default_pipeline, build_parser, run_single_query
-from gatecache.models.context import RequestContext
+from gated_semantic_cache.cli import _ensure_repl_thread_scope, build_default_pipeline, build_parser, run_single_query
+from gated_semantic_cache.models.context import RequestContext
 
 
 def test_cli_query_returns_trace_and_latency() -> None:

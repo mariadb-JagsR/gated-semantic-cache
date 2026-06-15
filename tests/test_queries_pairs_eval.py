@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from gatecache.eval.queries_pairs_eval import (
+from gated_semantic_cache.eval.queries_pairs_eval import (
     QueryPairScenario,
     load_query_pair_scenarios,
     run_queries_pairs_eval,
@@ -30,7 +30,7 @@ def test_load_query_pair_scenarios_custom_tuple() -> None:
 
 
 def test_load_finance_adversarial_fixture() -> None:
-    from gatecache.eval.queries_pairs_eval import default_finance_pairs_path, load_query_pair_scenarios_from_json
+    from gated_semantic_cache.eval.queries_pairs_eval import default_finance_pairs_path, load_query_pair_scenarios_from_json
 
     scenarios = load_query_pair_scenarios_from_json(default_finance_pairs_path())
     assert len(scenarios) == 32
@@ -43,7 +43,7 @@ def test_load_finance_adversarial_fixture() -> None:
     reason="OpenAI-backed queries-pairs eval; set RUN_QUERIES_PAIRS_EVAL=1 to run intentionally.",
 )
 def test_queries_pairs_eval_smoke_vector_only() -> None:
-    from gatecache.cli import _load_dotenv_files
+    from gated_semantic_cache.cli import _load_dotenv_files
 
     _load_dotenv_files()
     if not __import__("os").environ.get("OPENAI_API_KEY"):

@@ -2,10 +2,10 @@
 
 from __future__ import annotations
 
-from gatecache.api import JudgePolicy, PutPolicy, SemanticCache
-from gatecache.cache.faiss_snapshot import faiss_paths
-from gatecache.cache.sqlite_persistence import SqliteCachePersistence
-from gatecache.embeddings.backends import embedding_dim_for_openai_model, make_offline_fake_embedder
+from gated_semantic_cache.api import JudgePolicy, PutPolicy, SemanticCache
+from gated_semantic_cache.cache.faiss_snapshot import faiss_paths
+from gated_semantic_cache.cache.sqlite_persistence import SqliteCachePersistence
+from gated_semantic_cache.embeddings.backends import embedding_dim_for_openai_model, make_offline_fake_embedder
 
 
 def test_sqlite_put_get_survives_new_instance(tmp_path) -> None:

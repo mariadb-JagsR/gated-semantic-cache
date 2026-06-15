@@ -1,8 +1,8 @@
-from gatecache.eval.structured_extract_eval import (
+from gated_semantic_cache.eval.structured_extract_eval import (
     build_novel_structured_exact_pairs,
     run_legacy_structured_coverage,
 )
-from gatecache.eval.structured_exact_benchmark import (
+from gated_semantic_cache.eval.structured_exact_benchmark import (
     build_structured_exact_pairs,
     run_structured_exact_benchmark,
 )

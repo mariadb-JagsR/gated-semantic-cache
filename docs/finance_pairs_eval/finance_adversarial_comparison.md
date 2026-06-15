@@ -73,10 +73,10 @@ Finance adversarial pairs are at least as dangerous for similarity-only caching 
 cd next
 FIXTURE=tests/fixtures/finance_adversarial_pairs.json
 
-gatecache eval queries-pairs --pairs-json "$FIXTURE" --route-policy honest \
+gated-semantic-cache eval queries-pairs --pairs-json "$FIXTURE" --route-policy honest \
   --report-json docs/finance_pairs_eval/finance_adversarial_honest_judge-on.json
 
-gatecache eval queries-pairs --pairs-json "$FIXTURE" --route-policy vector_only \
+gated-semantic-cache eval queries-pairs --pairs-json "$FIXTURE" --route-policy vector_only \
   --report-json docs/finance_pairs_eval/finance_adversarial_vector-only.json
 ```
 

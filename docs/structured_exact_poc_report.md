@@ -21,16 +21,16 @@ Validate the proposed `EXACT` interpretation where reuse is deterministic over n
 
 Implementation entry points:
 
-- `gatecache/serving/structured_exact.py`
-- `gatecache/structured_exact/normalize.py`
-- `gatecache/structured_exact/structured_query.py`
-- `gatecache/structured_exact/canonical_key.py`
-- `gatecache/structured_exact/matching.py`
-- `gatecache/structured_exact/extractors/`
+- `gated_semantic_cache/serving/structured_exact.py`
+- `gated_semantic_cache/structured_exact/normalize.py`
+- `gated_semantic_cache/structured_exact/structured_query.py`
+- `gated_semantic_cache/structured_exact/canonical_key.py`
+- `gated_semantic_cache/structured_exact/matching.py`
+- `gated_semantic_cache/structured_exact/extractors/`
 
 Benchmark entry point:
 
-- `gatecache/eval/structured_exact_benchmark.py`
+- `gated_semantic_cache/eval/structured_exact_benchmark.py`
 
 ## Benchmark result
 

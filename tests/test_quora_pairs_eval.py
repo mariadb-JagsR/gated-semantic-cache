@@ -2,8 +2,8 @@ from pathlib import Path
 
 import pytest
 
-from gatecache.eval.cache_hit_metrics import compute_cache_hit_metrics
-from gatecache.eval.quora_pairs_eval import (
+from gated_semantic_cache.eval.cache_hit_metrics import compute_cache_hit_metrics
+from gated_semantic_cache.eval.quora_pairs_eval import (
     _vector_only_context,
     _vector_only_lookup,
     default_quora_report_path,
@@ -63,14 +63,14 @@ def test_default_quora_report_path_vector_only() -> None:
 
 
 def test_vector_only_lookup_hits_at_threshold() -> None:
-    from gatecache.cli import build_default_pipeline
-    from gatecache.models.context import RequestContext
+    from gated_semantic_cache.cli import build_default_pipeline
+    from gated_semantic_cache.models.context import RequestContext
 
     pipeline = build_default_pipeline()
     pipeline.router.predict = lambda _: __import__(
-        "gatecache.routing.classifier", fromlist=["RoutingPrediction"]
+        "gated_semantic_cache.routing.classifier", fromlist=["RoutingPrediction"]
     ).RoutingPrediction(
-        label=__import__("gatecache.routing.labels", fromlist=["RoutingLabel"]).RoutingLabel.SEMANTIC_OK,
+        label=__import__("gated_semantic_cache.routing.labels", fromlist=["RoutingLabel"]).RoutingLabel.SEMANTIC_OK,
         confidence=1.0,
         probabilities={},
     )
@@ -84,8 +84,8 @@ def test_vector_only_lookup_hits_at_threshold() -> None:
 
 
 def test_write_quora_pair_report_roundtrip(tmp_path: Path) -> None:
-    from gatecache.eval.cache_hit_metrics import CacheHitMetrics
-    from gatecache.eval.quora_pairs_eval import QuoraPairEvalReport, load_quora_pair_report, write_quora_pair_report
+    from gated_semantic_cache.eval.cache_hit_metrics import CacheHitMetrics
+    from gated_semantic_cache.eval.quora_pairs_eval import QuoraPairEvalReport, load_quora_pair_report, write_quora_pair_report
 
     metrics = CacheHitMetrics(
         total_pairs=2,
@@ -121,7 +121,7 @@ def test_write_quora_pair_report_roundtrip(tmp_path: Path) -> None:
     reason="OpenAI-backed Quora eval; set RUN_QUORA_PAIRS_EVAL=1 to run intentionally.",
 )
 def test_quora_pairs_eval_smoke() -> None:
-    from gatecache.cli import _load_dotenv_files
+    from gated_semantic_cache.cli import _load_dotenv_files
 
     _load_dotenv_files()
     if not __import__("os").environ.get("OPENAI_API_KEY"):

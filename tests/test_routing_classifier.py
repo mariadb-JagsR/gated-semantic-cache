@@ -1,8 +1,8 @@
 from pathlib import Path
 
-from gatecache.eval.datasets import build_routing_dataset
-from gatecache.routing.classifier import RoutingClassifier, train_default_classifier
-from gatecache.routing.labels import RoutingLabel
+from gated_semantic_cache.eval.datasets import build_routing_dataset
+from gated_semantic_cache.routing.classifier import RoutingClassifier, train_default_classifier
+from gated_semantic_cache.routing.labels import RoutingLabel
 
 
 def test_classifier_predicts_expected_obvious_routes() -> None:
