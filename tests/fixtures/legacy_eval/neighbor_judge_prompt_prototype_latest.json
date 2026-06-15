@@ -1,0 +1,355 @@
+{
+  "baseline": [
+    {
+      "session_id": "support_connectivity_1",
+      "user_message": "I'm having trouble connecting to my RDS instance from my local machine. I keep getting a timeout error even though the status says 'Available'.",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "exact_lookup_miss",
+      "judgment": {},
+      "action": "lookup",
+      "domain": "networking"
+    },
+    {
+      "session_id": "support_connectivity_1",
+      "user_message": "Why is my connection to the managed SQL database timing out? The console says it's running but I can't reach it from home.",
+      "expected_hit_allowed": true,
+      "source": "llm",
+      "decision": "exact_lookup_miss",
+      "judgment": {},
+      "action": "lookup",
+      "domain": "networking"
+    },
+    {
+      "session_id": "support_connectivity_1",
+      "user_message": "The database says available, but my office IP can connect while my home IP still times out. Is this still just a firewall issue?",
+      "expected_hit_allowed": false,
+      "source": "cache",
+      "decision": "exact_lookup_hit",
+      "judgment": {},
+      "action": "lookup",
+      "domain": "networking"
+    },
+    {
+      "session_id": "support_storage_1",
+      "user_message": "My database is in a 'Storage Full' state and I can't run any write operations. How do I fix this quickly?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "exact_lookup_miss",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "database"
+    },
+    {
+      "session_id": "support_storage_1",
+      "user_message": "We ran out of disk space on the cloud DB and now it's read-only. What are the steps to add more GBs?",
+      "expected_hit_allowed": true,
+      "source": "llm",
+      "decision": "lookup_blocked",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "database"
+    },
+    {
+      "session_id": "support_storage_1",
+      "user_message": "The disk is full, but I want to shrink the storage allocation after cleanup. Is that allowed?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "lookup_blocked",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "database"
+    },
+    {
+      "session_id": "bitext_shipping_1",
+      "user_message": "I need to change the shipping address for my order before it goes out.",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "exact_lookup_miss",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "support"
+    },
+    {
+      "session_id": "bitext_shipping_1",
+      "user_message": "Can I update the delivery address on an order that hasn't shipped yet?",
+      "expected_hit_allowed": true,
+      "source": "cache",
+      "decision": "exact_lookup_hit",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "support"
+    },
+    {
+      "session_id": "bitext_shipping_1",
+      "user_message": "The package already shipped. Can I reroute it to another city instead?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "lookup_blocked",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "support"
+    },
+    {
+      "session_id": "bitext_refund_1",
+      "user_message": "What's your refund policy for an online order that arrived damaged?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "exact_lookup_miss",
+      "judgment": {},
+      "action": "lookup",
+      "domain": "support"
+    },
+    {
+      "session_id": "bitext_refund_1",
+      "user_message": "Can you explain the return and refund policy if an order comes damaged?",
+      "expected_hit_allowed": true,
+      "source": "llm",
+      "decision": "exact_lookup_miss",
+      "judgment": {},
+      "action": "explain",
+      "domain": "support"
+    },
+    {
+      "session_id": "bitext_refund_1",
+      "user_message": "How do I track a refund after it was already approved?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "exact_lookup_miss",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "support"
+    },
+    {
+      "session_id": "bitext_order_1",
+      "user_message": "Can I cancel an online order I placed this morning?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "exact_lookup_miss",
+      "judgment": {},
+      "action": "explain",
+      "domain": "ecommerce"
+    },
+    {
+      "session_id": "bitext_order_1",
+      "user_message": "Is it still possible to cancel an order I submitted earlier today?",
+      "expected_hit_allowed": true,
+      "source": "cache",
+      "decision": "exact_lookup_hit",
+      "judgment": {},
+      "action": "explain",
+      "domain": "ecommerce"
+    },
+    {
+      "session_id": "bitext_order_1",
+      "user_message": "Can I change the items in that order instead of cancelling it?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "lookup_blocked",
+      "judgment": {},
+      "action": "explain",
+      "domain": "ecommerce"
+    }
+  ],
+  "neighbor_judge": [
+    {
+      "session_id": "support_connectivity_1",
+      "user_message": "I'm having trouble connecting to my RDS instance from my local machine. I keep getting a timeout error even though the status says 'Available'.",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "neighbor_judge_miss",
+      "judgment": {},
+      "action": "lookup",
+      "domain": "networking"
+    },
+    {
+      "session_id": "support_connectivity_1",
+      "user_message": "Why is my connection to the managed SQL database timing out? The console says it's running but I can't reach it from home.",
+      "expected_hit_allowed": true,
+      "source": "cache",
+      "decision": "neighbor_judge_hit",
+      "judgment": {
+        "reuse_safe": true,
+        "candidate_index": 0,
+        "confidence": 1.0,
+        "reason": "The current query and the cached answer both describe a timeout error when connecting to an RDS instance from a local machine, with the instance status being 'Available'. The phrasing is slightly different, but the underlying issue and context are the same.",
+        "material_difference": false,
+        "latency_ms": 1720.64
+      },
+      "action": "lookup",
+      "domain": "networking"
+    },
+    {
+      "session_id": "support_connectivity_1",
+      "user_message": "The database says available, but my office IP can connect while my home IP still times out. Is this still just a firewall issue?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "neighbor_judge_miss",
+      "judgment": {
+        "reuse_safe": false,
+        "candidate_index": null,
+        "confidence": null,
+        "reason": "The current query specifies a home IP connection timing out, while the cached answer refers to a local machine connection timing out. This introduces a material difference in the source of the connection issue, which affects the answer.",
+        "material_difference": "Different source IPs (home IP vs local machine).",
+        "latency_ms": 1775.22
+      },
+      "action": "lookup",
+      "domain": "networking"
+    },
+    {
+      "session_id": "support_storage_1",
+      "user_message": "My database is in a 'Storage Full' state and I can't run any write operations. How do I fix this quickly?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "neighbor_judge_miss",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "database"
+    },
+    {
+      "session_id": "support_storage_1",
+      "user_message": "We ran out of disk space on the cloud DB and now it's read-only. What are the steps to add more GBs?",
+      "expected_hit_allowed": true,
+      "source": "llm",
+      "decision": "lookup_blocked",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "database"
+    },
+    {
+      "session_id": "support_storage_1",
+      "user_message": "The disk is full, but I want to shrink the storage allocation after cleanup. Is that allowed?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "lookup_blocked",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "database"
+    },
+    {
+      "session_id": "bitext_shipping_1",
+      "user_message": "I need to change the shipping address for my order before it goes out.",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "neighbor_judge_miss",
+      "judgment": {},
+      "action": "how_to",
+      "domain": "sales"
+    },
+    {
+      "session_id": "bitext_shipping_1",
+      "user_message": "Can I update the delivery address on an order that hasn't shipped yet?",
+      "expected_hit_allowed": true,
+      "source": "cache",
+      "decision": "neighbor_judge_hit",
+      "judgment": {
+        "reuse_safe": true,
+        "candidate_index": 0,
+        "confidence": 1.0,
+        "reason": "The current query and the cached answer both inquire about changing the shipping address for an order that has not yet shipped, which is the same action and context.",
+        "material_difference": false,
+        "latency_ms": 1537.88
+      },
+      "action": "how_to",
+      "domain": "sales"
+    },
+    {
+      "session_id": "bitext_shipping_1",
+      "user_message": "The package already shipped. Can I reroute it to another city instead?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "neighbor_judge_miss",
+      "judgment": {
+        "reuse_safe": false,
+        "candidate_index": null,
+        "confidence": 0,
+        "reason": "The current query involves rerouting a package that has already shipped, while the cached answer pertains to changing the shipping address before the order goes out. This represents a material difference in the status of the package and the action being requested.",
+        "material_difference": true,
+        "latency_ms": 2407.86
+      },
+      "action": "how_to",
+      "domain": "sales"
+    },
+    {
+      "session_id": "bitext_refund_1",
+      "user_message": "What's your refund policy for an online order that arrived damaged?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "neighbor_judge_miss",
+      "judgment": {},
+      "action": "explain",
+      "domain": "sales"
+    },
+    {
+      "session_id": "bitext_refund_1",
+      "user_message": "Can you explain the return and refund policy if an order comes damaged?",
+      "expected_hit_allowed": true,
+      "source": "cache",
+      "decision": "neighbor_judge_hit",
+      "judgment": {
+        "reuse_safe": true,
+        "candidate_index": 0,
+        "confidence": 1.0,
+        "reason": "The current query and the cached answer both ask for an explanation of the refund policy for online orders that arrive damaged, which are equivalent in meaning.",
+        "material_difference": false,
+        "latency_ms": 1755.58
+      },
+      "action": "explain",
+      "domain": "sales"
+    },
+    {
+      "session_id": "bitext_refund_1",
+      "user_message": "How do I track a refund after it was already approved?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "neighbor_judge_miss",
+      "judgment": {
+        "reuse_safe": false,
+        "candidate_index": null,
+        "confidence": 0,
+        "reason": "The current query is about tracking a refund after it was approved, while the candidate's query is about the refund policy for a damaged online order. These are different topics with distinct intents and contexts.",
+        "material_difference": true,
+        "latency_ms": 5339.98
+      },
+      "action": "how_to",
+      "domain": "sales"
+    },
+    {
+      "session_id": "bitext_order_1",
+      "user_message": "Can I cancel an online order I placed this morning?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "neighbor_judge_miss",
+      "judgment": {},
+      "action": "explain",
+      "domain": "ecommerce"
+    },
+    {
+      "session_id": "bitext_order_1",
+      "user_message": "Is it still possible to cancel an order I submitted earlier today?",
+      "expected_hit_allowed": true,
+      "source": "cache",
+      "decision": "neighbor_judge_hit",
+      "judgment": {
+        "reuse_safe": true,
+        "candidate_index": 0,
+        "confidence": 1.0,
+        "reason": "The current query and the cached answer both inquire about the possibility of canceling an order placed earlier today, which is the same action and timeframe.",
+        "material_difference": false,
+        "latency_ms": 1940.21
+      },
+      "action": "explain",
+      "domain": "ecommerce"
+    },
+    {
+      "session_id": "bitext_order_1",
+      "user_message": "Can I change the items in that order instead of cancelling it?",
+      "expected_hit_allowed": false,
+      "source": "llm",
+      "decision": "lookup_blocked",
+      "judgment": {},
+      "action": "explain",
+      "domain": "ecommerce"
+    }
+  ]
+}

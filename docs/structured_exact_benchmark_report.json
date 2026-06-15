@@ -1,0 +1,20 @@
+{
+  "total_pairs": 10,
+  "overall_accuracy": 1.0,
+  "positive_pair_match_rate": 1.0,
+  "negative_pair_rejection_rate": 1.0,
+  "extraction_coverage": 0.7,
+  "category_accuracy": {
+    "same_constraints_paraphrase": 1.0,
+    "dimension_change": 1.0,
+    "numeric_bound_change": 1.0,
+    "quantity_change": 1.0,
+    "date_window_change": 1.0,
+    "binary_flag_change": 1.0,
+    "identifier_paraphrase": 1.0,
+    "incomplete_extraction": 1.0,
+    "date_window_paraphrase": 1.0,
+    "policy_action_difference": 1.0
+  },
+  "failures": []
+}

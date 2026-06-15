@@ -1,0 +1,23 @@
+---
+description: GateCache architecture direction
+alwaysApply: true
+---
+
+# GateCache Direction
+
+- Production code lives at the repo root under `gatecache/`. The old prototype was archived outside this repo; regression prompts are vendored under `tests/fixtures/legacy_eval/`.
+- Treat `MockRuleBasedGatekeeper` and similar rule-only paths as deterministic scaffolding for tests and regressions, not as the preferred product architecture.
+- Do not steer new work back toward `mock`-led design decisions unless the task is explicitly about tests, regression reproduction, or deterministic ablations.
+- Do not re-center GateCache on `provider_split`, LLM gatekeepers, rich semantic extraction, or always-on LLM judges. Treat those as archived research/comparison context.
+- The current design is exact cache first, cheap routing classifier second, scoped FAISS/HNSW retrieval third, then lightweight metadata/structured gates with a two-threshold decision:
+  - above the high-confidence threshold, return the cached answer only when scope, freshness, metadata, and margin gates pass
+  - between the low watermark and high-confidence threshold, optionally invoke a bounded gray-zone LLM judge to pick a winner or skip cache
+  - below the low watermark, skip cache and go live
+- Any live LLM judge must be post-retrieval only, bounded by timeout/call/cost controls, observable, and fail safe to a live answer.
+- Keep the core cache engine domain-agnostic. Do not add healthcare-specific, finance-specific, DBA-specific, or other domain-specific rules to the shared engine.
+- Treat remaining open work primarily as:
+  - calibrating high and low semantic thresholds from evals
+  - reducing gray-zone judge latency, token cost, and invocation rate
+  - improving pre-retrieval routing / standalone-vs-mutation handling
+  - refining scope control via `cache_namespace` and `reuse_scope_key`
+- Use the old exact-field-only baseline mainly as a comparison point or lightweight fallback, not as the default design recommendation in new architectural discussions.

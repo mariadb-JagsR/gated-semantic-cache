@@ -1,0 +1,828 @@
+[
+  {
+    "query": "What are the common side effects of Lisinopril?",
+    "source": "live",
+    "total_latency_ms": 2666.818,
+    "trace": {
+      "normalized_query": "what are the common side effects of lisinopril?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "2d8a5f990b880f97d1440e004f4d0bffc92939b913a434af1b3a445f20616bb7",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.8563963056714876,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 1546.576,
+      "ann_latency_ms": 0.02,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:What are the common side effects of Lisinopril?",
+      "success": true
+    }
+  },
+  {
+    "query": "Tell me about the adverse reactions associated with ACE inhibitors like Lisinopril.",
+    "source": "live",
+    "total_latency_ms": 761.08,
+    "trace": {
+      "normalized_query": "tell me about the adverse reactions associated with ace inhibitors like lisinopril.",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "f0f7a53146062070131584f7c3c7d1f14ffd9734ab7ab3171a3d27d08b880229",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.3639482336441265,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 403.934,
+      "ann_latency_ms": 0.931,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Tell me about the adverse reactions associated with ACE inhibitors like Lisinopril.",
+      "success": true
+    }
+  },
+  {
+    "query": "Does Metformin cause stomach issues?",
+    "source": "live",
+    "total_latency_ms": 1279.566,
+    "trace": {
+      "normalized_query": "does metformin cause stomach issues?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "6d046b7b30452ef149aee6bfe07fc07c03ffe88e165560ec580875dfeaec2539",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.7979629582227692,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 379.328,
+      "ann_latency_ms": 0.18,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.0,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [
+        "low_information"
+      ],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Does Metformin cause stomach issues?",
+      "success": true
+    }
+  },
+  {
+    "query": "Is gastrointestinal distress a frequent complication of taking Metformin?",
+    "source": "live",
+    "total_latency_ms": 273.369,
+    "trace": {
+      "normalized_query": "is gastrointestinal distress a frequent complication of taking metformin?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "8fe5be8af1a73027489f0ac72b2eabe0561195dbae87257b97009f768e6860aa",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.9106925227272878,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 112.227,
+      "ann_latency_ms": 0.305,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Is gastrointestinal distress a frequent complication of taking Metformin?",
+      "success": true
+    }
+  },
+  {
+    "query": "Summarize the HIPAA guidelines for patient data sharing.",
+    "source": "live",
+    "total_latency_ms": 561.962,
+    "trace": {
+      "normalized_query": "summarize the hipaa guidelines for patient data sharing.",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "0e9de249cf8b1e7b6c7a4e4a76db5ca55b7e1ba45a648dcdb945fff214434841",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.40417656539302027,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 275.019,
+      "ann_latency_ms": 0.417,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Summarize the HIPAA guidelines for patient data sharing.",
+      "success": true
+    }
+  },
+  {
+    "query": "Give me a rundown of the regulatory requirements for PHI disclosure under HIPAA.",
+    "source": "live",
+    "total_latency_ms": 705.61,
+    "trace": {
+      "normalized_query": "give me a rundown of the regulatory requirements for phi disclosure under hipaa.",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "ac4ca6ca36eca36984407b134c1733867bdd043c1beb64fe26e844c0774287f9",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.429125998845556,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 401.866,
+      "ann_latency_ms": 0.241,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Give me a rundown of the regulatory requirements for PHI disclosure under HIPAA.",
+      "success": true
+    }
+  },
+  {
+    "query": "What is the recommended dosage for Pediatric Amoxicillin?",
+    "source": "live",
+    "total_latency_ms": 609.39,
+    "trace": {
+      "normalized_query": "what is the recommended dosage for pediatric amoxicillin?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "6199ca07113bc50627e5dde149f690e329a1bf7841d38c082fcec45a38028f2c",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.8568900200543197,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 180.008,
+      "ann_latency_ms": 0.583,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:What is the recommended dosage for Pediatric Amoxicillin?",
+      "success": true
+    }
+  },
+  {
+    "query": "What is the recommended dosage for Adult Amoxicillin?",
+    "source": "semantic_cache",
+    "total_latency_ms": 840.158,
+    "trace": {
+      "normalized_query": "what is the recommended dosage for adult amoxicillin?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "61e224f29a1b5e720ae79f74ec0d38f0847c6a31519eeb3a92b590b77e08a6ae",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.8533417399357334,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 833.35,
+      "ann_latency_ms": 0.461,
+      "top_candidate_similarity": 0.8882677555084229,
+      "candidate_count": 1,
+      "rejected_reasons": [
+        "below_threshold",
+        "below_threshold",
+        "below_threshold",
+        "below_threshold"
+      ],
+      "final_result_source": "semantic_cache",
+      "insert_performed": false,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:What is the recommended dosage for Pediatric Amoxicillin?",
+      "success": true
+    }
+  },
+  {
+    "query": "How do I treat a Type 1 diabetic with low blood sugar?",
+    "source": "live",
+    "total_latency_ms": 529.616,
+    "trace": {
+      "normalized_query": "how do i treat a type 1 diabetic with low blood sugar?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "c5b7afa080bb5f6d0b1608b6a88489643555fab5803a8c23f04cd08807e5ddd0",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.9907142221716659,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 207.315,
+      "ann_latency_ms": 0.48,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:How do I treat a Type 1 diabetic with low blood sugar?",
+      "success": true
+    }
+  },
+  {
+    "query": "How do I treat a Type 2 diabetic with low blood sugar?",
+    "source": "semantic_cache",
+    "total_latency_ms": 199.336,
+    "trace": {
+      "normalized_query": "how do i treat a type 2 diabetic with low blood sugar?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "7c87d05a243691c12c6026606af1c0fa300981fe12dbdc6d615ca6df35aa8737",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.9907142221716659,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 193.741,
+      "ann_latency_ms": 0.52,
+      "top_candidate_similarity": 0.9599862098693848,
+      "candidate_count": 1,
+      "rejected_reasons": [
+        "below_threshold",
+        "below_threshold",
+        "below_threshold",
+        "below_threshold"
+      ],
+      "final_result_source": "semantic_cache",
+      "insert_performed": false,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:How do I treat a Type 1 diabetic with low blood sugar?",
+      "success": true
+    }
+  },
+  {
+    "query": "Is it safe to take Aspirin with Warfarin?",
+    "source": "live",
+    "total_latency_ms": 226.18,
+    "trace": {
+      "normalized_query": "is it safe to take aspirin with warfarin?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "e657eb97f87223a5a36adff2ffb58382b317244ddb3a7baa15e8ede25a8706b5",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.6464690926350017,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 108.363,
+      "ann_latency_ms": 0.456,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.0,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [
+        "ambiguous_reference"
+      ],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Is it safe to take Aspirin with Warfarin?",
+      "success": true
+    }
+  },
+  {
+    "query": "Is it safe to take Aspirin with Vitamin C?",
+    "source": "live",
+    "total_latency_ms": 350.643,
+    "trace": {
+      "normalized_query": "is it safe to take aspirin with vitamin c?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "c8b34c94093c3e569eb3d3f1461a668706bceae8a5183259ae8cd3d1242dcabd",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.7141833105077323,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 227.421,
+      "ann_latency_ms": 0.255,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.0,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [
+        "ambiguous_reference"
+      ],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Is it safe to take Aspirin with Vitamin C?",
+      "success": true
+    }
+  },
+  {
+    "query": "Show me the last lab results for patient ID: 88291.",
+    "source": "live",
+    "total_latency_ms": 5.741,
+    "trace": {
+      "normalized_query": "show me the last lab results for patient id: 88291.",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "701ed3f481bfff0a01f9b90f69af941e73b83be5d7f2ff572d51dee8020874f4",
+      "routing_label": "SKIP_CACHE",
+      "routing_confidence": 0.47993710744274526,
+      "semantic_lookup_attempted": false,
+      "embedding_latency_ms": 0.0,
+      "ann_latency_ms": 0.0,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": false,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.6,
+      "structured_canonical_key_sha256": "543a40b8b089bdedfe622e20266e50135eb3e089ec036e542e813d3a2820a8ec",
+      "structured_constraint_kinds": [
+        "identifier"
+      ],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 1,
+      "structured_critical_preview": [
+        "identifier:id=88291"
+      ],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Show me the last lab results for patient ID: 88291.",
+      "success": true
+    }
+  },
+  {
+    "query": "What were the laboratory findings for patient ID: 11022?",
+    "source": "live",
+    "total_latency_ms": 264.362,
+    "trace": {
+      "normalized_query": "what were the laboratory findings for patient id: 11022?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "2af0a781c366806a57b9c7a878a9db39c13b687935403ea9b477b36496eebe28",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.6334373790660304,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 119.023,
+      "ann_latency_ms": 0.503,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.6,
+      "structured_canonical_key_sha256": "868c65dc6d5a711a43a503766c3046d387307978cd12b2af768620607f1fa249",
+      "structured_constraint_kinds": [
+        "identifier"
+      ],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 1,
+      "structured_critical_preview": [
+        "identifier:id=11022"
+      ],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:What were the laboratory findings for patient ID: 11022?",
+      "success": true
+    }
+  },
+  {
+    "query": "Can you retrieve the discharge summary for John Doe?",
+    "source": "live",
+    "total_latency_ms": 667.966,
+    "trace": {
+      "normalized_query": "can you retrieve the discharge summary for john doe?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "631b236e34ed25e54efccd1853d3a9b1747a4e827725ef2475384dac8d112428",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.91687975758608,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 290.942,
+      "ann_latency_ms": 0.348,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Can you retrieve the discharge summary for John Doe?",
+      "success": true
+    }
+  },
+  {
+    "query": "I need the discharge summary for Jane Smith.",
+    "source": "live",
+    "total_latency_ms": 5.049,
+    "trace": {
+      "normalized_query": "i need the discharge summary for jane smith.",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "58f2a1a5220817bd795684405a56786cab6946912b9096c29120b5478aadfef2",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.4747696448927632,
+      "semantic_lookup_attempted": false,
+      "embedding_latency_ms": 0.0,
+      "ann_latency_ms": 0.0,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": false,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:I need the discharge summary for Jane Smith.",
+      "success": true
+    }
+  },
+  {
+    "query": "What is the current wait time at the St. Jude's ER right now?",
+    "source": "live",
+    "total_latency_ms": 440.808,
+    "trace": {
+      "normalized_query": "what is the current wait time at the st. jude's er right now?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "b3ef442c9d9faf510fe45967877118eca01df0749fe13223a281f84fec55dbe8",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.5975971576262277,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 294.478,
+      "ann_latency_ms": 0.194,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:What is the current wait time at the St. Jude's ER right now?",
+      "success": true
+    }
+  },
+  {
+    "query": "How long is the wait at the emergency room at St. Jude's?",
+    "source": "semantic_cache",
+    "total_latency_ms": 255.64,
+    "trace": {
+      "normalized_query": "how long is the wait at the emergency room at st. jude's?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "8dec054be5c86d7cf15aaee47faa9e178148427d71d190f95099a74ec3b55c1f",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.8355155961572197,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 249.329,
+      "ann_latency_ms": 0.372,
+      "top_candidate_similarity": 0.8676071166992188,
+      "candidate_count": 1,
+      "rejected_reasons": [
+        "below_threshold",
+        "below_threshold",
+        "below_threshold",
+        "below_threshold"
+      ],
+      "final_result_source": "semantic_cache",
+      "insert_performed": false,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:What is the current wait time at the St. Jude's ER right now?",
+      "success": true
+    }
+  },
+  {
+    "query": "Check my latest blood glucose reading from my Dexcom.",
+    "source": "live",
+    "total_latency_ms": 4.744,
+    "trace": {
+      "normalized_query": "check my latest blood glucose reading from my dexcom.",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "d191a7516a93287842a54f8510d25798ab8d4314dfcd85010656c533c9f43845",
+      "routing_label": "SKIP_CACHE",
+      "routing_confidence": 0.9383430745507585,
+      "semantic_lookup_attempted": false,
+      "embedding_latency_ms": 0.0,
+      "ann_latency_ms": 0.0,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": false,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Check my latest blood glucose reading from my Dexcom.",
+      "success": true
+    }
+  },
+  {
+    "query": "What was my most recent sugar level?",
+    "source": "live",
+    "total_latency_ms": 4.223,
+    "trace": {
+      "normalized_query": "what was my most recent sugar level?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "9261f80fc3c23d2178d8ffa764d2ce6f4755313d8765ea98341a495a153b4284",
+      "routing_label": "SKIP_CACHE",
+      "routing_confidence": 0.8209140576367389,
+      "semantic_lookup_attempted": false,
+      "embedding_latency_ms": 0.0,
+      "ann_latency_ms": 0.0,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": false,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:What was my most recent sugar level?",
+      "success": true
+    }
+  },
+  {
+    "query": "List the symptoms of a pulmonary embolism.",
+    "source": "live",
+    "total_latency_ms": 3.034,
+    "trace": {
+      "normalized_query": "list the symptoms of a pulmonary embolism.",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "b08f7746cee9fa385f3d96daa78330f0679485aa88ede7271b075fd2b4725d2c",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.388461650583557,
+      "semantic_lookup_attempted": false,
+      "embedding_latency_ms": 0.0,
+      "ann_latency_ms": 0.0,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": false,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:List the symptoms of a pulmonary embolism.",
+      "success": true
+    }
+  },
+  {
+    "query": "What symptoms exclude a diagnosis of pulmonary embolism?",
+    "source": "live",
+    "total_latency_ms": 299.776,
+    "trace": {
+      "normalized_query": "what symptoms exclude a diagnosis of pulmonary embolism?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "d17da467180767182753fce13cab2dde0c7d71f1ebe81f2d82eec824136089ee",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.5987922854328537,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 173.178,
+      "ann_latency_ms": 0.422,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:What symptoms exclude a diagnosis of pulmonary embolism?",
+      "success": true
+    }
+  },
+  {
+    "query": "Which patients are eligible for the clinical trial?",
+    "source": "live",
+    "total_latency_ms": 381.736,
+    "trace": {
+      "normalized_query": "which patients are eligible for the clinical trial?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "db530067eb6e4006d7ea2afd2353d7db053c653e7f0888d51ad1a70263f3294b",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.596983858883499,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 173.089,
+      "ann_latency_ms": 0.396,
+      "top_candidate_similarity": null,
+      "candidate_count": 0,
+      "rejected_reasons": [],
+      "final_result_source": "live",
+      "insert_performed": true,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Which patients are eligible for the clinical trial?",
+      "success": true
+    }
+  },
+  {
+    "query": "Which patients are ineligible for the clinical trial?",
+    "source": "semantic_cache",
+    "total_latency_ms": 131.596,
+    "trace": {
+      "normalized_query": "which patients are ineligible for the clinical trial?",
+      "exact_cache_attempted": true,
+      "exact_cache_hit": false,
+      "exact_cache_key_sha256": "60d8de1211734f19f00627aa3a534ceaee3e12c678970025e5dfe0a7dfb57800",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.5966921450846967,
+      "semantic_lookup_attempted": true,
+      "embedding_latency_ms": 126.021,
+      "ann_latency_ms": 0.483,
+      "top_candidate_similarity": 0.8693551421165466,
+      "candidate_count": 1,
+      "rejected_reasons": [
+        "below_threshold",
+        "below_threshold",
+        "below_threshold",
+        "below_threshold"
+      ],
+      "final_result_source": "semantic_cache",
+      "insert_performed": false,
+      "structured_extraction_attempted": true,
+      "structured_confidence": 0.15,
+      "structured_canonical_key_sha256": null,
+      "structured_constraint_kinds": [],
+      "structured_ambiguity_flags": [],
+      "structured_critical_constraint_count": 0,
+      "structured_critical_preview": [],
+      "anchor_lookup_key_sha256": null
+    },
+    "payload_preview": {
+      "answer": "live:Which patients are eligible for the clinical trial?",
+      "success": true
+    }
+  }
+]

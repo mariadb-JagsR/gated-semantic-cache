@@ -1,0 +1,71 @@
+{
+  "date": "2026-03-25",
+  "command": "EMBEDDER_PROVIDER_MODEL=text-embedding-3-small python -m eval.runtime_compare --runtime hash:canonical --runtime provider:hybrid --gatekeeper-backend mock",
+  "rows": 86,
+  "gatekeeper_backend": "mock",
+  "results": {
+    "hash:canonical": {
+      "metrics": {
+        "precision_hit": 0.9032,
+        "recall_hit": 0.8485,
+        "poison_rate": 0.0,
+        "wrong_cache_answer_rate": 0.0968,
+        "unsafe_query_miss_rate": 1.0,
+        "structured_constraint_recovery_coverage": 1.0,
+        "lookup_latency_ms_p50": 4.19,
+        "lookup_latency_ms_p95": 5.407,
+        "e2e_latency_ms_p50": 4.19,
+        "e2e_latency_ms_p95": 5.407,
+        "cache_hit_rate": 0.3605,
+        "follow_up_hit_rate": 0.5
+      },
+      "totals": {
+        "rows": 86,
+        "labeled_rows": 86,
+        "labeled_bypass_rows": 4,
+        "total_hits": 31,
+        "correct_hits": 28,
+        "total_possible_hits": 33,
+        "dispute_turns": 4,
+        "unsafe_query_turns": 2,
+        "unsafe_query_misses": 2,
+        "structured_query_turns": 35,
+        "structured_query_sufficient_turns": 35,
+        "follow_up_turns": 18,
+        "follow_up_hits": 9
+      }
+    },
+    "provider:hybrid": {
+      "metrics": {
+        "precision_hit": 0.9032,
+        "recall_hit": 0.8485,
+        "poison_rate": 0.0,
+        "wrong_cache_answer_rate": 0.0968,
+        "unsafe_query_miss_rate": 1.0,
+        "structured_constraint_recovery_coverage": 1.0,
+        "lookup_latency_ms_p50": 388.676,
+        "lookup_latency_ms_p95": 600.701,
+        "e2e_latency_ms_p50": 388.676,
+        "e2e_latency_ms_p95": 600.701,
+        "cache_hit_rate": 0.3605,
+        "follow_up_hit_rate": 0.5
+      },
+      "totals": {
+        "rows": 86,
+        "labeled_rows": 86,
+        "labeled_bypass_rows": 4,
+        "total_hits": 31,
+        "correct_hits": 28,
+        "total_possible_hits": 33,
+        "dispute_turns": 4,
+        "unsafe_query_turns": 2,
+        "unsafe_query_misses": 2,
+        "structured_query_turns": 35,
+        "structured_query_sufficient_turns": 35,
+        "follow_up_turns": 18,
+        "follow_up_hits": 9
+      }
+    }
+  },
+  "headline_takeaway": "In the live app path, provider:hybrid matches hash:canonical on quality but is dramatically slower, so it should remain a candidate configuration rather than the default until the latency tradeoff is addressed."
+}

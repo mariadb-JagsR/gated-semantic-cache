@@ -1,0 +1,2312 @@
+[
+  {
+    "id": "internal_company_repeat",
+    "turns": [
+      {
+        "user_message": "show me all running services for company campus cloud",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "list",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action list ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {
+                  "entity": "services"
+                },
+                "filters": {
+                  "company_name": "campus cloud",
+                  "status": "running"
+                },
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 2
+              },
+              "llm_canonical_query_text": "list in general: show me all running services for company campus cloud"
+            },
+            "exact_fields": {
+              "session_id": "internal_company_repeat",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "list",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {
+                "entity": "services"
+              },
+              "normalized_filters": {
+                "company_name": "campus cloud",
+                "status": "running"
+              },
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "split_llm": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "DYNAMIC_FACT",
+              "scope": "REALTIME",
+              "intent": {
+                "action": "list",
+                "domain": "support",
+                "constraints": {
+                  "filters": {},
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  }
+                },
+                "entities": []
+              },
+              "canonical_query_text": "domain support ; action list ; timeframe none",
+              "cache_worthy": false,
+              "reason": "new request for information about running services.",
+              "normalized_query": {
+                "subject": {
+                  "entity": "services"
+                },
+                "filters": {
+                  "company_name": "campus cloud",
+                  "status": "running"
+                },
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 2
+              },
+              "llm_canonical_query_text": "show me all running services for company campus cloud"
+            },
+            "exact_fields": {
+              "session_id": "internal_company_repeat",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "DYNAMIC_FACT",
+              "scope": "REALTIME",
+              "domain": "support",
+              "action": "list",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {
+                "entity": "services"
+              },
+              "normalized_filters": {
+                "company_name": "campus cloud",
+                "status": "running"
+              },
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "list",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action list ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {
+                  "entity": "services"
+                },
+                "filters": {
+                  "company_name": "campus cloud",
+                  "status": "running"
+                },
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 2
+              },
+              "llm_canonical_query_text": "list in general: show me all running services for company campus cloud"
+            },
+            "exact_fields": {
+              "session_id": "internal_company_repeat",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "list",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {
+                "entity": "services"
+              },
+              "normalized_filters": {
+                "company_name": "campus cloud",
+                "status": "running"
+              },
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          }
+        }
+      },
+      {
+        "user_message": "Show me \"Campus cloud\" again",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "list",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {},
+                  "limit": null
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action list ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {
+                  "entity": "services"
+                },
+                "filters": {
+                  "company_name": "campus cloud",
+                  "status": "running"
+                },
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {
+                    "company_name": "campus cloud"
+                  },
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "mutation",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "list in general: show me \"campus cloud\" again"
+            },
+            "exact_fields": {
+              "session_id": "internal_company_repeat",
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "list",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {
+                "entity": "services"
+              },
+              "normalized_filters": {
+                "company_name": "campus cloud",
+                "status": "running"
+              },
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "split_llm": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "DYNAMIC_FACT",
+              "scope": "REALTIME",
+              "intent": {
+                "action": "list",
+                "domain": "support",
+                "constraints": {
+                  "filters": {},
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "limit": null
+                },
+                "entities": []
+              },
+              "canonical_query_text": "domain support ; action list ; timeframe none",
+              "cache_worthy": false,
+              "reason": "user is requesting the same information again.",
+              "normalized_query": {
+                "subject": {
+                  "entity": "services"
+                },
+                "filters": {
+                  "company_name": "campus cloud",
+                  "status": "running"
+                },
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {
+                    "company_name": "campus cloud"
+                  },
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "mutation",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "show me all running services for company campus cloud again"
+            },
+            "exact_fields": {
+              "session_id": "internal_company_repeat",
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "DYNAMIC_FACT",
+              "scope": "REALTIME",
+              "domain": "support",
+              "action": "list",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {
+                "entity": "services"
+              },
+              "normalized_filters": {
+                "company_name": "campus cloud",
+                "status": "running"
+              },
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "list",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {},
+                  "limit": null
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action list ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {
+                  "entity": "services"
+                },
+                "filters": {
+                  "company_name": "campus cloud",
+                  "status": "running"
+                },
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {
+                    "company_name": "campus cloud"
+                  },
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "mutation",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "list in general: show me \"campus cloud\" again"
+            },
+            "exact_fields": {
+              "session_id": "internal_company_repeat",
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "list",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {
+                "entity": "services"
+              },
+              "normalized_filters": {
+                "company_name": "campus cloud",
+                "status": "running"
+              },
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "ibm_groundwater_coref",
+    "turns": [
+      {
+        "user_message": "What is ground water contamination?",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "explain",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action explain ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "explanatory",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "explain in general: what is ground water contamination?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_groundwater_coref",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "explain",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "split_llm": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "explain",
+                "domain": "general",
+                "constraints": {
+                  "filters": {},
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  }
+                },
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action explain ; timeframe none",
+              "cache_worthy": true,
+              "reason": "user is asking for a definition or explanation of a concept.",
+              "query_class": "explanatory",
+              "normalized_query": {
+                "subject": {
+                  "name": "ground water contamination"
+                },
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "what is ground water contamination?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_groundwater_coref",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "explain",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {
+                "name": "ground water contamination"
+              },
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "explain",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action explain ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "explanatory",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "explain in general: what is ground water contamination?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_groundwater_coref",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "explain",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          }
+        }
+      },
+      {
+        "user_message": "Can it be clean up?",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "other",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action other ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "other in general: can it be clean up?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_groundwater_coref",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "other",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": false,
+            "insert_allowed": false
+          },
+          "split_llm": {
+            "error": "network error: The read operation timed out"
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "other",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action other ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "other in general: can it be clean up?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_groundwater_coref",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "other",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": false,
+            "insert_allowed": false
+          }
+        }
+      },
+      {
+        "user_message": "What is it?",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "explain",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action explain ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "explanatory",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "explain in general: what is it?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_groundwater_coref",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "explain",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "split_llm": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "explain",
+                "domain": "general",
+                "constraints": {
+                  "filters": {},
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  }
+                },
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action explain ; timeframe none",
+              "cache_worthy": true,
+              "reason": "user is asking for an explanation of a new topic.",
+              "query_class": "explanatory",
+              "normalized_query": {
+                "subject": {
+                  "name": "ground water contamination"
+                },
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "what is ground water contamination?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_groundwater_coref",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "explain",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {
+                "name": "ground water contamination"
+              },
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "explain",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action explain ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "explanatory",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "explain in general: what is it?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_groundwater_coref",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "explain",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "ibm_disaster_followup",
+    "turns": [
+      {
+        "user_message": "What are the sheltered rooms designated for use?",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "other",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action other ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "mutation",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "other in general: what are the sheltered rooms designated for use?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_disaster_followup",
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "other",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": false,
+            "insert_allowed": false
+          },
+          "split_llm": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "lookup",
+                "domain": "general",
+                "constraints": {
+                  "filters": {},
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  }
+                },
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action lookup ; timeframe none",
+              "cache_worthy": true,
+              "reason": "new inquiry about sheltered rooms.",
+              "query_class": "generic",
+              "normalized_query": {
+                "subject": {
+                  "type": "rooms",
+                  "category": "sheltered"
+                },
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "what are the sheltered rooms designated for use?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_disaster_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "lookup",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {
+                "category": "sheltered",
+                "type": "rooms"
+              },
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "other",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action other ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "mutation",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "other in general: what are the sheltered rooms designated for use?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_disaster_followup",
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "other",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": false,
+            "insert_allowed": false
+          }
+        }
+      },
+      {
+        "user_message": "What items should I keep?",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "other",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action other ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "other in general: what items should i keep?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_disaster_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "other",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": false,
+            "insert_allowed": false
+          },
+          "split_llm": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "lookup",
+                "domain": "general",
+                "constraints": {
+                  "filters": {},
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  }
+                },
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action lookup ; timeframe none",
+              "cache_worthy": true,
+              "reason": "the query is independent and seeks static knowledge about items to keep.",
+              "query_class": "generic",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "what items should i keep?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_disaster_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "lookup",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "other",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action other ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "other in general: what items should i keep?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_disaster_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "other",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": false,
+            "insert_allowed": false
+          }
+        }
+      },
+      {
+        "user_message": "Is it the same for earthquakes?",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "other",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {},
+                  "limit": null
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action other ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "mutation",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "other in general: is it the same for earthquakes?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_disaster_followup",
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "other",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": false,
+            "insert_allowed": false
+          },
+          "split_llm": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "lookup",
+                "domain": "general",
+                "constraints": {
+                  "filters": {},
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  }
+                },
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action lookup ; timeframe none",
+              "cache_worthy": true,
+              "reason": "user is inquiring about a new topic related to earthquakes.",
+              "query_class": "generic",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "is it the same for earthquakes?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_disaster_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "lookup",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "other",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {},
+                  "limit": null
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action other ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "mutation",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "other in general: is it the same for earthquakes?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_disaster_followup",
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "other",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": false,
+            "insert_allowed": false
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "ibm_bank_account_followup",
+    "turns": [
+      {
+        "user_message": "Freelancer: Should I start a second bank account?",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "lookup",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action lookup ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "lookup in general: freelancer: should i start a second bank account?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_bank_account_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "lookup",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "split_llm": {
+            "error": "network error: The read operation timed out"
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "lookup",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action lookup ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "lookup in general: freelancer: should i start a second bank account?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_bank_account_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "lookup",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          }
+        }
+      },
+      {
+        "user_message": "Is it free to open a second bank account?",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "lookup",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action lookup ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "lookup in general: is it free to open a second bank account?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_bank_account_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "lookup",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "split_llm": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "DYNAMIC_FACT",
+              "scope": "SLOW_MOVING",
+              "intent": {
+                "action": "lookup",
+                "domain": "general",
+                "constraints": {
+                  "filters": {},
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  }
+                },
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action lookup ; timeframe none",
+              "cache_worthy": true,
+              "reason": "user is inquiring about the cost associated with opening a second bank account.",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "mutation",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "is it free to open a second bank account?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_bank_account_followup",
+              "logic": "NEW",
+              "relation_to_previous": "MUTATION",
+              "answer_class": "DYNAMIC_FACT",
+              "scope": "SLOW_MOVING",
+              "domain": "general",
+              "action": "lookup",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": false,
+            "insert_allowed": false
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "lookup",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action lookup ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "generic",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 0,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "lookup in general: is it free to open a second bank account?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_bank_account_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "lookup",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          }
+        }
+      },
+      {
+        "user_message": "if it is free, then I should make a second account for my business. how can I create?",
+        "approaches": {
+          "heuristic": {
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "lookup",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action lookup ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "structured_retrieval",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 1,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "lookup in general: if it is free, then i should make a second account for my business. how can i create?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_bank_account_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "lookup",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          },
+          "split_llm": {
+            "error": "network error: The read operation timed out"
+          },
+          "unified_llm": {
+            "provider_used": false,
+            "analysis": {
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "intent": {
+                "action": "lookup",
+                "constraints": {
+                  "sort": {
+                    "by": "other",
+                    "direction": "desc"
+                  },
+                  "timeframe": {
+                    "type": "none",
+                    "tz": "america/los_angeles"
+                  },
+                  "filters": {}
+                },
+                "domain": "general",
+                "entities": []
+              },
+              "canonical_query_text": "domain general ; action lookup ; timeframe none",
+              "cache_worthy": true,
+              "reason": "deterministic rule-based classification",
+              "normalized_query": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": [],
+                "mutation_patch": {
+                  "subject": {},
+                  "filters": {},
+                  "attributes": {},
+                  "predicates": []
+                }
+              },
+              "query_class": "structured_retrieval",
+              "context_dependencies": {
+                "user_location_required": false,
+                "location_resolved": true
+              },
+              "constraint_recovery": {
+                "status": "sufficient",
+                "raw_constraint_cues": 1,
+                "recovered_constraints": 0
+              },
+              "llm_canonical_query_text": "lookup in general: if it is free, then i should make a second account for my business. how can i create?"
+            },
+            "exact_fields": {
+              "session_id": "ibm_bank_account_followup",
+              "logic": "NEW",
+              "relation_to_previous": "INDEPENDENT",
+              "answer_class": "STATIC_KNOWLEDGE",
+              "scope": "STATIC",
+              "domain": "general",
+              "action": "lookup",
+              "limit": null,
+              "timeframe": {
+                "type": "none"
+              },
+              "filters": {},
+              "normalized_subject": {},
+              "normalized_filters": {},
+              "normalized_attributes": {},
+              "normalized_predicates": [],
+              "strict_entities": []
+            },
+            "lookup_allowed": true,
+            "insert_allowed": true
+          }
+        }
+      }
+    ]
+  }
+]

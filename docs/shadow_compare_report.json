@@ -1,0 +1,63 @@
+{
+  "total_turns": 8,
+  "matched_turns": 8,
+  "agreement_rate": 1.0,
+  "results": [
+    {
+      "query": "Explain what semantic caching is",
+      "expected_source": "live",
+      "actual_source": "live",
+      "matched": true,
+      "routing_label": "SEMANTIC_OK"
+    },
+    {
+      "query": "What is semantic caching?",
+      "expected_source": "semantic_cache",
+      "actual_source": "semantic_cache",
+      "matched": true,
+      "routing_label": "SEMANTIC_OK"
+    },
+    {
+      "query": "Lookup order #A123 status",
+      "expected_source": "live",
+      "actual_source": "live",
+      "matched": true,
+      "routing_label": "EXACT_ONLY"
+    },
+    {
+      "query": "Lookup order #A123 status",
+      "expected_source": "exact_cache",
+      "actual_source": "exact_cache",
+      "matched": true,
+      "routing_label": null
+    },
+    {
+      "query": "Same but in december",
+      "expected_source": "live",
+      "actual_source": "live",
+      "matched": true,
+      "routing_label": "THREAD_SCOPED_ONLY"
+    },
+    {
+      "query": "Same but in december",
+      "expected_source": "live",
+      "actual_source": "live",
+      "matched": true,
+      "routing_label": "THREAD_SCOPED_ONLY"
+    },
+    {
+      "query": "Same but in december",
+      "expected_source": "exact_cache",
+      "actual_source": "exact_cache",
+      "matched": true,
+      "routing_label": null
+    },
+    {
+      "query": "Show today's revenue in apac",
+      "expected_source": "live",
+      "actual_source": "live",
+      "matched": true,
+      "routing_label": "SKIP_CACHE"
+    }
+  ]
+}

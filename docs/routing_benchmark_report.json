@@ -1,0 +1,62 @@
+{
+  "total_examples": 128,
+  "class_distribution": {
+    "SEMANTIC_OK": 35,
+    "SKIP_CACHE": 37,
+    "EXACT_ONLY": 28,
+    "THREAD_SCOPED_ONLY": 28
+  },
+  "average_precision_by_label": {
+    "SEMANTIC_OK": 0.8417,
+    "SKIP_CACHE": 0.9688,
+    "EXACT_ONLY": 0.8462,
+    "THREAD_SCOPED_ONLY": 0.8223
+  },
+  "average_recall_by_label": {
+    "SEMANTIC_OK": 0.9444,
+    "SKIP_CACHE": 0.6472,
+    "EXACT_ONLY": 0.9286,
+    "THREAD_SCOPED_ONLY": 0.9286
+  },
+  "average_f1_by_label": {
+    "SEMANTIC_OK": 0.8848,
+    "SKIP_CACHE": 0.7555,
+    "EXACT_ONLY": 0.883,
+    "THREAD_SCOPED_ONLY": 0.8678
+  },
+  "confusion_matrix": {
+    "SEMANTIC_OK": {
+      "SEMANTIC_OK": 33,
+      "SKIP_CACHE": 1,
+      "EXACT_ONLY": 1,
+      "THREAD_SCOPED_ONLY": 0
+    },
+    "SKIP_CACHE": {
+      "SEMANTIC_OK": 5,
+      "SKIP_CACHE": 24,
+      "EXACT_ONLY": 3,
+      "THREAD_SCOPED_ONLY": 5
+    },
+    "EXACT_ONLY": {
+      "SEMANTIC_OK": 1,
+      "SKIP_CACHE": 0,
+      "EXACT_ONLY": 26,
+      "THREAD_SCOPED_ONLY": 1
+    },
+    "THREAD_SCOPED_ONLY": {
+      "SEMANTIC_OK": 1,
+      "SKIP_CACHE": 0,
+      "EXACT_ONLY": 1,
+      "THREAD_SCOPED_ONLY": 26
+    }
+  },
+  "routing_latency_ms_p50": 1.3377,
+  "routing_latency_ms_p95": 1.819,
+  "confidence_by_label": {
+    "SEMANTIC_OK": 0.7905,
+    "SKIP_CACHE": 0.8307,
+    "EXACT_ONLY": 0.8355,
+    "THREAD_SCOPED_ONLY": 0.7219
+  },
+  "semantic_route_rate": 0.3125
+}

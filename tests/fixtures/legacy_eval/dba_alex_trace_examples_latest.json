@@ -1,0 +1,1519 @@
+{
+  "mock_baseline": [
+    {
+      "turn_index": 1,
+      "user_message": "Hey, I'm seeing a massive spike in CPU on the production PostgreSQL instance prod-db-01. Can you identify the top three most expensive queries from the last 30 minutes or so?",
+      "source": "llm",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "035feda0060c2e0386bde85e50a3176fea9beac573849b81f82bfb3df65d526f"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "dba_alex",
+          "user_message": "Hey, I'm seeing a massive spike in CPU on the production PostgreSQL instance prod-db-01. Can you identify the top three most expensive queries from the last 30 minutes or so?",
+          "history_len": 0
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "STATIC_KNOWLEDGE",
+          "scope": "STATIC",
+          "query_class": "structured_retrieval",
+          "intent": {
+            "action": "list",
+            "constraints": {
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              },
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "filters": {}
+            },
+            "domain": "sales",
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "missing",
+            "raw_constraint_cues": 2,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": null,
+          "canonical_query_text": "domain sales ; action list ; timeframe none",
+          "fingerprint": "035feda0060c2e0386bde85e50a3176fea9beac573849b81f82bfb3df65d526f"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": false,
+          "semantic_text": "domain sales ; action list ; timeframe none",
+          "exact_fields": {
+            "session_id": "dba_alex",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "STATIC",
+            "domain": "sales",
+            "action": "list",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "lookup_blocked",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "STATIC",
+            "reason": "post-check on response style and class"
+          },
+          "inserted": false
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "user_message": "That SELECT on the orders table looks like it's doing a full table scan. Check the execution plan-is there a missing index, or are the statistics just stale?",
+      "source": "llm",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "7946f613438d84a11ab138baa94dffc023f1a3d577c8203947a49b7d95d4206b"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "dba_alex",
+          "user_message": "That SELECT on the orders table looks like it's doing a full table scan. Check the execution plan-is there a missing index, or are the statistics just stale?",
+          "history_len": 2
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "STATIC_KNOWLEDGE",
+          "scope": "STATIC",
+          "query_class": "generic",
+          "intent": {
+            "action": "other",
+            "constraints": {
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              },
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "filters": {}
+            },
+            "domain": "support",
+            "entities": [
+              {
+                "id": "s",
+                "type": "order",
+                "value": "s"
+              }
+            ]
+          },
+          "normalized_query": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 1,
+            "recovered_constraints": 1
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "STATIC",
+            "query_class": "structured_retrieval",
+            "normalized_query": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": [],
+              "mutation_patch": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "missing",
+              "raw_constraint_cues": 2,
+              "recovered_constraints": 0
+            },
+            "canonical_query_text": "domain sales ; action list ; timeframe none",
+            "intent": {
+              "domain": "sales",
+              "action": "list",
+              "entities": [],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "none",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "other",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain support ; action other ; timeframe none ; entities order=s",
+          "fingerprint": "7946f613438d84a11ab138baa94dffc023f1a3d577c8203947a49b7d95d4206b"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": false,
+          "semantic_text": "domain support ; action other ; timeframe none ; entities order=s",
+          "exact_fields": {
+            "session_id": "dba_alex",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "STATIC",
+            "domain": "support",
+            "action": "other",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": [
+              {
+                "type": "order",
+                "value": "s",
+                "id": "s"
+              }
+            ]
+          }
+        },
+        "decision": {
+          "kind": "lookup_blocked",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "STATIC",
+            "reason": "post-check on response style and class"
+          },
+          "inserted": false
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "user_message": "Show me which queries are hogging the processor within the last 30 mins.",
+      "source": "llm",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "2c3a555dd129b4663498839c6fe9962c06b1c4408c26df2a68611ef3cda88276"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "dba_alex",
+          "user_message": "Show me which queries are hogging the processor within the last 30 mins.",
+          "history_len": 4
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "STATIC_KNOWLEDGE",
+          "scope": "STATIC",
+          "query_class": "structured_retrieval",
+          "intent": {
+            "action": "list",
+            "constraints": {
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              },
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "filters": {}
+            },
+            "domain": "general",
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {
+              "category": "which"
+            },
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 1,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "STATIC",
+            "query_class": "generic",
+            "normalized_query": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": [],
+              "mutation_patch": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "sufficient",
+              "raw_constraint_cues": 1,
+              "recovered_constraints": 1
+            },
+            "canonical_query_text": "domain support ; action other ; timeframe none ; entities order=s",
+            "intent": {
+              "domain": "support",
+              "action": "other",
+              "entities": [
+                {
+                  "id": "s",
+                  "type": "order",
+                  "value": "s"
+                }
+              ],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "none",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "other",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain general ; action list ; timeframe none",
+          "fingerprint": "2c3a555dd129b4663498839c6fe9962c06b1c4408c26df2a68611ef3cda88276"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": true,
+          "semantic_text": "domain general ; action list ; timeframe none",
+          "exact_fields": {
+            "session_id": "dba_alex",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "STATIC",
+            "domain": "general",
+            "action": "list",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {
+              "category": "which"
+            },
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "exact_lookup_miss",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "STATIC",
+            "reason": "post-check on response style and class"
+          },
+          "inserted": true
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "user_message": "Go ahead and update the statistics for that table. Let me know when it's finished and if the estimated cost in the plan drops.",
+      "source": "llm",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "81551e32398e292144b6e15edc402b32ec24c47a16a25f1bc4eb2b5cb707d714"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "dba_alex",
+          "user_message": "Go ahead and update the statistics for that table. Let me know when it's finished and if the estimated cost in the plan drops.",
+          "history_len": 6
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "MUTATION",
+          "answer_class": "STATE_UPDATE",
+          "scope": "REALTIME",
+          "query_class": "mutation",
+          "intent": {
+            "action": "list",
+            "constraints": {
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              },
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "filters": {},
+              "limit": null
+            },
+            "domain": "general",
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {
+              "category": "which",
+              "entity": "database_table"
+            },
+            "filters": {},
+            "attributes": {
+              "execution_operation": "refresh_statistics"
+            },
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {
+                "entity": "database_table"
+              },
+              "filters": {},
+              "attributes": {
+                "execution_operation": "refresh_statistics"
+              },
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 0,
+            "recovered_constraints": 1
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "STATIC",
+            "query_class": "structured_retrieval",
+            "normalized_query": {
+              "subject": {
+                "category": "which"
+              },
+              "filters": {},
+              "attributes": {},
+              "predicates": [],
+              "mutation_patch": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "sufficient",
+              "raw_constraint_cues": 1,
+              "recovered_constraints": 0
+            },
+            "canonical_query_text": "domain general ; action list ; timeframe none",
+            "intent": {
+              "domain": "general",
+              "action": "list",
+              "entities": [],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "none",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "other",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain general ; action list ; timeframe none",
+          "fingerprint": "81551e32398e292144b6e15edc402b32ec24c47a16a25f1bc4eb2b5cb707d714"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": false,
+          "semantic_text": "domain general ; action list ; timeframe none",
+          "exact_fields": {
+            "session_id": "dba_alex",
+            "logic": "NEW",
+            "relation_to_previous": "MUTATION",
+            "answer_class": "STATE_UPDATE",
+            "scope": "REALTIME",
+            "domain": "general",
+            "action": "list",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {
+              "category": "which",
+              "entity": "database_table"
+            },
+            "normalized_filters": {},
+            "normalized_attributes": {
+              "execution_operation": "refresh_statistics"
+            },
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "lookup_blocked",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": false,
+            "answer_class": "STATE_UPDATE",
+            "scope": "REALTIME",
+            "reason": "post-check on response style and class"
+          },
+          "inserted": false
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "user_message": "What's our current deadlocking trend for the last 24 hours? Are there any specific objects that keep popping up?",
+      "source": "llm",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "417609d99ddbd71b135104e10bde03f9126912f79655ce925787fb6967681578"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "dba_alex",
+          "user_message": "What's our current deadlocking trend for the last 24 hours? Are there any specific objects that keep popping up?",
+          "history_len": 8
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "DYNAMIC_FACT",
+          "scope": "REALTIME",
+          "query_class": "generic",
+          "intent": {
+            "action": "other",
+            "constraints": {
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              },
+              "timeframe": {
+                "type": "relative_day",
+                "tz": "america/los_angeles",
+                "unit": "day",
+                "value": 0
+              },
+              "filters": {}
+            },
+            "domain": "general",
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 1,
+            "recovered_constraints": 1
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "MUTATION",
+            "answer_class": "STATE_UPDATE",
+            "scope": "REALTIME",
+            "query_class": "mutation",
+            "normalized_query": {
+              "subject": {
+                "category": "which",
+                "entity": "database_table"
+              },
+              "filters": {},
+              "attributes": {
+                "execution_operation": "refresh_statistics"
+              },
+              "predicates": [],
+              "mutation_patch": {
+                "subject": {
+                  "entity": "database_table"
+                },
+                "filters": {},
+                "attributes": {
+                  "execution_operation": "refresh_statistics"
+                },
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "sufficient",
+              "raw_constraint_cues": 0,
+              "recovered_constraints": 1
+            },
+            "canonical_query_text": "domain general ; action list ; timeframe none",
+            "intent": {
+              "domain": "general",
+              "action": "list",
+              "entities": [],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "none",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "other",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain general ; action other ; timeframe relative_day",
+          "fingerprint": "417609d99ddbd71b135104e10bde03f9126912f79655ce925787fb6967681578"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": false,
+          "semantic_text": "domain general ; action other ; timeframe relative_day",
+          "exact_fields": {
+            "session_id": "dba_alex",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "general",
+            "action": "other",
+            "limit": null,
+            "timeframe": {
+              "type": "relative_day",
+              "tz": "america/los_angeles",
+              "unit": "day",
+              "value": 0
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "lookup_blocked",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "reason": "post-check on response style and class"
+          },
+          "inserted": false
+        }
+      }
+    }
+  ],
+  "provider_split_baseline": [
+    {
+      "turn_index": 1,
+      "user_message": "Hey, I'm seeing a massive spike in CPU on the production PostgreSQL instance prod-db-01. Can you identify the top three most expensive queries from the last 30 minutes or so?",
+      "source": "llm",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "4f6adcd030fad9856360d657f190c1342765f17100f99ec4db1285fa2ed59074"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "dba_alex",
+          "user_message": "Hey, I'm seeing a massive spike in CPU on the production PostgreSQL instance prod-db-01. Can you identify the top three most expensive queries from the last 30 minutes or so?",
+          "history_len": 0
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "DYNAMIC_FACT",
+          "scope": "REALTIME",
+          "query_class": "structured_retrieval",
+          "intent": {
+            "action": "lookup",
+            "domain": "database",
+            "constraints": {
+              "filters": {},
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              }
+            },
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "missing",
+            "raw_constraint_cues": 2,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": null,
+          "canonical_query_text": "domain database ; action lookup ; timeframe none",
+          "fingerprint": "4f6adcd030fad9856360d657f190c1342765f17100f99ec4db1285fa2ed59074"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": false,
+          "semantic_text": "domain database ; action lookup ; timeframe none",
+          "exact_fields": {
+            "session_id": "dba_alex",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "database",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "lookup_blocked",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "reason": "local worthiness check after provider intent extraction"
+          },
+          "inserted": false
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "user_message": "That SELECT on the orders table looks like it's doing a full table scan. Check the execution plan-is there a missing index, or are the statistics just stale?",
+      "source": "llm",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "e13a54879e707ee91e62b7cd8628e4ce45ddfbfda3475b0ea55e66de40d738c1"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "dba_alex",
+          "user_message": "That SELECT on the orders table looks like it's doing a full table scan. Check the execution plan-is there a missing index, or are the statistics just stale?",
+          "history_len": 2
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "MUTATION",
+          "answer_class": "DYNAMIC_FACT",
+          "scope": "REALTIME",
+          "query_class": "mutation",
+          "intent": {
+            "action": "lookup",
+            "constraints": {
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              },
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "filters": {},
+              "limit": null
+            },
+            "domain": "database",
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 1,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "query_class": "structured_retrieval",
+            "normalized_query": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": [],
+              "mutation_patch": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "missing",
+              "raw_constraint_cues": 2,
+              "recovered_constraints": 0
+            },
+            "canonical_query_text": "domain database ; action lookup ; timeframe none",
+            "intent": {
+              "domain": "database",
+              "action": "lookup",
+              "entities": [],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "none",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "other",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain database ; action lookup ; timeframe none",
+          "fingerprint": "e13a54879e707ee91e62b7cd8628e4ce45ddfbfda3475b0ea55e66de40d738c1"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": false,
+          "semantic_text": "domain database ; action lookup ; timeframe none",
+          "exact_fields": {
+            "session_id": "dba_alex",
+            "logic": "NEW",
+            "relation_to_previous": "MUTATION",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "database",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "lookup_blocked",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "reason": "local worthiness check after provider intent extraction"
+          },
+          "inserted": false
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "user_message": "Show me which queries are hogging the processor within the last 30 mins.",
+      "source": "llm",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "e5986e603303ed79a1f2588dc41a7f30b3f6271fa690dc288ea64f62af3df68b"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "dba_alex",
+          "user_message": "Show me which queries are hogging the processor within the last 30 mins.",
+          "history_len": 4
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "DYNAMIC_FACT",
+          "scope": "REALTIME",
+          "query_class": "structured_retrieval",
+          "intent": {
+            "action": "lookup",
+            "constraints": {
+              "sort": {
+                "by": "processor_usage",
+                "direction": "desc"
+              },
+              "timeframe": {
+                "type": "last_30_minutes",
+                "tz": "america/los_angeles"
+              },
+              "filters": {}
+            },
+            "domain": "database",
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {
+              "category": "which"
+            },
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 1,
+            "recovered_constraints": 1
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "MUTATION",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "query_class": "mutation",
+            "normalized_query": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": [],
+              "mutation_patch": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "sufficient",
+              "raw_constraint_cues": 1,
+              "recovered_constraints": 0
+            },
+            "canonical_query_text": "domain database ; action lookup ; timeframe none",
+            "intent": {
+              "domain": "database",
+              "action": "lookup",
+              "entities": [],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "none",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "other",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain database ; action lookup ; timeframe last_30_minutes",
+          "fingerprint": "e5986e603303ed79a1f2588dc41a7f30b3f6271fa690dc288ea64f62af3df68b"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": true,
+          "semantic_text": "domain database ; action lookup ; timeframe last_30_minutes",
+          "exact_fields": {
+            "session_id": "dba_alex",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "database",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "last_30_minutes",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {
+              "category": "which"
+            },
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "exact_lookup_miss",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "reason": "local worthiness check after provider intent extraction"
+          },
+          "inserted": true
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "user_message": "Go ahead and update the statistics for that table. Let me know when it's finished and if the estimated cost in the plan drops.",
+      "source": "llm",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "ec4613e0929991b6d366911e4462aa094dbeee3ac259de044ae88a6dc657659e"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "dba_alex",
+          "user_message": "Go ahead and update the statistics for that table. Let me know when it's finished and if the estimated cost in the plan drops.",
+          "history_len": 6
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "MUTATION",
+          "answer_class": "STATE_UPDATE",
+          "scope": "REALTIME",
+          "query_class": "mutation",
+          "intent": {
+            "action": "lookup",
+            "domain": "database",
+            "constraints": {
+              "filters": {},
+              "timeframe": {
+                "type": "last_30_minutes",
+                "tz": "america/los_angeles"
+              },
+              "sort": {
+                "by": "processor_usage",
+                "direction": "desc"
+              },
+              "limit": null
+            },
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {
+              "category": "which",
+              "entity": "database_table"
+            },
+            "filters": {},
+            "attributes": {
+              "execution_operation": "refresh_statistics"
+            },
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {
+                "entity": "database_table"
+              },
+              "filters": {},
+              "attributes": {
+                "execution_operation": "refresh_statistics"
+              },
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 0,
+            "recovered_constraints": 1
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "query_class": "structured_retrieval",
+            "normalized_query": {
+              "subject": {
+                "category": "which"
+              },
+              "filters": {},
+              "attributes": {},
+              "predicates": [],
+              "mutation_patch": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "sufficient",
+              "raw_constraint_cues": 1,
+              "recovered_constraints": 1
+            },
+            "canonical_query_text": "domain database ; action lookup ; timeframe last_30_minutes",
+            "intent": {
+              "domain": "database",
+              "action": "lookup",
+              "entities": [],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "last_30_minutes",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "processor_usage",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain database ; action lookup ; timeframe last_30_minutes",
+          "fingerprint": "ec4613e0929991b6d366911e4462aa094dbeee3ac259de044ae88a6dc657659e"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": false,
+          "semantic_text": "domain database ; action lookup ; timeframe last_30_minutes",
+          "exact_fields": {
+            "session_id": "dba_alex",
+            "logic": "NEW",
+            "relation_to_previous": "MUTATION",
+            "answer_class": "STATE_UPDATE",
+            "scope": "REALTIME",
+            "domain": "database",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "last_30_minutes",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {
+              "category": "which",
+              "entity": "database_table"
+            },
+            "normalized_filters": {},
+            "normalized_attributes": {
+              "execution_operation": "refresh_statistics"
+            },
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "lookup_blocked",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": false,
+            "answer_class": "STATE_UPDATE",
+            "scope": "REALTIME",
+            "reason": "local worthiness check after provider intent extraction"
+          },
+          "inserted": false
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "user_message": "What's our current deadlocking trend for the last 24 hours? Are there any specific objects that keep popping up?",
+      "source": "llm",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "4f6adcd030fad9856360d657f190c1342765f17100f99ec4db1285fa2ed59074"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "dba_alex",
+          "user_message": "What's our current deadlocking trend for the last 24 hours? Are there any specific objects that keep popping up?",
+          "history_len": 8
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "DYNAMIC_FACT",
+          "scope": "REALTIME",
+          "query_class": "structured_retrieval",
+          "intent": {
+            "action": "lookup",
+            "domain": "database",
+            "constraints": {
+              "filters": {},
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              }
+            },
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 1,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "MUTATION",
+            "answer_class": "STATE_UPDATE",
+            "scope": "REALTIME",
+            "query_class": "mutation",
+            "normalized_query": {
+              "subject": {
+                "category": "which",
+                "entity": "database_table"
+              },
+              "filters": {},
+              "attributes": {
+                "execution_operation": "refresh_statistics"
+              },
+              "predicates": [],
+              "mutation_patch": {
+                "subject": {
+                  "entity": "database_table"
+                },
+                "filters": {},
+                "attributes": {
+                  "execution_operation": "refresh_statistics"
+                },
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "sufficient",
+              "raw_constraint_cues": 0,
+              "recovered_constraints": 1
+            },
+            "canonical_query_text": "domain database ; action lookup ; timeframe last_30_minutes",
+            "intent": {
+              "domain": "database",
+              "action": "lookup",
+              "entities": [],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "last_30_minutes",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "processor_usage",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain database ; action lookup ; timeframe none",
+          "fingerprint": "4f6adcd030fad9856360d657f190c1342765f17100f99ec4db1285fa2ed59074"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": true,
+          "semantic_text": "domain database ; action lookup ; timeframe none",
+          "exact_fields": {
+            "session_id": "dba_alex",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "database",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "exact_lookup_miss",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "reason": "local worthiness check after provider intent extraction"
+          },
+          "inserted": true
+        }
+      }
+    }
+  ]
+}

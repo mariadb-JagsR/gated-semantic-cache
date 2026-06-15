@@ -1,0 +1,410 @@
+{
+  "total_examples": 128,
+  "total_misclassified": 19,
+  "overall_error_rate": 0.1484,
+  "confusion_pairs": {
+    "SKIP_CACHE -> SEMANTIC_OK": 5,
+    "SKIP_CACHE -> THREAD_SCOPED_ONLY": 5,
+    "SKIP_CACHE -> EXACT_ONLY": 3,
+    "SEMANTIC_OK -> SKIP_CACHE": 1,
+    "SEMANTIC_OK -> EXACT_ONLY": 1,
+    "EXACT_ONLY -> THREAD_SCOPED_ONLY": 1,
+    "EXACT_ONLY -> SEMANTIC_OK": 1,
+    "THREAD_SCOPED_ONLY -> SEMANTIC_OK": 1,
+    "THREAD_SCOPED_ONLY -> EXACT_ONLY": 1
+  },
+  "top_confusions": [
+    {
+      "pair": "SKIP_CACHE -> SEMANTIC_OK",
+      "count": 5
+    },
+    {
+      "pair": "SKIP_CACHE -> THREAD_SCOPED_ONLY",
+      "count": 5
+    },
+    {
+      "pair": "SKIP_CACHE -> EXACT_ONLY",
+      "count": 3
+    },
+    {
+      "pair": "SEMANTIC_OK -> SKIP_CACHE",
+      "count": 1
+    },
+    {
+      "pair": "SEMANTIC_OK -> EXACT_ONLY",
+      "count": 1
+    },
+    {
+      "pair": "EXACT_ONLY -> THREAD_SCOPED_ONLY",
+      "count": 1
+    },
+    {
+      "pair": "EXACT_ONLY -> SEMANTIC_OK",
+      "count": 1
+    },
+    {
+      "pair": "THREAD_SCOPED_ONLY -> SEMANTIC_OK",
+      "count": 1
+    },
+    {
+      "pair": "THREAD_SCOPED_ONLY -> EXACT_ONLY",
+      "count": 1
+    }
+  ],
+  "skip_cache_confusions": [
+    {
+      "fold": 2,
+      "query": "I've had the same headache and congestion, but now I'm also having blurry vision. Could this still be sinusitis?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.8986,
+      "slice_id": "G",
+      "source": "legacy_eval",
+      "notes": "near-neighbor trap: added red-flag symptom changes reuse safety",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 1,
+      "query": "Update customer 55291 email to new@example.com",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "EXACT_ONLY",
+      "confidence": 0.7922,
+      "slice_id": "B",
+      "source": "manual",
+      "notes": "account mutation",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 4,
+      "query": "Delete ticket 12345",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "EXACT_ONLY",
+      "confidence": 0.7825,
+      "slice_id": "B",
+      "source": "manual",
+      "notes": "destructive action",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 2,
+      "query": "that's wrong",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.7047,
+      "slice_id": "B",
+      "source": "legacy_eval",
+      "notes": "legacy correction/dispute style turn",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 4,
+      "query": "recheck that",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.6783,
+      "slice_id": "B",
+      "source": "legacy_eval",
+      "notes": "legacy correction/dispute style turn",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 3,
+      "query": "Can I change the items in that order instead of cancelling it?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.6556,
+      "slice_id": "G",
+      "source": "legacy_eval",
+      "notes": "near-neighbor trap: mutation relative to a reusable policy question",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 2,
+      "query": "What changed this week in the audit log?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.6151,
+      "slice_id": "E",
+      "source": "manual",
+      "notes": "recent temporal request",
+      "namespace_policy": "freshness_strict"
+    },
+    {
+      "fold": 2,
+      "query": "What is my current order status for A123?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.4599,
+      "slice_id": "E",
+      "source": "manual",
+      "notes": "personalized and freshness-sensitive anchored query",
+      "namespace_policy": "freshness_strict"
+    },
+    {
+      "fold": 2,
+      "query": "What is happening now?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.4395,
+      "slice_id": "E",
+      "source": "manual",
+      "notes": "underspecified and freshness sensitive",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 4,
+      "query": "Show my open support cases",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.4331,
+      "slice_id": "B",
+      "source": "manual",
+      "notes": "personalized account scoped",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 3,
+      "query": "The package already shipped. Can I reroute it to another city instead?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.4214,
+      "slice_id": "G",
+      "source": "legacy_eval",
+      "notes": "near-neighbor trap: similar policy topic but materially different action/state",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 1,
+      "query": "are you sure",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "EXACT_ONLY",
+      "confidence": 0.3864,
+      "slice_id": "B",
+      "source": "legacy_eval",
+      "notes": "legacy correction/dispute style turn",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 2,
+      "query": "What is the latest incident status?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.3807,
+      "slice_id": "E",
+      "source": "manual",
+      "notes": "freshness sensitive",
+      "namespace_policy": "freshness_strict"
+    }
+  ],
+  "misclassified_examples": [
+    {
+      "fold": 1,
+      "query": "Is it still possible to cancel an order I submitted earlier today?",
+      "expected_label": "SEMANTIC_OK",
+      "predicted_label": "SKIP_CACHE",
+      "confidence": 0.9385,
+      "slice_id": "F",
+      "source": "legacy_eval",
+      "notes": "legacy policy paraphrase",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 2,
+      "query": "I've had the same headache and congestion, but now I'm also having blurry vision. Could this still be sinusitis?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.8986,
+      "slice_id": "G",
+      "source": "legacy_eval",
+      "notes": "near-neighbor trap: added red-flag symptom changes reuse safety",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 1,
+      "query": "Update customer 55291 email to new@example.com",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "EXACT_ONLY",
+      "confidence": 0.7922,
+      "slice_id": "B",
+      "source": "manual",
+      "notes": "account mutation",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 4,
+      "query": "Delete ticket 12345",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "EXACT_ONLY",
+      "confidence": 0.7825,
+      "slice_id": "B",
+      "source": "manual",
+      "notes": "destructive action",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 2,
+      "query": "that's wrong",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.7047,
+      "slice_id": "B",
+      "source": "legacy_eval",
+      "notes": "legacy correction/dispute style turn",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 4,
+      "query": "recheck that",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.6783,
+      "slice_id": "B",
+      "source": "legacy_eval",
+      "notes": "legacy correction/dispute style turn",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 3,
+      "query": "Can I change the items in that order instead of cancelling it?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.6556,
+      "slice_id": "G",
+      "source": "legacy_eval",
+      "notes": "near-neighbor trap: mutation relative to a reusable policy question",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 2,
+      "query": "What changed this week in the audit log?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.6151,
+      "slice_id": "E",
+      "source": "manual",
+      "notes": "recent temporal request",
+      "namespace_policy": "freshness_strict"
+    },
+    {
+      "fold": 2,
+      "query": "Summarize docs for customer onboarding",
+      "expected_label": "SEMANTIC_OK",
+      "predicted_label": "EXACT_ONLY",
+      "confidence": 0.6014,
+      "slice_id": "A",
+      "source": "legacy_eval",
+      "notes": "documentation summary",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 4,
+      "query": "What is the status of ticket 55192?",
+      "expected_label": "EXACT_ONLY",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.5986,
+      "slice_id": "C",
+      "source": "manual",
+      "notes": "ticket id query",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 4,
+      "query": "No, I want to avoid carrying a balance entirely. Does that change your recommendation?",
+      "expected_label": "THREAD_SCOPED_ONLY",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.4727,
+      "slice_id": "D",
+      "source": "legacy_eval",
+      "notes": "legacy follow-up clarification",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 2,
+      "query": "What is my current order status for A123?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.4599,
+      "slice_id": "E",
+      "source": "manual",
+      "notes": "personalized and freshness-sensitive anchored query",
+      "namespace_policy": "freshness_strict"
+    },
+    {
+      "fold": 2,
+      "query": "What is happening now?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.4395,
+      "slice_id": "E",
+      "source": "manual",
+      "notes": "underspecified and freshness sensitive",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 4,
+      "query": "Show my open support cases",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.4331,
+      "slice_id": "B",
+      "source": "manual",
+      "notes": "personalized account scoped",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 3,
+      "query": "The package already shipped. Can I reroute it to another city instead?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.4214,
+      "slice_id": "G",
+      "source": "legacy_eval",
+      "notes": "near-neighbor trap: similar policy topic but materially different action/state",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 1,
+      "query": "are you sure",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "EXACT_ONLY",
+      "confidence": 0.3864,
+      "slice_id": "B",
+      "source": "legacy_eval",
+      "notes": "legacy correction/dispute style turn",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 4,
+      "query": "What about the earlier incident?",
+      "expected_label": "THREAD_SCOPED_ONLY",
+      "predicted_label": "EXACT_ONLY",
+      "confidence": 0.3848,
+      "slice_id": "D",
+      "source": "manual",
+      "notes": "ambiguous prior referent",
+      "namespace_policy": "default"
+    },
+    {
+      "fold": 2,
+      "query": "What is the latest incident status?",
+      "expected_label": "SKIP_CACHE",
+      "predicted_label": "SEMANTIC_OK",
+      "confidence": 0.3807,
+      "slice_id": "E",
+      "source": "manual",
+      "notes": "freshness sensitive",
+      "namespace_policy": "freshness_strict"
+    },
+    {
+      "fold": 2,
+      "query": "Check invoice INV-2024-9912",
+      "expected_label": "EXACT_ONLY",
+      "predicted_label": "THREAD_SCOPED_ONLY",
+      "confidence": 0.3208,
+      "slice_id": "C",
+      "source": "manual",
+      "notes": "invoice identifier",
+      "namespace_policy": "default"
+    }
+  ]
+}

@@ -1,0 +1,864 @@
+{
+  "name": "banking_semantic_duplicate_probe",
+  "generated_at_unix": 1777783103.622699,
+  "evaluation_note": "User-supplied mini probe. Pair B is labeled as no-reuse because it is a payment-cancellation/action request; live answerer also marks it destructive/freshness-sensitive to test insertion safety.",
+  "routing_rows": [
+    {
+      "pair_id": "A",
+      "turn": 1,
+      "query": "What's my account routing number?",
+      "routing_label": "EXACT_ONLY",
+      "routing_confidence": 0.6574,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.6574,
+        "SEMANTIC_OK": 0.0393,
+        "SKIP_CACHE": 0.2468,
+        "THREAD_SCOPED_ONLY": 0.0565
+      }
+    },
+    {
+      "pair_id": "A",
+      "turn": 2,
+      "query": "Can you find the ACH code for my checking account?",
+      "routing_label": "SKIP_CACHE",
+      "routing_confidence": 0.4536,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.1145,
+        "SEMANTIC_OK": 0.4062,
+        "SKIP_CACHE": 0.4536,
+        "THREAD_SCOPED_ONLY": 0.0257
+      }
+    },
+    {
+      "pair_id": "B",
+      "turn": 1,
+      "query": "I need to cancel a pending Zelle payment.",
+      "routing_label": "SKIP_CACHE",
+      "routing_confidence": 0.4302,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0094,
+        "SEMANTIC_OK": 0.2798,
+        "SKIP_CACHE": 0.4302,
+        "THREAD_SCOPED_ONLY": 0.2806
+      }
+    },
+    {
+      "pair_id": "B",
+      "turn": 2,
+      "query": "Stop the transfer I just sent through Zelle.",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.3474,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0508,
+        "SEMANTIC_OK": 0.2561,
+        "SKIP_CACHE": 0.3457,
+        "THREAD_SCOPED_ONLY": 0.3474
+      }
+    },
+    {
+      "pair_id": "C",
+      "turn": 1,
+      "query": "Does my savings account have a minimum balance fee?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.9209,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0204,
+        "SEMANTIC_OK": 0.9209,
+        "SKIP_CACHE": 0.0531,
+        "THREAD_SCOPED_ONLY": 0.0057
+      }
+    },
+    {
+      "pair_id": "C",
+      "turn": 2,
+      "query": "Will I get charged if my savings balance drops too low?",
+      "routing_label": "SKIP_CACHE",
+      "routing_confidence": 0.5224,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0092,
+        "SEMANTIC_OK": 0.3434,
+        "SKIP_CACHE": 0.5224,
+        "THREAD_SCOPED_ONLY": 0.125
+      }
+    }
+  ],
+  "summary_by_threshold": [
+    {
+      "semantic_threshold": 0.86,
+      "passed_pairs": 1,
+      "total_pairs": 3,
+      "second_turn_sources": {
+        "A": "live",
+        "B": "live",
+        "C": "live"
+      },
+      "pair_similarities": {
+        "A": 0.5878,
+        "B": 0.6756,
+        "C": 0.6891
+      }
+    },
+    {
+      "semantic_threshold": 0.82,
+      "passed_pairs": 1,
+      "total_pairs": 3,
+      "second_turn_sources": {
+        "A": "live",
+        "B": "live",
+        "C": "live"
+      },
+      "pair_similarities": {
+        "A": 0.5878,
+        "B": 0.6756,
+        "C": 0.6891
+      }
+    },
+    {
+      "semantic_threshold": 0.8,
+      "passed_pairs": 1,
+      "total_pairs": 3,
+      "second_turn_sources": {
+        "A": "live",
+        "B": "live",
+        "C": "live"
+      },
+      "pair_similarities": {
+        "A": 0.5878,
+        "B": 0.6756,
+        "C": 0.6891
+      }
+    },
+    {
+      "semantic_threshold": 0.78,
+      "passed_pairs": 1,
+      "total_pairs": 3,
+      "second_turn_sources": {
+        "A": "live",
+        "B": "live",
+        "C": "live"
+      },
+      "pair_similarities": {
+        "A": 0.5878,
+        "B": 0.6756,
+        "C": 0.6891
+      }
+    },
+    {
+      "semantic_threshold": 0.75,
+      "passed_pairs": 1,
+      "total_pairs": 3,
+      "second_turn_sources": {
+        "A": "live",
+        "B": "live",
+        "C": "live"
+      },
+      "pair_similarities": {
+        "A": 0.5878,
+        "B": 0.6756,
+        "C": 0.6891
+      }
+    }
+  ],
+  "replays_by_threshold": {
+    "0.86": [
+      {
+        "id": "A",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "What's my account routing number?",
+        "q2": "Can you find the ACH code for my checking account?",
+        "expected_behavior": "semantic_reuse_allowed",
+        "notes": "Same intent if treated as stable banking info, though the 'my account' wording can look account-specific.",
+        "semantic_threshold": 0.86,
+        "pair_embedding_similarity": 0.5878,
+        "passed": false,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "What's my account routing number?",
+            "source": "live",
+            "latency_ms": 556.575,
+            "routing_label": "EXACT_ONLY",
+            "routing_confidence": 0.6574,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": true,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=A query=What's my account routing number?"
+          },
+          {
+            "turn": 2,
+            "query": "Can you find the ACH code for my checking account?",
+            "source": "live",
+            "latency_ms": 4.522,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.4536,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=A query=Can you find the ACH code for my checking account?"
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "I need to cancel a pending Zelle payment.",
+        "q2": "Stop the transfer I just sent through Zelle.",
+        "expected_behavior": "skip_cache_no_reuse",
+        "notes": "Payment cancellation is a mutable/action request; similar wording should not cause cached reuse.",
+        "semantic_threshold": 0.86,
+        "pair_embedding_similarity": 0.6756,
+        "passed": true,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "I need to cancel a pending Zelle payment.",
+            "source": "live",
+            "latency_ms": 2.441,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.4302,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=B query=I need to cancel a pending Zelle payment."
+          },
+          {
+            "turn": 2,
+            "query": "Stop the transfer I just sent through Zelle.",
+            "source": "live",
+            "latency_ms": 184.961,
+            "routing_label": "THREAD_SCOPED_ONLY",
+            "routing_confidence": 0.3474,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=B query=Stop the transfer I just sent through Zelle."
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "Does my savings account have a minimum balance fee?",
+        "q2": "Will I get charged if my savings balance drops too low?",
+        "expected_behavior": "semantic_reuse_allowed",
+        "notes": "Same reusable fee-policy intent.",
+        "semantic_threshold": 0.86,
+        "pair_embedding_similarity": 0.6891,
+        "passed": false,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "Does my savings account have a minimum balance fee?",
+            "source": "live",
+            "latency_ms": 210.892,
+            "routing_label": "SEMANTIC_OK",
+            "routing_confidence": 0.9209,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": true,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=C query=Does my savings account have a minimum balance fee?"
+          },
+          {
+            "turn": 2,
+            "query": "Will I get charged if my savings balance drops too low?",
+            "source": "live",
+            "latency_ms": 4.648,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.5224,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=C query=Will I get charged if my savings balance drops too low?"
+          }
+        ]
+      }
+    ],
+    "0.82": [
+      {
+        "id": "A",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "What's my account routing number?",
+        "q2": "Can you find the ACH code for my checking account?",
+        "expected_behavior": "semantic_reuse_allowed",
+        "notes": "Same intent if treated as stable banking info, though the 'my account' wording can look account-specific.",
+        "semantic_threshold": 0.82,
+        "pair_embedding_similarity": 0.5878,
+        "passed": false,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "What's my account routing number?",
+            "source": "live",
+            "latency_ms": 5.412,
+            "routing_label": "EXACT_ONLY",
+            "routing_confidence": 0.6574,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": true,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=A query=What's my account routing number?"
+          },
+          {
+            "turn": 2,
+            "query": "Can you find the ACH code for my checking account?",
+            "source": "live",
+            "latency_ms": 2.187,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.4536,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=A query=Can you find the ACH code for my checking account?"
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "I need to cancel a pending Zelle payment.",
+        "q2": "Stop the transfer I just sent through Zelle.",
+        "expected_behavior": "skip_cache_no_reuse",
+        "notes": "Payment cancellation is a mutable/action request; similar wording should not cause cached reuse.",
+        "semantic_threshold": 0.82,
+        "pair_embedding_similarity": 0.6756,
+        "passed": true,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "I need to cancel a pending Zelle payment.",
+            "source": "live",
+            "latency_ms": 1.494,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.4302,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=B query=I need to cancel a pending Zelle payment."
+          },
+          {
+            "turn": 2,
+            "query": "Stop the transfer I just sent through Zelle.",
+            "source": "live",
+            "latency_ms": 1.935,
+            "routing_label": "THREAD_SCOPED_ONLY",
+            "routing_confidence": 0.3474,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=B query=Stop the transfer I just sent through Zelle."
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "Does my savings account have a minimum balance fee?",
+        "q2": "Will I get charged if my savings balance drops too low?",
+        "expected_behavior": "semantic_reuse_allowed",
+        "notes": "Same reusable fee-policy intent.",
+        "semantic_threshold": 0.82,
+        "pair_embedding_similarity": 0.6891,
+        "passed": false,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "Does my savings account have a minimum balance fee?",
+            "source": "live",
+            "latency_ms": 2.955,
+            "routing_label": "SEMANTIC_OK",
+            "routing_confidence": 0.9209,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": true,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=C query=Does my savings account have a minimum balance fee?"
+          },
+          {
+            "turn": 2,
+            "query": "Will I get charged if my savings balance drops too low?",
+            "source": "live",
+            "latency_ms": 2.193,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.5224,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=C query=Will I get charged if my savings balance drops too low?"
+          }
+        ]
+      }
+    ],
+    "0.8": [
+      {
+        "id": "A",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "What's my account routing number?",
+        "q2": "Can you find the ACH code for my checking account?",
+        "expected_behavior": "semantic_reuse_allowed",
+        "notes": "Same intent if treated as stable banking info, though the 'my account' wording can look account-specific.",
+        "semantic_threshold": 0.8,
+        "pair_embedding_similarity": 0.5878,
+        "passed": false,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "What's my account routing number?",
+            "source": "live",
+            "latency_ms": 1.575,
+            "routing_label": "EXACT_ONLY",
+            "routing_confidence": 0.6574,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": true,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=A query=What's my account routing number?"
+          },
+          {
+            "turn": 2,
+            "query": "Can you find the ACH code for my checking account?",
+            "source": "live",
+            "latency_ms": 1.767,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.4536,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=A query=Can you find the ACH code for my checking account?"
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "I need to cancel a pending Zelle payment.",
+        "q2": "Stop the transfer I just sent through Zelle.",
+        "expected_behavior": "skip_cache_no_reuse",
+        "notes": "Payment cancellation is a mutable/action request; similar wording should not cause cached reuse.",
+        "semantic_threshold": 0.8,
+        "pair_embedding_similarity": 0.6756,
+        "passed": true,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "I need to cancel a pending Zelle payment.",
+            "source": "live",
+            "latency_ms": 2.945,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.4302,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=B query=I need to cancel a pending Zelle payment."
+          },
+          {
+            "turn": 2,
+            "query": "Stop the transfer I just sent through Zelle.",
+            "source": "live",
+            "latency_ms": 2.031,
+            "routing_label": "THREAD_SCOPED_ONLY",
+            "routing_confidence": 0.3474,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=B query=Stop the transfer I just sent through Zelle."
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "Does my savings account have a minimum balance fee?",
+        "q2": "Will I get charged if my savings balance drops too low?",
+        "expected_behavior": "semantic_reuse_allowed",
+        "notes": "Same reusable fee-policy intent.",
+        "semantic_threshold": 0.8,
+        "pair_embedding_similarity": 0.6891,
+        "passed": false,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "Does my savings account have a minimum balance fee?",
+            "source": "live",
+            "latency_ms": 1.726,
+            "routing_label": "SEMANTIC_OK",
+            "routing_confidence": 0.9209,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": true,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=C query=Does my savings account have a minimum balance fee?"
+          },
+          {
+            "turn": 2,
+            "query": "Will I get charged if my savings balance drops too low?",
+            "source": "live",
+            "latency_ms": 2.795,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.5224,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=C query=Will I get charged if my savings balance drops too low?"
+          }
+        ]
+      }
+    ],
+    "0.78": [
+      {
+        "id": "A",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "What's my account routing number?",
+        "q2": "Can you find the ACH code for my checking account?",
+        "expected_behavior": "semantic_reuse_allowed",
+        "notes": "Same intent if treated as stable banking info, though the 'my account' wording can look account-specific.",
+        "semantic_threshold": 0.78,
+        "pair_embedding_similarity": 0.5878,
+        "passed": false,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "What's my account routing number?",
+            "source": "live",
+            "latency_ms": 2.11,
+            "routing_label": "EXACT_ONLY",
+            "routing_confidence": 0.6574,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": true,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=A query=What's my account routing number?"
+          },
+          {
+            "turn": 2,
+            "query": "Can you find the ACH code for my checking account?",
+            "source": "live",
+            "latency_ms": 1.497,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.4536,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=A query=Can you find the ACH code for my checking account?"
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "I need to cancel a pending Zelle payment.",
+        "q2": "Stop the transfer I just sent through Zelle.",
+        "expected_behavior": "skip_cache_no_reuse",
+        "notes": "Payment cancellation is a mutable/action request; similar wording should not cause cached reuse.",
+        "semantic_threshold": 0.78,
+        "pair_embedding_similarity": 0.6756,
+        "passed": true,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "I need to cancel a pending Zelle payment.",
+            "source": "live",
+            "latency_ms": 1.568,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.4302,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=B query=I need to cancel a pending Zelle payment."
+          },
+          {
+            "turn": 2,
+            "query": "Stop the transfer I just sent through Zelle.",
+            "source": "live",
+            "latency_ms": 2.091,
+            "routing_label": "THREAD_SCOPED_ONLY",
+            "routing_confidence": 0.3474,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=B query=Stop the transfer I just sent through Zelle."
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "Does my savings account have a minimum balance fee?",
+        "q2": "Will I get charged if my savings balance drops too low?",
+        "expected_behavior": "semantic_reuse_allowed",
+        "notes": "Same reusable fee-policy intent.",
+        "semantic_threshold": 0.78,
+        "pair_embedding_similarity": 0.6891,
+        "passed": false,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "Does my savings account have a minimum balance fee?",
+            "source": "live",
+            "latency_ms": 2.714,
+            "routing_label": "SEMANTIC_OK",
+            "routing_confidence": 0.9209,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": true,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=C query=Does my savings account have a minimum balance fee?"
+          },
+          {
+            "turn": 2,
+            "query": "Will I get charged if my savings balance drops too low?",
+            "source": "live",
+            "latency_ms": 1.586,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.5224,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=C query=Will I get charged if my savings balance drops too low?"
+          }
+        ]
+      }
+    ],
+    "0.75": [
+      {
+        "id": "A",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "What's my account routing number?",
+        "q2": "Can you find the ACH code for my checking account?",
+        "expected_behavior": "semantic_reuse_allowed",
+        "notes": "Same intent if treated as stable banking info, though the 'my account' wording can look account-specific.",
+        "semantic_threshold": 0.75,
+        "pair_embedding_similarity": 0.5878,
+        "passed": false,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "What's my account routing number?",
+            "source": "live",
+            "latency_ms": 1.564,
+            "routing_label": "EXACT_ONLY",
+            "routing_confidence": 0.6574,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": true,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=A query=What's my account routing number?"
+          },
+          {
+            "turn": 2,
+            "query": "Can you find the ACH code for my checking account?",
+            "source": "live",
+            "latency_ms": 2.036,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.4536,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=A query=Can you find the ACH code for my checking account?"
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "I need to cancel a pending Zelle payment.",
+        "q2": "Stop the transfer I just sent through Zelle.",
+        "expected_behavior": "skip_cache_no_reuse",
+        "notes": "Payment cancellation is a mutable/action request; similar wording should not cause cached reuse.",
+        "semantic_threshold": 0.75,
+        "pair_embedding_similarity": 0.6756,
+        "passed": true,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "I need to cancel a pending Zelle payment.",
+            "source": "live",
+            "latency_ms": 2.168,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.4302,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=B query=I need to cancel a pending Zelle payment."
+          },
+          {
+            "turn": 2,
+            "query": "Stop the transfer I just sent through Zelle.",
+            "source": "live",
+            "latency_ms": 1.647,
+            "routing_label": "THREAD_SCOPED_ONLY",
+            "routing_confidence": 0.3474,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=B query=Stop the transfer I just sent through Zelle."
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "category": "Semantic Duplicates / Variation Tolerance",
+        "q1": "Does my savings account have a minimum balance fee?",
+        "q2": "Will I get charged if my savings balance drops too low?",
+        "expected_behavior": "semantic_reuse_allowed",
+        "notes": "Same reusable fee-policy intent.",
+        "semantic_threshold": 0.75,
+        "pair_embedding_similarity": 0.6891,
+        "passed": false,
+        "observed_second_turn_source": "live",
+        "turns": [
+          {
+            "turn": 1,
+            "query": "Does my savings account have a minimum balance fee?",
+            "source": "live",
+            "latency_ms": 1.644,
+            "routing_label": "SEMANTIC_OK",
+            "routing_confidence": 0.9209,
+            "semantic_lookup_attempted": true,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": true,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=1 pair=C query=Does my savings account have a minimum balance fee?"
+          },
+          {
+            "turn": 2,
+            "query": "Will I get charged if my savings balance drops too low?",
+            "source": "live",
+            "latency_ms": 1.999,
+            "routing_label": "SKIP_CACHE",
+            "routing_confidence": 0.5224,
+            "semantic_lookup_attempted": false,
+            "candidate_count": 0,
+            "top_candidate_similarity": null,
+            "semantic_post_ann_reject_reason": null,
+            "rejected_reasons": [],
+            "insert_performed": false,
+            "exact_cache_hit": false,
+            "payload_answer": "live_origin=2 pair=C query=Will I get charged if my savings balance drops too low?"
+          }
+        ]
+      }
+    ]
+  }
+}

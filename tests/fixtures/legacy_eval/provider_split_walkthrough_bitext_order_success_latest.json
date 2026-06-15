@@ -1,0 +1,388 @@
+{
+  "attempt": 1,
+  "turns": [
+    {
+      "turn_index": 1,
+      "user_message": "Can I cancel an online order I placed this morning?",
+      "source": "llm",
+      "answer": "Answer for ecommerce / lookup.",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "444b7c8a1462542ccc996ac5b046e52aa87f29966b2aa9ed4091371edd32de32"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "bitext_order_1",
+          "user_message": "Can I cancel an online order I placed this morning?",
+          "history_len": 0
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "STATIC_KNOWLEDGE",
+          "scope": "SLOW_MOVING",
+          "query_class": "explanatory",
+          "intent": {
+            "action": "lookup",
+            "domain": "ecommerce",
+            "constraints": {
+              "filters": {},
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              }
+            },
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {
+              "type": "order",
+              "status": "online"
+            },
+            "filters": {},
+            "attributes": {},
+            "predicates": [
+              {
+                "field": "order_time",
+                "op": "is",
+                "value": "this morning",
+                "unit": "time"
+              }
+            ],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 0,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": null,
+          "canonical_query_text": "domain ecommerce ; action lookup ; timeframe none",
+          "fingerprint": "444b7c8a1462542ccc996ac5b046e52aa87f29966b2aa9ed4091371edd32de32"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": true,
+          "semantic_text": "domain ecommerce ; action lookup ; timeframe none",
+          "exact_fields": {
+            "session_id": "bitext_order_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "domain": "ecommerce",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {
+              "status": "online",
+              "type": "order"
+            },
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [
+              {
+                "field": "order_time",
+                "op": "is",
+                "value": "this morning",
+                "unit": "time"
+              }
+            ],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "exact_lookup_miss",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "reason": "local worthiness check after provider intent extraction"
+          },
+          "inserted": true
+        }
+      },
+      "faiss_search_after_response": [
+        {
+          "rank": 1,
+          "similarity": 1.0000001192092896,
+          "key": "444b7c8a1462542ccc996ac5b046e52aa87f29966b2aa9ed4091371edd32de32",
+          "candidate_semantic_text": "domain ecommerce ; action lookup ; timeframe none",
+          "candidate_exact_fields": {
+            "session_id": "bitext_order_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "domain": "ecommerce",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {
+              "status": "online",
+              "type": "order"
+            },
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [
+              {
+                "field": "order_time",
+                "op": "is",
+                "value": "this morning",
+                "unit": "time"
+              }
+            ],
+            "strict_entities": []
+          },
+          "exact_match": true,
+          "answer": "Answer for ecommerce / lookup."
+        }
+      ]
+    },
+    {
+      "turn_index": 2,
+      "user_message": "Is it still possible to cancel an order I submitted earlier today?",
+      "source": "cache",
+      "answer": "Answer for ecommerce / lookup.",
+      "cache": {
+        "hit": true,
+        "similarity": 1.0000001192092896,
+        "fingerprint": "444b7c8a1462542ccc996ac5b046e52aa87f29966b2aa9ed4091371edd32de32"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "bitext_order_1",
+          "user_message": "Is it still possible to cancel an order I submitted earlier today?",
+          "history_len": 2
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "STATIC_KNOWLEDGE",
+          "scope": "SLOW_MOVING",
+          "query_class": "explanatory",
+          "intent": {
+            "action": "lookup",
+            "domain": "ecommerce",
+            "constraints": {
+              "filters": {},
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              }
+            },
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {
+              "type": "order",
+              "status": "online"
+            },
+            "filters": {},
+            "attributes": {},
+            "predicates": [
+              {
+                "field": "order_time",
+                "op": "is",
+                "value": "this morning",
+                "unit": "time"
+              }
+            ],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 0,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "query_class": "explanatory",
+            "normalized_query": {
+              "subject": {
+                "type": "order",
+                "status": "online"
+              },
+              "filters": {},
+              "attributes": {},
+              "predicates": [
+                {
+                  "field": "order_time",
+                  "op": "is",
+                  "value": "this morning",
+                  "unit": "time"
+                }
+              ],
+              "mutation_patch": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "sufficient",
+              "raw_constraint_cues": 0,
+              "recovered_constraints": 0
+            },
+            "canonical_query_text": "domain ecommerce ; action lookup ; timeframe none",
+            "intent": {
+              "domain": "ecommerce",
+              "action": "lookup",
+              "entities": [],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "none",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "other",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain ecommerce ; action lookup ; timeframe none",
+          "fingerprint": "444b7c8a1462542ccc996ac5b046e52aa87f29966b2aa9ed4091371edd32de32"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": true,
+          "semantic_text": "domain ecommerce ; action lookup ; timeframe none",
+          "exact_fields": {
+            "session_id": "bitext_order_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "domain": "ecommerce",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {
+              "status": "online",
+              "type": "order"
+            },
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [
+              {
+                "field": "order_time",
+                "op": "is",
+                "value": "this morning",
+                "unit": "time"
+              }
+            ],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "exact_lookup_hit",
+          "source": "cache",
+          "similarity": 1.0000001192092896
+        },
+        "insert": null
+      },
+      "faiss_search_after_response": [
+        {
+          "rank": 1,
+          "similarity": 1.0000001192092896,
+          "key": "444b7c8a1462542ccc996ac5b046e52aa87f29966b2aa9ed4091371edd32de32",
+          "candidate_semantic_text": "domain ecommerce ; action lookup ; timeframe none",
+          "candidate_exact_fields": {
+            "session_id": "bitext_order_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "domain": "ecommerce",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {
+              "status": "online",
+              "type": "order"
+            },
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [
+              {
+                "field": "order_time",
+                "op": "is",
+                "value": "this morning",
+                "unit": "time"
+              }
+            ],
+            "strict_entities": []
+          },
+          "exact_match": true,
+          "answer": "Answer for ecommerce / lookup."
+        }
+      ]
+    }
+  ]
+}

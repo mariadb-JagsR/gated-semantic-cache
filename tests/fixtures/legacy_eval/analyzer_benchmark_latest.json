@@ -1,0 +1,2917 @@
+{
+  "dataset": "novel_domain",
+  "rows": [
+    {
+      "case_id": "healthcare_beta_blockers",
+      "backend": "mock",
+      "user_message": "What are the contraindications for prescribing beta blockers to a patient with asthma?",
+      "action": "other",
+      "domain": "general",
+      "query_class": "generic",
+      "state_score": 0,
+      "action_expected": false,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": null,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action other ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "other",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "generic",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 1,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action other ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "other",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "healthcare_beta_blockers",
+      "backend": "provider_split",
+      "user_message": "What are the contraindications for prescribing beta blockers to a patient with asthma?",
+      "action": "lookup",
+      "domain": "healthcare",
+      "query_class": "explanatory",
+      "state_score": 4,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain healthcare ; action lookup ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "name": "beta blockers",
+          "type": "medication"
+        },
+        "filters": {},
+        "attributes": {
+          "condition": "asthma"
+        },
+        "predicates": [
+          {
+            "field": "contraindications",
+            "op": "list",
+            "value": "beta blockers",
+            "unit": null
+          }
+        ],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "lookup",
+        "domain": "healthcare",
+        "constraints": {
+          "filters": {},
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          }
+        },
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {
+            "name": "beta blockers",
+            "type": "medication"
+          },
+          "filters": {},
+          "attributes": {
+            "condition": "asthma"
+          },
+          "predicates": [
+            {
+              "field": "contraindications",
+              "op": "list",
+              "value": "beta blockers",
+              "unit": null
+            }
+          ],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain healthcare ; action lookup ; timeframe none",
+        "intent": {
+          "domain": "healthcare",
+          "action": "lookup",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "healthcare_beta_blockers",
+      "backend": "unified_llm",
+      "user_message": "What are the contraindications for prescribing beta blockers to a patient with asthma?",
+      "action": "other",
+      "domain": "general",
+      "query_class": "generic",
+      "state_score": 0,
+      "action_expected": false,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action other ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "other",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "generic",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 1,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action other ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "other",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "legal_fair_use",
+      "backend": "mock",
+      "user_message": "Can you summarize the difference between copyright infringement and fair use?",
+      "action": "summarize",
+      "domain": "general",
+      "query_class": "explanatory",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": null,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action summarize ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "summarize",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 1,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action summarize ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "summarize",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "legal_fair_use",
+      "backend": "provider_split",
+      "user_message": "Can you summarize the difference between copyright infringement and fair use?",
+      "action": "summarize",
+      "domain": "legal",
+      "query_class": "explanatory",
+      "state_score": 4,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain legal ; action summarize ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "type": "legal concepts",
+          "name": "copyright"
+        },
+        "filters": {},
+        "attributes": {
+          "summary": true
+        },
+        "predicates": [
+          {
+            "field": "type",
+            "op": "equals",
+            "value": "fair use",
+            "unit": null
+          }
+        ],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "summarize",
+        "domain": "legal",
+        "constraints": {
+          "filters": {},
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          }
+        },
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {
+            "type": "legal concepts",
+            "name": "copyright"
+          },
+          "filters": {},
+          "attributes": {
+            "summary": true
+          },
+          "predicates": [
+            {
+              "field": "type",
+              "op": "equals",
+              "value": "fair use",
+              "unit": null
+            }
+          ],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain legal ; action summarize ; timeframe none",
+        "intent": {
+          "domain": "legal",
+          "action": "summarize",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "legal_fair_use",
+      "backend": "unified_llm",
+      "user_message": "Can you summarize the difference between copyright infringement and fair use?",
+      "action": "summarize",
+      "domain": "general",
+      "query_class": "explanatory",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action summarize ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "summarize",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 1,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action summarize ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "summarize",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "networking_ingress_502",
+      "backend": "mock",
+      "user_message": "Why is my Kubernetes ingress returning 502 errors after the latest deploy?",
+      "action": "other",
+      "domain": "general",
+      "query_class": "generic",
+      "state_score": 0,
+      "action_expected": false,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": null,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action other ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "other",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "generic",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 1,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action other ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "other",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "networking_ingress_502",
+      "backend": "provider_split",
+      "user_message": "Why is my Kubernetes ingress returning 502 errors after the latest deploy?",
+      "action": "explain",
+      "domain": "networking",
+      "query_class": "explanatory",
+      "state_score": 3,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain networking ; action explain ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "type": "Kubernetes ingress",
+          "state": "returning 502 errors"
+        },
+        "filters": {},
+        "attributes": {},
+        "predicates": [
+          {
+            "field": "deploy",
+            "op": "after",
+            "value": "latest",
+            "unit": null
+          }
+        ],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "explain",
+        "domain": "networking",
+        "constraints": {
+          "filters": {},
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          }
+        },
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "DYNAMIC_FACT",
+        "scope": "REALTIME",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {
+            "type": "Kubernetes ingress",
+            "state": "returning 502 errors"
+          },
+          "filters": {},
+          "attributes": {},
+          "predicates": [
+            {
+              "field": "deploy",
+              "op": "after",
+              "value": "latest",
+              "unit": null
+            }
+          ],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain networking ; action explain ; timeframe none",
+        "intent": {
+          "domain": "networking",
+          "action": "explain",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "networking_ingress_502",
+      "backend": "unified_llm",
+      "user_message": "Why is my Kubernetes ingress returning 502 errors after the latest deploy?",
+      "action": "other",
+      "domain": "general",
+      "query_class": "generic",
+      "state_score": 0,
+      "action_expected": false,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action other ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "other",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "generic",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 1,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action other ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "other",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "hr_benefits_switch",
+      "backend": "mock",
+      "user_message": "How do I switch an employee from part-time to full-time benefits enrollment?",
+      "action": "how_to",
+      "domain": "general",
+      "query_class": "explanatory",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": null,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action how_to ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "how_to",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action how_to ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "how_to",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "hr_benefits_switch",
+      "backend": "provider_split",
+      "user_message": "How do I switch an employee from part-time to full-time benefits enrollment?",
+      "action": "how_to",
+      "domain": "hr",
+      "query_class": "explanatory",
+      "state_score": 3,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain hr ; action how_to ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "type": "employee",
+          "status": "part-time"
+        },
+        "filters": {},
+        "attributes": {
+          "benefits": "full-time"
+        },
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "how_to",
+        "domain": "hr",
+        "constraints": {
+          "filters": {},
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          }
+        },
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "HOW_TO",
+        "scope": "STATIC",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {
+            "type": "employee",
+            "status": "part-time"
+          },
+          "filters": {},
+          "attributes": {
+            "benefits": "full-time"
+          },
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain hr ; action how_to ; timeframe none",
+        "intent": {
+          "domain": "hr",
+          "action": "how_to",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "hr_benefits_switch",
+      "backend": "unified_llm",
+      "user_message": "How do I switch an employee from part-time to full-time benefits enrollment?",
+      "action": "how_to",
+      "domain": "hr",
+      "query_class": "explanatory",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain hr ; action how_to ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "how_to",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "hr",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain hr ; action how_to ; timeframe none",
+        "intent": {
+          "domain": "hr",
+          "action": "how_to",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "manufacturing_cnc_tolerance",
+      "backend": "mock",
+      "user_message": "List CNC machines that can hold 5 micron tolerance on titanium parts.",
+      "action": "list",
+      "domain": "general",
+      "query_class": "structured_retrieval",
+      "state_score": 1,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": null,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action list ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "category": "cnc"
+        },
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "list",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "structured_retrieval",
+        "normalized_query": {
+          "subject": {
+            "category": "cnc"
+          },
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 1,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action list ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "list",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "manufacturing_cnc_tolerance",
+      "backend": "provider_split",
+      "user_message": "List CNC machines that can hold 5 micron tolerance on titanium parts.",
+      "action": "list",
+      "domain": "manufacturing",
+      "query_class": "structured_retrieval",
+      "state_score": 4,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain manufacturing ; action list ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "category": "cnc",
+          "type": "CNC machines"
+        },
+        "filters": {},
+        "attributes": {
+          "tolerance": "5 micron",
+          "material": "titanium"
+        },
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "list",
+        "domain": "manufacturing",
+        "constraints": {
+          "filters": {},
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          }
+        },
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "structured_retrieval",
+        "normalized_query": {
+          "subject": {
+            "category": "cnc",
+            "type": "CNC machines"
+          },
+          "filters": {},
+          "attributes": {
+            "tolerance": "5 micron",
+            "material": "titanium"
+          },
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain manufacturing ; action list ; timeframe none",
+        "intent": {
+          "domain": "manufacturing",
+          "action": "list",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "manufacturing_cnc_tolerance",
+      "backend": "unified_llm",
+      "user_message": "List CNC machines that can hold 5 micron tolerance on titanium parts.",
+      "action": "list",
+      "domain": "general",
+      "query_class": "structured_retrieval",
+      "state_score": 1,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action list ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "category": "cnc"
+        },
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "list",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "structured_retrieval",
+        "normalized_query": {
+          "subject": {
+            "category": "cnc"
+          },
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 1,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action list ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "list",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "education_world_wars",
+      "backend": "mock",
+      "user_message": "Compare the causes of World War I and World War II in one concise table.",
+      "action": "compare",
+      "domain": "general",
+      "query_class": "generic",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": null,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action compare ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "compare",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "generic",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action compare ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "compare",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "education_world_wars",
+      "backend": "provider_split",
+      "user_message": "Compare the causes of World War I and World War II in one concise table.",
+      "action": "compare",
+      "domain": "history",
+      "query_class": "generic",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain history ; action compare ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "compare",
+        "domain": "history",
+        "constraints": {
+          "filters": {},
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          }
+        },
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "generic",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain history ; action compare ; timeframe none",
+        "intent": {
+          "domain": "history",
+          "action": "compare",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "education_world_wars",
+      "backend": "unified_llm",
+      "user_message": "Compare the causes of World War I and World War II in one concise table.",
+      "action": "compare",
+      "domain": "general",
+      "query_class": "generic",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action compare ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "compare",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "generic",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action compare ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "compare",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "real_estate_condos",
+      "backend": "mock",
+      "user_message": "Find 3 bedroom condos in Austin with HOA under 400 dollars and a garage.",
+      "action": "lookup",
+      "domain": "general",
+      "query_class": "structured_retrieval",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": false,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": null,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action lookup ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "lookup",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "structured_retrieval",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "missing",
+          "raw_constraint_cues": 3,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action lookup ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "lookup",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "real_estate_condos",
+      "backend": "provider_split",
+      "user_message": "Find 3 bedroom condos in Austin with HOA under 400 dollars and a garage.",
+      "action": "lookup",
+      "domain": "real estate",
+      "query_class": "structured_retrieval",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": false,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain real estate ; action lookup ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "lookup",
+        "domain": "real estate",
+        "constraints": {
+          "filters": {},
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          }
+        },
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "DYNAMIC_FACT",
+        "scope": "REALTIME",
+        "query_class": "structured_retrieval",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "missing",
+          "raw_constraint_cues": 3,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain real estate ; action lookup ; timeframe none",
+        "intent": {
+          "domain": "real estate",
+          "action": "lookup",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "real_estate_condos",
+      "backend": "unified_llm",
+      "user_message": "Find 3 bedroom condos in Austin with HOA under 400 dollars and a garage.",
+      "action": "lookup",
+      "domain": "real estate",
+      "query_class": "structured_retrieval",
+      "state_score": 5,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain real estate ; action lookup ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "type": "condo",
+          "bedrooms": 3
+        },
+        "filters": {
+          "location": "Austin",
+          "hoa": {
+            "max": 400
+          },
+          "garage": true
+        },
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "lookup",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "real estate",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "structured_retrieval",
+        "normalized_query": {
+          "subject": {
+            "type": "condo",
+            "bedrooms": 3
+          },
+          "filters": {
+            "location": "Austin",
+            "hoa": {
+              "max": 400
+            },
+            "garage": true
+          },
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "missing",
+          "raw_constraint_cues": 3,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain real estate ; action lookup ; timeframe none",
+        "intent": {
+          "domain": "real estate",
+          "action": "lookup",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "biology_crispr",
+      "backend": "mock",
+      "user_message": "Explain how CRISPR differs from older gene-editing techniques.",
+      "action": "explain",
+      "domain": "general",
+      "query_class": "explanatory",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": null,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action explain ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "explain",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action explain ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "explain",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "biology_crispr",
+      "backend": "provider_split",
+      "user_message": "Explain how CRISPR differs from older gene-editing techniques.",
+      "action": "explain",
+      "domain": "biology",
+      "query_class": "explanatory",
+      "state_score": 3,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain biology ; action explain ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "name": "CRISPR",
+          "type": "gene-editing technique"
+        },
+        "filters": {},
+        "attributes": {},
+        "predicates": [
+          {
+            "field": "comparison",
+            "op": "differs_from",
+            "value": "older gene-editing techniques",
+            "unit": null
+          }
+        ],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "explain",
+        "domain": "biology",
+        "constraints": {
+          "filters": {},
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          }
+        },
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {
+            "name": "CRISPR",
+            "type": "gene-editing technique"
+          },
+          "filters": {},
+          "attributes": {},
+          "predicates": [
+            {
+              "field": "comparison",
+              "op": "differs_from",
+              "value": "older gene-editing techniques",
+              "unit": null
+            }
+          ],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain biology ; action explain ; timeframe none",
+        "intent": {
+          "domain": "biology",
+          "action": "explain",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "biology_crispr",
+      "backend": "unified_llm",
+      "user_message": "Explain how CRISPR differs from older gene-editing techniques.",
+      "action": "explain",
+      "domain": "general",
+      "query_class": "explanatory",
+      "state_score": 0,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action explain ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "explain",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action explain ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "explain",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "finance_muni_bonds",
+      "backend": "mock",
+      "user_message": "Show municipal bonds yielding above 4 percent with duration under 7 years.",
+      "action": "list",
+      "domain": "general",
+      "query_class": "structured_retrieval",
+      "state_score": 1,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": null,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action list ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "category": "municipal"
+        },
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "list",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "structured_retrieval",
+        "normalized_query": {
+          "subject": {
+            "category": "municipal"
+          },
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "missing",
+          "raw_constraint_cues": 3,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action list ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "list",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "finance_muni_bonds",
+      "backend": "provider_split",
+      "user_message": "Show municipal bonds yielding above 4 percent with duration under 7 years.",
+      "action": "list",
+      "domain": "finance",
+      "query_class": "structured_retrieval",
+      "state_score": 1,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain finance ; action list ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "category": "municipal"
+        },
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "list",
+        "domain": "finance",
+        "constraints": {
+          "filters": {},
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          }
+        },
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "DYNAMIC_FACT",
+        "scope": "REALTIME",
+        "query_class": "structured_retrieval",
+        "normalized_query": {
+          "subject": {
+            "category": "municipal"
+          },
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "missing",
+          "raw_constraint_cues": 3,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain finance ; action list ; timeframe none",
+        "intent": {
+          "domain": "finance",
+          "action": "list",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "finance_muni_bonds",
+      "backend": "unified_llm",
+      "user_message": "Show municipal bonds yielding above 4 percent with duration under 7 years.",
+      "action": "list",
+      "domain": "general",
+      "query_class": "structured_retrieval",
+      "state_score": 1,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action list ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "category": "municipal"
+        },
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "list",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "structured_retrieval",
+        "normalized_query": {
+          "subject": {
+            "category": "municipal"
+          },
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "missing",
+          "raw_constraint_cues": 3,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action list ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "list",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "security_saml_tenant",
+      "backend": "mock",
+      "user_message": "What should I check first if SAML login started failing only for one tenant?",
+      "action": "other",
+      "domain": "general",
+      "query_class": "generic",
+      "state_score": 0,
+      "action_expected": false,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": null,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action other ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "other",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "generic",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action other ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "other",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "security_saml_tenant",
+      "backend": "provider_split",
+      "user_message": "What should I check first if SAML login started failing only for one tenant?",
+      "action": "lookup",
+      "domain": "support",
+      "query_class": "explanatory",
+      "state_score": 4,
+      "action_expected": true,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": true,
+      "should_attempt_insert": true,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain support ; action lookup ; timeframe none",
+      "normalized_query": {
+        "subject": {
+          "type": "SAML login",
+          "specifics": "one tenant"
+        },
+        "filters": {},
+        "attributes": {},
+        "predicates": [
+          {
+            "field": "login_status",
+            "op": "failed",
+            "value": "true",
+            "unit": null
+          },
+          {
+            "field": "tenant",
+            "op": "specific",
+            "value": "one",
+            "unit": null
+          }
+        ],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "lookup",
+        "domain": "support",
+        "constraints": {
+          "filters": {},
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          }
+        },
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "SLOW_MOVING",
+        "query_class": "explanatory",
+        "normalized_query": {
+          "subject": {
+            "type": "SAML login",
+            "specifics": "one tenant"
+          },
+          "filters": {},
+          "attributes": {},
+          "predicates": [
+            {
+              "field": "login_status",
+              "op": "failed",
+              "value": "true",
+              "unit": null
+            },
+            {
+              "field": "tenant",
+              "op": "specific",
+              "value": "one",
+              "unit": null
+            }
+          ],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain support ; action lookup ; timeframe none",
+        "intent": {
+          "domain": "support",
+          "action": "lookup",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "case_id": "security_saml_tenant",
+      "backend": "unified_llm",
+      "user_message": "What should I check first if SAML login started failing only for one tenant?",
+      "action": "other",
+      "domain": "general",
+      "query_class": "generic",
+      "state_score": 0,
+      "action_expected": false,
+      "non_empty_state_ok": true,
+      "should_attempt_lookup": false,
+      "should_attempt_insert": false,
+      "provider_ok": true,
+      "provider_error": null,
+      "canonical_query_text": "domain general ; action other ; timeframe none",
+      "normalized_query": {
+        "subject": {},
+        "filters": {},
+        "attributes": {},
+        "predicates": [],
+        "mutation_patch": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": []
+        }
+      },
+      "intent": {
+        "action": "other",
+        "constraints": {
+          "sort": {
+            "by": "other",
+            "direction": "desc"
+          },
+          "timeframe": {
+            "type": "none",
+            "tz": "america/los_angeles"
+          },
+          "filters": {}
+        },
+        "domain": "general",
+        "entities": []
+      },
+      "state_snapshot": {
+        "logic": "NEW",
+        "relation_to_previous": "INDEPENDENT",
+        "answer_class": "STATIC_KNOWLEDGE",
+        "scope": "STATIC",
+        "query_class": "generic",
+        "normalized_query": {
+          "subject": {},
+          "filters": {},
+          "attributes": {},
+          "predicates": [],
+          "mutation_patch": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": []
+          }
+        },
+        "context_dependencies": {
+          "user_location_required": false,
+          "location_resolved": true
+        },
+        "constraint_recovery": {
+          "status": "sufficient",
+          "raw_constraint_cues": 0,
+          "recovered_constraints": 0
+        },
+        "canonical_query_text": "domain general ; action other ; timeframe none",
+        "intent": {
+          "domain": "general",
+          "action": "other",
+          "entities": [],
+          "constraints": {
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "sort": {
+              "by": "other",
+              "direction": "desc"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "mock": {
+      "rows": 10,
+      "action_expected_rate": 0.7,
+      "action_other_rate": 0.3,
+      "non_empty_state_rate": 0.2,
+      "structured_state_ok_rate": 0.9,
+      "lookup_allowed_rate": 0.5,
+      "insert_allowed_rate": 0.5,
+      "provider_success_rate": null
+    },
+    "provider_split": {
+      "rows": 10,
+      "action_expected_rate": 1.0,
+      "action_other_rate": 0.0,
+      "non_empty_state_rate": 0.8,
+      "structured_state_ok_rate": 0.9,
+      "lookup_allowed_rate": 0.8,
+      "insert_allowed_rate": 0.8,
+      "provider_success_rate": 1.0
+    },
+    "unified_llm": {
+      "rows": 10,
+      "action_expected_rate": 0.7,
+      "action_other_rate": 0.3,
+      "non_empty_state_rate": 0.3,
+      "structured_state_ok_rate": 1.0,
+      "lookup_allowed_rate": 0.5,
+      "insert_allowed_rate": 0.5,
+      "provider_success_rate": 1.0
+    }
+  }
+}

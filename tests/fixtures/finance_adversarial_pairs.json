@@ -1,0 +1,267 @@
+[
+  {
+    "category": "Buy vs sell (action polarity)",
+    "pairs": [
+      {
+        "a": "Should I buy Tesla stock right now?",
+        "b": "Should I sell Tesla stock right now?",
+        "why_different": "Opposite actions. Same answer would lead a user to take the wrong trade. 3-small often misses 'buy' vs 'sell' as the key token."
+      },
+      {
+        "a": "When is the best time to buy bonds?",
+        "b": "When is the best time to sell bonds?",
+        "why_different": "Entry vs exit timing follow opposite logic — buy when yields are high, sell when yields fall."
+      }
+    ]
+  },
+  {
+    "category": "Long vs short positions",
+    "pairs": [
+      {
+        "a": "How do I open a long position on oil futures?",
+        "b": "How do I open a short position on oil futures?",
+        "why_different": "Opposite directional bets. Margin requirements, risk profile, and order mechanics differ significantly."
+      },
+      {
+        "a": "What happens if I go long on the S&P 500?",
+        "b": "What happens if I go short on the S&P 500?",
+        "why_different": "Long has limited downside, unlimited upside; short is the reverse. Completely different risk explanations."
+      }
+    ]
+  },
+  {
+    "category": "Account type swaps",
+    "pairs": [
+      {
+        "a": "Can I withdraw from my Roth IRA without penalty?",
+        "b": "Can I withdraw from my Traditional IRA without penalty?",
+        "why_different": "Different rules: Roth allows contribution withdrawals anytime; Traditional triggers taxes and 10% penalty before 59½."
+      },
+      {
+        "a": "What's the contribution limit for a 401(k)?",
+        "b": "What's the contribution limit for a Roth IRA?",
+        "why_different": "$23,000 vs $7,000 (2024). Very different planning implications."
+      },
+      {
+        "a": "How do I roll over my 401(k) to an IRA?",
+        "b": "How do I roll over my IRA to a 401(k)?",
+        "why_different": "Direction reversed. Reverse rollovers have specific restrictions and aren't always permitted."
+      }
+    ]
+  },
+  {
+    "category": "Order type confusion",
+    "pairs": [
+      {
+        "a": "How do I place a market order on Apple stock?",
+        "b": "How do I place a limit order on Apple stock?",
+        "why_different": "Market = execute immediately at best price; limit = execute only at specified price or better. Same template, critical execution difference."
+      },
+      {
+        "a": "What is a stop-loss order?",
+        "b": "What is a stop-limit order?",
+        "why_different": "Stop-loss becomes a market order at trigger; stop-limit becomes a limit order. Behavior in fast markets is very different."
+      }
+    ]
+  },
+  {
+    "category": "Tax-event distinctions",
+    "pairs": [
+      {
+        "a": "What is the tax rate on short-term capital gains?",
+        "b": "What is the tax rate on long-term capital gains?",
+        "why_different": "Short-term taxed as ordinary income (up to 37%); long-term capped at 20%. Massive difference, same template."
+      },
+      {
+        "a": "Are dividends taxed as ordinary income?",
+        "b": "Are dividends taxed as capital gains?",
+        "why_different": "Depends on qualified vs non-qualified status — but the questions ask opposite framings. A cached answer to one misleads on the other."
+      }
+    ]
+  },
+  {
+    "category": "Risk direction (gain vs loss)",
+    "pairs": [
+      {
+        "a": "How do I calculate my profit on this trade?",
+        "b": "How do I calculate my loss on this trade?",
+        "why_different": "Same formula mechanically, but the framing implies different scenarios and tax treatments (loss harvesting, wash sales, etc.)."
+      },
+      {
+        "a": "What's my unrealized gain on AAPL?",
+        "b": "What's my realized gain on AAPL?",
+        "why_different": "Unrealized = paper, not taxable. Realized = sold, taxable event. Critical distinction the embedding will collapse."
+      }
+    ]
+  },
+  {
+    "category": "Asset class swaps within the same sentence frame",
+    "pairs": [
+      {
+        "a": "Should I invest in index funds or individual stocks?",
+        "b": "Should I invest in mutual funds or individual stocks?",
+        "why_different": "Index funds and mutual funds aren't the same (passive vs often-active, fee structures differ). The comparison and answer change."
+      },
+      {
+        "a": "What are the risks of investing in ETFs?",
+        "b": "What are the risks of investing in ETNs?",
+        "why_different": "ETF holds underlying assets; ETN is unsecured debt of the issuer (credit risk). One-letter swap, very different risk profile."
+      }
+    ]
+  },
+  {
+    "category": "Interest rate direction",
+    "pairs": [
+      {
+        "a": "What happens to bond prices when interest rates rise?",
+        "b": "What happens to bond prices when interest rates fall?",
+        "why_different": "Inverse relationship. Bond prices fall when rates rise, rise when rates fall. Opposite answers."
+      },
+      {
+        "a": "Should I refinance when rates go down?",
+        "b": "Should I refinance when rates go up?",
+        "why_different": "Generally yes vs generally no. Opposite advice."
+      }
+    ]
+  },
+  {
+    "category": "Pre-tax vs post-tax",
+    "pairs": [
+      {
+        "a": "How much should I contribute to my pre-tax 401(k)?",
+        "b": "How much should I contribute to my Roth 401(k)?",
+        "why_different": "Different tax treatment now vs in retirement. Optimal contribution strategy depends on current vs expected future tax bracket."
+      }
+    ]
+  },
+  {
+    "category": "Margin vs cash account",
+    "pairs": [
+      {
+        "a": "Can I day trade in a cash account?",
+        "b": "Can I day trade in a margin account?",
+        "why_different": "Pattern day trader rule ($25K minimum) applies to margin accounts; cash accounts have settlement restrictions instead. Different rules entirely."
+      }
+    ]
+  },
+  {
+    "category": "Owe vs refund (direction of money)",
+    "pairs": [
+      {
+        "a": "Why do I owe taxes this year?",
+        "b": "Why am I getting a tax refund this year?",
+        "why_different": "Opposite outcomes from opposite causes (underwithholding vs overwithholding). Same template, opposite explanation."
+      }
+    ]
+  },
+  {
+    "category": "Inherited vs gifted assets",
+    "pairs": [
+      {
+        "a": "What's the tax basis of inherited stock?",
+        "b": "What's the tax basis of gifted stock?",
+        "why_different": "Inherited = stepped-up basis at date of death. Gifted = carryover basis from giver. Wildly different tax outcomes."
+      }
+    ]
+  },
+  {
+    "category": "Options direction (call vs put)",
+    "pairs": [
+      {
+        "a": "How do I buy a call option on Microsoft?",
+        "b": "How do I buy a put option on Microsoft?",
+        "why_different": "Call = bet on price rising; Put = bet on price falling. One-word swap, opposite directional bet."
+      },
+      {
+        "a": "When should I exercise a call option?",
+        "b": "When should I exercise a put option?",
+        "why_different": "Different conditions and economic logic — calls when stock is above strike, puts when below."
+      }
+    ]
+  },
+  {
+    "category": "Roth conversion direction",
+    "pairs": [
+      {
+        "a": "Should I convert my Traditional IRA to a Roth IRA?",
+        "b": "Should I convert my Roth IRA to a Traditional IRA?",
+        "why_different": "First is common (Roth conversion); second is generally not allowed (reverse conversions were eliminated by TCJA). Cached answer to the first would be actively wrong for the second."
+      }
+    ]
+  },
+  {
+    "category": "Withdraw vs deposit",
+    "pairs": [
+      {
+        "a": "How do I withdraw money from my brokerage account?",
+        "b": "How do I deposit money into my brokerage account?",
+        "why_different": "Opposite flows. Different forms, ACH directions, settlement times."
+      }
+    ]
+  },
+  {
+    "category": "Income vs deduction (template + direction)",
+    "pairs": [
+      {
+        "a": "Is mortgage interest taxable income?",
+        "b": "Is mortgage interest tax deductible?",
+        "why_different": "Whether someone receives it (lender, taxable) or pays it (borrower, deductible). Same noun phrase, opposite tax treatment."
+      }
+    ]
+  },
+  {
+    "category": "Vesting and grant types",
+    "pairs": [
+      {
+        "a": "How are RSUs taxed when they vest?",
+        "b": "How are stock options taxed when they vest?",
+        "why_different": "RSUs taxed as ordinary income on vest. Options aren't taxed on vest (only on exercise, and differently for ISO vs NSO). Very different."
+      },
+      {
+        "a": "What's the tax treatment of ISOs?",
+        "b": "What's the tax treatment of NSOs?",
+        "why_different": "ISOs may qualify for capital gains treatment with AMT implications; NSOs taxed as ordinary income at exercise. Embedding will treat acronym as near-identical."
+      }
+    ]
+  },
+  {
+    "category": "Insured vs uninsured products",
+    "pairs": [
+      {
+        "a": "Is my money safe in a savings account?",
+        "b": "Is my money safe in a money market fund?",
+        "why_different": "Savings account FDIC-insured to $250K. Money market fund is not FDIC-insured (SIPC at best, can break the buck). Critical safety difference."
+      }
+    ]
+  },
+  {
+    "category": "Borrow vs lend",
+    "pairs": [
+      {
+        "a": "How does margin lending work?",
+        "b": "How does margin borrowing work?",
+        "why_different": "Lender's side (broker earning interest, securities lending) vs borrower's side (investor paying interest, maintenance requirements). Two different perspectives on the same mechanism."
+      }
+    ]
+  },
+  {
+    "category": "Bull vs bear / hedge direction",
+    "pairs": [
+      {
+        "a": "How do I hedge against a market crash?",
+        "b": "How do I profit from a market crash?",
+        "why_different": "Hedging is defensive (protect existing positions); profiting is offensive (short/puts/inverse ETFs). Different strategies, different risk profiles."
+      }
+    ]
+  },
+  {
+    "category": "Wash sale specifics",
+    "pairs": [
+      {
+        "a": "Can I sell a stock at a loss and buy it back the next day?",
+        "b": "Can I sell a stock at a loss and buy it back after 31 days?",
+        "why_different": "First triggers wash sale rule (loss disallowed); second is the standard workaround (loss allowed). Numerical swap with massive tax consequence."
+      }
+    ]
+  }
+]

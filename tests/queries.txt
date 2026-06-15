@@ -1,0 +1,48 @@
+What are the common side effects of Lisinopril?
+
+Tell me about the adverse reactions associated with ACE inhibitors like Lisinopril.
+
+Does Metformin cause stomach issues?
+
+Is gastrointestinal distress a frequent complication of taking Metformin?
+
+Summarize the HIPAA guidelines for patient data sharing.
+
+Give me a rundown of the regulatory requirements for PHI disclosure under HIPAA.
+
+What is the recommended dosage for Pediatric Amoxicillin?
+
+What is the recommended dosage for Adult Amoxicillin?
+
+How do I treat a Type 1 diabetic with low blood sugar?
+
+How do I treat a Type 2 diabetic with low blood sugar?
+
+Is it safe to take Aspirin with Warfarin?
+
+Is it safe to take Aspirin with Vitamin C?
+
+Show me the last lab results for patient ID: 88291.
+
+What were the laboratory findings for patient ID: 11022?
+
+Can you retrieve the discharge summary for John Doe?
+
+I need the discharge summary for Jane Smith.
+
+What is the current wait time at the St. Jude's ER right now?
+
+How long is the wait at the emergency room at St. Jude's?
+
+Check my latest blood glucose reading from my Dexcom.
+
+What was my most recent sugar level?
+
+List the symptoms of a pulmonary embolism.
+
+What symptoms exclude a diagnosis of pulmonary embolism?
+
+Which patients are eligible for the clinical trial?
+
+Which patients are ineligible for the clinical trial?
+

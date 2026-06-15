@@ -1,0 +1,2957 @@
+{
+  "selection_rule": "Consecutive rows 201-240 from legacy/eval/ibm_mtrag_replay.jsonl; rows 1-200 skipped because a separate ibm_mtrag_replay_200.jsonl artifact exists and is more likely to have been sampled before.",
+  "source_file": "legacy/eval/ibm_mtrag_replay.jsonl",
+  "start_line": 201,
+  "limit": 40,
+  "routing_only_summary": {
+    "total_rows": 40,
+    "session_counts": {
+      "ibm-27": 5,
+      "ibm-28": 7,
+      "ibm-29": 8,
+      "ibm-30": 8,
+      "ibm-31": 9,
+      "ibm-32": 3
+    },
+    "routing_label_counts": {
+      "THREAD_SCOPED_ONLY": 12,
+      "EXACT_ONLY": 4,
+      "SEMANTIC_OK": 23,
+      "SKIP_CACHE": 1
+    },
+    "avg_confidence_by_label": {
+      "THREAD_SCOPED_ONLY": 0.645,
+      "EXACT_ONLY": 0.4144,
+      "SEMANTIC_OK": 0.6998,
+      "SKIP_CACHE": 0.4032
+    },
+    "low_confidence_rows_lt_0_55": [
+      {
+        "line": 201,
+        "session_id": "ibm-27",
+        "query": "archaeological discoveries and colonialists",
+        "label": "THREAD_SCOPED_ONLY",
+        "confidence": 0.3641
+      },
+      {
+        "line": 202,
+        "session_id": "ibm-27",
+        "query": "Celts",
+        "label": "EXACT_ONLY",
+        "confidence": 0.5136
+      },
+      {
+        "line": 205,
+        "session_id": "ibm-27",
+        "query": "secondary source",
+        "label": "THREAD_SCOPED_ONLY",
+        "confidence": 0.4437
+      },
+      {
+        "line": 206,
+        "session_id": "ibm-28",
+        "query": "where is bone marrow found what does it do for the body",
+        "label": "SEMANTIC_OK",
+        "confidence": 0.4548
+      },
+      {
+        "line": 208,
+        "session_id": "ibm-28",
+        "query": "How is Sickle cell treated?",
+        "label": "SKIP_CACHE",
+        "confidence": 0.4032
+      },
+      {
+        "line": 210,
+        "session_id": "ibm-28",
+        "query": "How about transplant?",
+        "label": "THREAD_SCOPED_ONLY",
+        "confidence": 0.4677
+      },
+      {
+        "line": 211,
+        "session_id": "ibm-28",
+        "query": "Is Huntington's disease also inherited?",
+        "label": "SEMANTIC_OK",
+        "confidence": 0.5481
+      },
+      {
+        "line": 215,
+        "session_id": "ibm-29",
+        "query": "Tipsy",
+        "label": "EXACT_ONLY",
+        "confidence": 0.4944
+      },
+      {
+        "line": 216,
+        "session_id": "ibm-29",
+        "query": "What is OTS?",
+        "label": "SEMANTIC_OK",
+        "confidence": 0.351
+      },
+      {
+        "line": 217,
+        "session_id": "ibm-29",
+        "query": "Speed limit",
+        "label": "EXACT_ONLY",
+        "confidence": 0.2977
+      },
+      {
+        "line": 220,
+        "session_id": "ibm-29",
+        "query": "Fines and penalties",
+        "label": "EXACT_ONLY",
+        "confidence": 0.3518
+      },
+      {
+        "line": 228,
+        "session_id": "ibm-30",
+        "query": "Speaking about vaccines, how are they made?",
+        "label": "SEMANTIC_OK",
+        "confidence": 0.4481
+      },
+      {
+        "line": 230,
+        "session_id": "ibm-31",
+        "query": "When did the MSL All-Star game start?",
+        "label": "SEMANTIC_OK",
+        "confidence": 0.3821
+      },
+      {
+        "line": 238,
+        "session_id": "ibm-32",
+        "query": "who takes photos of planes in the air",
+        "label": "SEMANTIC_OK",
+        "confidence": 0.4759
+      },
+      {
+        "line": 239,
+        "session_id": "ibm-32",
+        "query": "No, I meant photos in the air.",
+        "label": "THREAD_SCOPED_ONLY",
+        "confidence": 0.5109
+      }
+    ],
+    "thread_like_rows_not_thread_scoped": [
+      {
+        "line": 203,
+        "session_id": "ibm-27",
+        "query": "Talking about the Celts, what is the importance of them in history?",
+        "label": "SEMANTIC_OK",
+        "confidence": 0.6945
+      },
+      {
+        "line": 232,
+        "session_id": "ibm-31",
+        "query": "Talking about soccer, Can you name the best soccer players of all the time?",
+        "label": "SEMANTIC_OK",
+        "confidence": 0.8506
+      },
+      {
+        "line": 240,
+        "session_id": "ibm-32",
+        "query": "So does that mean pilot of the second aircraft also acts as a photographer?",
+        "label": "SEMANTIC_OK",
+        "confidence": 0.6034
+      }
+    ]
+  },
+  "routing_rows": [
+    {
+      "line": 201,
+      "session_id": "ibm-27",
+      "user_message": "archaeological discoveries and colonialists",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.3641,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.2504,
+        "SEMANTIC_OK": 0.1738,
+        "SKIP_CACHE": 0.2117,
+        "THREAD_SCOPED_ONLY": 0.3641
+      }
+    },
+    {
+      "line": 202,
+      "session_id": "ibm-27",
+      "user_message": "Celts",
+      "routing_label": "EXACT_ONLY",
+      "routing_confidence": 0.5136,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.5136,
+        "SEMANTIC_OK": 0.0466,
+        "SKIP_CACHE": 0.1055,
+        "THREAD_SCOPED_ONLY": 0.3343
+      }
+    },
+    {
+      "line": 203,
+      "session_id": "ibm-27",
+      "user_message": "Talking about the Celts, what is the importance of them in history?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.6945,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0035,
+        "SEMANTIC_OK": 0.6945,
+        "SKIP_CACHE": 0.2362,
+        "THREAD_SCOPED_ONLY": 0.0658
+      }
+    },
+    {
+      "line": 204,
+      "session_id": "ibm-27",
+      "user_message": "Going back to primary source, can it be used in literature",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.5768,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.003,
+        "SEMANTIC_OK": 0.303,
+        "SKIP_CACHE": 0.1173,
+        "THREAD_SCOPED_ONLY": 0.5768
+      }
+    },
+    {
+      "line": 205,
+      "session_id": "ibm-27",
+      "user_message": "secondary source",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.4437,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.3725,
+        "SEMANTIC_OK": 0.0662,
+        "SKIP_CACHE": 0.1176,
+        "THREAD_SCOPED_ONLY": 0.4437
+      }
+    },
+    {
+      "line": 206,
+      "session_id": "ibm-28",
+      "user_message": "where is bone marrow found what does it do for the body",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.4548,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0019,
+        "SEMANTIC_OK": 0.4548,
+        "SKIP_CACHE": 0.1101,
+        "THREAD_SCOPED_ONLY": 0.4332
+      }
+    },
+    {
+      "line": 207,
+      "session_id": "ibm-28",
+      "user_message": "What happens if it does not work well?",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.5864,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0084,
+        "SEMANTIC_OK": 0.2537,
+        "SKIP_CACHE": 0.1514,
+        "THREAD_SCOPED_ONLY": 0.5864
+      }
+    },
+    {
+      "line": 208,
+      "session_id": "ibm-28",
+      "user_message": "How is Sickle cell treated?",
+      "routing_label": "SKIP_CACHE",
+      "routing_confidence": 0.4032,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.1216,
+        "SEMANTIC_OK": 0.2595,
+        "SKIP_CACHE": 0.4032,
+        "THREAD_SCOPED_ONLY": 0.2156
+      }
+    },
+    {
+      "line": 209,
+      "session_id": "ibm-28",
+      "user_message": "Will it kill me?",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.7519,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0326,
+        "SEMANTIC_OK": 0.0214,
+        "SKIP_CACHE": 0.1942,
+        "THREAD_SCOPED_ONLY": 0.7519
+      }
+    },
+    {
+      "line": 210,
+      "session_id": "ibm-28",
+      "user_message": "How about transplant?",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.4677,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.1804,
+        "SEMANTIC_OK": 0.1424,
+        "SKIP_CACHE": 0.2095,
+        "THREAD_SCOPED_ONLY": 0.4677
+      }
+    },
+    {
+      "line": 211,
+      "session_id": "ibm-28",
+      "user_message": "Is Huntington's disease also inherited?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.5481,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0737,
+        "SEMANTIC_OK": 0.5481,
+        "SKIP_CACHE": 0.2192,
+        "THREAD_SCOPED_ONLY": 0.159
+      }
+    },
+    {
+      "line": 212,
+      "session_id": "ibm-28",
+      "user_message": "Any cures for it?",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.8199,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0288,
+        "SEMANTIC_OK": 0.0414,
+        "SKIP_CACHE": 0.1099,
+        "THREAD_SCOPED_ONLY": 0.8199
+      }
+    },
+    {
+      "line": 213,
+      "session_id": "ibm-29",
+      "user_message": "How many fatalities each year are caused by collisions between motorcycles and other vehicles in New York?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.9409,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0001,
+        "SEMANTIC_OK": 0.9409,
+        "SKIP_CACHE": 0.0539,
+        "THREAD_SCOPED_ONLY": 0.005
+      }
+    },
+    {
+      "line": 214,
+      "session_id": "ibm-29",
+      "user_message": "What are the regulations for motorcycle driving?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.7178,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0241,
+        "SEMANTIC_OK": 0.7178,
+        "SKIP_CACHE": 0.1744,
+        "THREAD_SCOPED_ONLY": 0.0837
+      }
+    },
+    {
+      "line": 215,
+      "session_id": "ibm-29",
+      "user_message": "Tipsy",
+      "routing_label": "EXACT_ONLY",
+      "routing_confidence": 0.4944,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.4944,
+        "SEMANTIC_OK": 0.0447,
+        "SKIP_CACHE": 0.1137,
+        "THREAD_SCOPED_ONLY": 0.3472
+      }
+    },
+    {
+      "line": 216,
+      "session_id": "ibm-29",
+      "user_message": "What is OTS?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.351,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.177,
+        "SEMANTIC_OK": 0.351,
+        "SKIP_CACHE": 0.3054,
+        "THREAD_SCOPED_ONLY": 0.1666
+      }
+    },
+    {
+      "line": 217,
+      "session_id": "ibm-29",
+      "user_message": "Speed limit",
+      "routing_label": "EXACT_ONLY",
+      "routing_confidence": 0.2977,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.2977,
+        "SEMANTIC_OK": 0.2575,
+        "SKIP_CACHE": 0.1804,
+        "THREAD_SCOPED_ONLY": 0.2644
+      }
+    },
+    {
+      "line": 218,
+      "session_id": "ibm-29",
+      "user_message": "What about bicycles?",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.8802,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.036,
+        "SEMANTIC_OK": 0.0347,
+        "SKIP_CACHE": 0.049,
+        "THREAD_SCOPED_ONLY": 0.8802
+      }
+    },
+    {
+      "line": 219,
+      "session_id": "ibm-29",
+      "user_message": "Are the laws the same for pedestrians?",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.8122,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0084,
+        "SEMANTIC_OK": 0.0694,
+        "SKIP_CACHE": 0.1099,
+        "THREAD_SCOPED_ONLY": 0.8122
+      }
+    },
+    {
+      "line": 220,
+      "session_id": "ibm-29",
+      "user_message": "Fines and penalties",
+      "routing_label": "EXACT_ONLY",
+      "routing_confidence": 0.3518,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.3518,
+        "SEMANTIC_OK": 0.1301,
+        "SKIP_CACHE": 0.1742,
+        "THREAD_SCOPED_ONLY": 0.344
+      }
+    },
+    {
+      "line": 221,
+      "session_id": "ibm-30",
+      "user_message": "What are the categories of people for which it is especially important to get a flu vaccine?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.9392,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0,
+        "SEMANTIC_OK": 0.9392,
+        "SKIP_CACHE": 0.0421,
+        "THREAD_SCOPED_ONLY": 0.0187
+      }
+    },
+    {
+      "line": 222,
+      "session_id": "ibm-30",
+      "user_message": "Can you tell me the greatest pandemics worldwide before  COVID in 2020?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.7498,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0025,
+        "SEMANTIC_OK": 0.7498,
+        "SKIP_CACHE": 0.2159,
+        "THREAD_SCOPED_ONLY": 0.0318
+      }
+    },
+    {
+      "line": 223,
+      "session_id": "ibm-30",
+      "user_message": "What about HIV pandemic? did it kill many people?",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.9233,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0007,
+        "SEMANTIC_OK": 0.0474,
+        "SKIP_CACHE": 0.0286,
+        "THREAD_SCOPED_ONLY": 0.9233
+      }
+    },
+    {
+      "line": 224,
+      "session_id": "ibm-30",
+      "user_message": "How did  HIV originated and where did start the first cases?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.7113,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0061,
+        "SEMANTIC_OK": 0.7113,
+        "SKIP_CACHE": 0.2088,
+        "THREAD_SCOPED_ONLY": 0.0738
+      }
+    },
+    {
+      "line": 225,
+      "session_id": "ibm-30",
+      "user_message": "Is there a cure for HIV?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.5907,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.048,
+        "SEMANTIC_OK": 0.5907,
+        "SKIP_CACHE": 0.2376,
+        "THREAD_SCOPED_ONLY": 0.1238
+      }
+    },
+    {
+      "line": 226,
+      "session_id": "ibm-30",
+      "user_message": "Is Herpes a lethal disease and how is it transmitted?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.7298,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0021,
+        "SEMANTIC_OK": 0.7298,
+        "SKIP_CACHE": 0.1215,
+        "THREAD_SCOPED_ONLY": 0.1466
+      }
+    },
+    {
+      "line": 227,
+      "session_id": "ibm-30",
+      "user_message": "Is there a vaccine for Herper, how can it be prevent?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.7199,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0013,
+        "SEMANTIC_OK": 0.7199,
+        "SKIP_CACHE": 0.1232,
+        "THREAD_SCOPED_ONLY": 0.1556
+      }
+    },
+    {
+      "line": 228,
+      "session_id": "ibm-30",
+      "user_message": "Speaking about vaccines, how are they made?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.4481,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0425,
+        "SEMANTIC_OK": 0.4481,
+        "SKIP_CACHE": 0.2593,
+        "THREAD_SCOPED_ONLY": 0.2501
+      }
+    },
+    {
+      "line": 229,
+      "session_id": "ibm-31",
+      "user_message": "how does the mls all star game work?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.8624,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0112,
+        "SEMANTIC_OK": 0.8624,
+        "SKIP_CACHE": 0.0819,
+        "THREAD_SCOPED_ONLY": 0.0444
+      }
+    },
+    {
+      "line": 230,
+      "session_id": "ibm-31",
+      "user_message": "When did the MSL All-Star game start?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.3821,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0603,
+        "SEMANTIC_OK": 0.3821,
+        "SKIP_CACHE": 0.3146,
+        "THREAD_SCOPED_ONLY": 0.243
+      }
+    },
+    {
+      "line": 231,
+      "session_id": "ibm-31",
+      "user_message": "MSL All-Star game seems to be a big sport event.  Have any teams from Europe played in the MSL All-Star Games ?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.9762,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0,
+        "SEMANTIC_OK": 0.9762,
+        "SKIP_CACHE": 0.0222,
+        "THREAD_SCOPED_ONLY": 0.0016
+      }
+    },
+    {
+      "line": 232,
+      "session_id": "ibm-31",
+      "user_message": "Talking about soccer, Can you name the best soccer players of all the time?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.8506,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0011,
+        "SEMANTIC_OK": 0.8506,
+        "SKIP_CACHE": 0.1107,
+        "THREAD_SCOPED_ONLY": 0.0377
+      }
+    },
+    {
+      "line": 233,
+      "session_id": "ibm-31",
+      "user_message": "What  does it make a good soccer player?",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.6029,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0083,
+        "SEMANTIC_OK": 0.2441,
+        "SKIP_CACHE": 0.1446,
+        "THREAD_SCOPED_ONLY": 0.6029
+      }
+    },
+    {
+      "line": 234,
+      "session_id": "ibm-31",
+      "user_message": "Are Soccer still considered the most watched sports around the world?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.7143,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0064,
+        "SEMANTIC_OK": 0.7143,
+        "SKIP_CACHE": 0.2148,
+        "THREAD_SCOPED_ONLY": 0.0645
+      }
+    },
+    {
+      "line": 235,
+      "session_id": "ibm-31",
+      "user_message": "What can you say about American Football? Is i talso considered a popular sport as soccer?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.8043,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0004,
+        "SEMANTIC_OK": 0.8043,
+        "SKIP_CACHE": 0.1544,
+        "THREAD_SCOPED_ONLY": 0.0409
+      }
+    },
+    {
+      "line": 236,
+      "session_id": "ibm-31",
+      "user_message": "Is Basketball also considered a very popular sport in America?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.874,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0041,
+        "SEMANTIC_OK": 0.874,
+        "SKIP_CACHE": 0.0939,
+        "THREAD_SCOPED_ONLY": 0.0281
+      }
+    },
+    {
+      "line": 237,
+      "session_id": "ibm-31",
+      "user_message": "I like ice hockey as my sons were great players in the High school and also played for club hockey during their years in college.",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.9574,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0,
+        "SEMANTIC_OK": 0.9574,
+        "SKIP_CACHE": 0.0413,
+        "THREAD_SCOPED_ONLY": 0.0014
+      }
+    },
+    {
+      "line": 238,
+      "session_id": "ibm-32",
+      "user_message": "who takes photos of planes in the air",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.4759,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0556,
+        "SEMANTIC_OK": 0.4759,
+        "SKIP_CACHE": 0.2745,
+        "THREAD_SCOPED_ONLY": 0.194
+      }
+    },
+    {
+      "line": 239,
+      "session_id": "ibm-32",
+      "user_message": "No, I meant photos in the air.",
+      "routing_label": "THREAD_SCOPED_ONLY",
+      "routing_confidence": 0.5109,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0672,
+        "SEMANTIC_OK": 0.1606,
+        "SKIP_CACHE": 0.2613,
+        "THREAD_SCOPED_ONLY": 0.5109
+      }
+    },
+    {
+      "line": 240,
+      "session_id": "ibm-32",
+      "user_message": "So does that mean pilot of the second aircraft also acts as a photographer?",
+      "routing_label": "SEMANTIC_OK",
+      "routing_confidence": 0.6034,
+      "routing_probabilities": {
+        "EXACT_ONLY": 0.0005,
+        "SEMANTIC_OK": 0.6034,
+        "SKIP_CACHE": 0.1339,
+        "THREAD_SCOPED_ONLY": 0.2622
+      }
+    }
+  ],
+  "pipeline_replays": [
+    {
+      "name": "offline_fake_embeddings",
+      "semantic_threshold": 0.86,
+      "summary": {
+        "total_rows": 40,
+        "source_counts": {
+          "live": 40
+        },
+        "routing_label_counts": {
+          "THREAD_SCOPED_ONLY": 12,
+          "EXACT_ONLY": 4,
+          "SEMANTIC_OK": 23,
+          "SKIP_CACHE": 1
+        },
+        "semantic_hit_count": 0,
+        "cross_session_semantic_hit_count": 0,
+        "latency_ms_p50": 1.612,
+        "latency_ms_max": 4.836
+      },
+      "cross_session_semantic_hits": [],
+      "rows": [
+        {
+          "line": 201,
+          "session_id": "ibm-27",
+          "user_message": "archaeological discoveries and colonialists",
+          "source": "live",
+          "total_latency_ms": 4.836,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.3640950763533396,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 0,
+          "rejected_reasons": [],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=201 session=ibm-27 query=archaeological discoveries and colonialists",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 202,
+          "session_id": "ibm-27",
+          "user_message": "Celts",
+          "source": "live",
+          "total_latency_ms": 2.234,
+          "routing_label": "EXACT_ONLY",
+          "routing_confidence": 0.513587487812628,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 1,
+          "rejected_reasons": [
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=202 session=ibm-27 query=Celts",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 203,
+          "session_id": "ibm-27",
+          "user_message": "Talking about the Celts, what is the importance of them in history?",
+          "source": "live",
+          "total_latency_ms": 1.693,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.6944913050607208,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 2,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=203 session=ibm-27 query=Talking about the Celts, what is the importance of them in history?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 204,
+          "session_id": "ibm-27",
+          "user_message": "Going back to primary source, can it be used in literature",
+          "source": "live",
+          "total_latency_ms": 1.591,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.5767958856357668,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 3,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=204 session=ibm-27 query=Going back to primary source, can it be used in literature",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 205,
+          "session_id": "ibm-27",
+          "user_message": "secondary source",
+          "source": "live",
+          "total_latency_ms": 1.431,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.4437209749829462,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 4,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=205 session=ibm-27 query=secondary source",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 206,
+          "session_id": "ibm-28",
+          "user_message": "where is bone marrow found what does it do for the body",
+          "source": "live",
+          "total_latency_ms": 1.608,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.45482240045433,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=206 session=ibm-28 query=where is bone marrow found what does it do for the body",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 207,
+          "session_id": "ibm-28",
+          "user_message": "What happens if it does not work well?",
+          "source": "live",
+          "total_latency_ms": 2.082,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.5864337396858429,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "below_threshold",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=207 session=ibm-28 query=What happens if it does not work well?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 208,
+          "session_id": "ibm-28",
+          "user_message": "How is Sickle cell treated?",
+          "source": "live",
+          "total_latency_ms": 1.293,
+          "routing_label": "SKIP_CACHE",
+          "routing_confidence": 0.4032093913976215,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 0,
+          "rejected_reasons": [],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=208 session=ibm-28 query=How is Sickle cell treated?",
+          "insert_performed": false,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 209,
+          "session_id": "ibm-28",
+          "user_message": "Will it kill me?",
+          "source": "live",
+          "total_latency_ms": 1.469,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.7518998734967102,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=209 session=ibm-28 query=Will it kill me?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 210,
+          "session_id": "ibm-28",
+          "user_message": "How about transplant?",
+          "source": "live",
+          "total_latency_ms": 1.473,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.46767591381600637,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=210 session=ibm-28 query=How about transplant?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 211,
+          "session_id": "ibm-28",
+          "user_message": "Is Huntington's disease also inherited?",
+          "source": "live",
+          "total_latency_ms": 1.588,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.5481212439067218,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=211 session=ibm-28 query=Is Huntington's disease also inherited?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 212,
+          "session_id": "ibm-28",
+          "user_message": "Any cures for it?",
+          "source": "live",
+          "total_latency_ms": 1.889,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.8199492837229582,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "thread_scope_mismatch",
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=212 session=ibm-28 query=Any cures for it?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 213,
+          "session_id": "ibm-29",
+          "user_message": "How many fatalities each year are caused by collisions between motorcycles and other vehicles in New York?",
+          "source": "live",
+          "total_latency_ms": 2.094,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.9408859575494408,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=213 session=ibm-29 query=How many fatalities each year are caused by collisions between motorcycles and other vehicles in New York?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 214,
+          "session_id": "ibm-29",
+          "user_message": "What are the regulations for motorcycle driving?",
+          "source": "live",
+          "total_latency_ms": 1.792,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7178067013040902,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=214 session=ibm-29 query=What are the regulations for motorcycle driving?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 215,
+          "session_id": "ibm-29",
+          "user_message": "Tipsy",
+          "source": "live",
+          "total_latency_ms": 1.462,
+          "routing_label": "EXACT_ONLY",
+          "routing_confidence": 0.49436914866453585,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=215 session=ibm-29 query=Tipsy",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 216,
+          "session_id": "ibm-29",
+          "user_message": "What is OTS?",
+          "source": "live",
+          "total_latency_ms": 1.643,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.35099499053831973,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=216 session=ibm-29 query=What is OTS?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 217,
+          "session_id": "ibm-29",
+          "user_message": "Speed limit",
+          "source": "live",
+          "total_latency_ms": 1.605,
+          "routing_label": "EXACT_ONLY",
+          "routing_confidence": 0.2976873963039133,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=217 session=ibm-29 query=Speed limit",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 218,
+          "session_id": "ibm-29",
+          "user_message": "What about bicycles?",
+          "source": "live",
+          "total_latency_ms": 1.497,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.8802476296345503,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=218 session=ibm-29 query=What about bicycles?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 219,
+          "session_id": "ibm-29",
+          "user_message": "Are the laws the same for pedestrians?",
+          "source": "live",
+          "total_latency_ms": 1.515,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.8122454712501667,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=219 session=ibm-29 query=Are the laws the same for pedestrians?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 220,
+          "session_id": "ibm-29",
+          "user_message": "Fines and penalties",
+          "source": "live",
+          "total_latency_ms": 1.471,
+          "routing_label": "EXACT_ONLY",
+          "routing_confidence": 0.3518142932615992,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=220 session=ibm-29 query=Fines and penalties",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 221,
+          "session_id": "ibm-30",
+          "user_message": "What are the categories of people for which it is especially important to get a flu vaccine?",
+          "source": "live",
+          "total_latency_ms": 1.881,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.9391830255200295,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=221 session=ibm-30 query=What are the categories of people for which it is especially important to get a flu vaccine?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 222,
+          "session_id": "ibm-30",
+          "user_message": "Can you tell me the greatest pandemics worldwide before  COVID in 2020?",
+          "source": "live",
+          "total_latency_ms": 1.975,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7497916032885525,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=222 session=ibm-30 query=Can you tell me the greatest pandemics worldwide before  COVID in 2020?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 223,
+          "session_id": "ibm-30",
+          "user_message": "What about HIV pandemic? did it kill many people?",
+          "source": "live",
+          "total_latency_ms": 1.562,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.9232730702025461,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=223 session=ibm-30 query=What about HIV pandemic? did it kill many people?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 224,
+          "session_id": "ibm-30",
+          "user_message": "How did  HIV originated and where did start the first cases?",
+          "source": "live",
+          "total_latency_ms": 1.579,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7112813642432049,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=224 session=ibm-30 query=How did  HIV originated and where did start the first cases?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 225,
+          "session_id": "ibm-30",
+          "user_message": "Is there a cure for HIV?",
+          "source": "live",
+          "total_latency_ms": 1.878,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.5906572711616505,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=225 session=ibm-30 query=Is there a cure for HIV?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 226,
+          "session_id": "ibm-30",
+          "user_message": "Is Herpes a lethal disease and how is it transmitted?",
+          "source": "live",
+          "total_latency_ms": 1.67,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7298197981175155,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=226 session=ibm-30 query=Is Herpes a lethal disease and how is it transmitted?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 227,
+          "session_id": "ibm-30",
+          "user_message": "Is there a vaccine for Herper, how can it be prevent?",
+          "source": "live",
+          "total_latency_ms": 2.043,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7198843410297093,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=227 session=ibm-30 query=Is there a vaccine for Herper, how can it be prevent?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 228,
+          "session_id": "ibm-30",
+          "user_message": "Speaking about vaccines, how are they made?",
+          "source": "live",
+          "total_latency_ms": 1.549,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.4481114780040616,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=228 session=ibm-30 query=Speaking about vaccines, how are they made?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 229,
+          "session_id": "ibm-31",
+          "user_message": "how does the mls all star game work?",
+          "source": "live",
+          "total_latency_ms": 1.517,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.8624354292056428,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=229 session=ibm-31 query=how does the mls all star game work?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 230,
+          "session_id": "ibm-31",
+          "user_message": "When did the MSL All-Star game start?",
+          "source": "live",
+          "total_latency_ms": 1.539,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.38212937986013057,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=230 session=ibm-31 query=When did the MSL All-Star game start?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 231,
+          "session_id": "ibm-31",
+          "user_message": "MSL All-Star game seems to be a big sport event.  Have any teams from Europe played in the MSL All-Star Games ?",
+          "source": "live",
+          "total_latency_ms": 1.815,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.9761611876869998,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=231 session=ibm-31 query=MSL All-Star game seems to be a big sport event.  Have any teams from Europe played in the MSL All-Star Games ?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 232,
+          "session_id": "ibm-31",
+          "user_message": "Talking about soccer, Can you name the best soccer players of all the time?",
+          "source": "live",
+          "total_latency_ms": 2.081,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.8505654686760382,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=232 session=ibm-31 query=Talking about soccer, Can you name the best soccer players of all the time?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 233,
+          "session_id": "ibm-31",
+          "user_message": "What  does it make a good soccer player?",
+          "source": "live",
+          "total_latency_ms": 1.612,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.6029317829314114,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=233 session=ibm-31 query=What  does it make a good soccer player?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 234,
+          "session_id": "ibm-31",
+          "user_message": "Are Soccer still considered the most watched sports around the world?",
+          "source": "live",
+          "total_latency_ms": 1.612,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7142988213045227,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=234 session=ibm-31 query=Are Soccer still considered the most watched sports around the world?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 235,
+          "session_id": "ibm-31",
+          "user_message": "What can you say about American Football? Is i talso considered a popular sport as soccer?",
+          "source": "live",
+          "total_latency_ms": 1.877,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.8042859748630029,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=235 session=ibm-31 query=What can you say about American Football? Is i talso considered a popular sport as soccer?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 236,
+          "session_id": "ibm-31",
+          "user_message": "Is Basketball also considered a very popular sport in America?",
+          "source": "live",
+          "total_latency_ms": 1.813,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.8740138061484357,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=236 session=ibm-31 query=Is Basketball also considered a very popular sport in America?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 237,
+          "session_id": "ibm-31",
+          "user_message": "I like ice hockey as my sons were great players in the High school and also played for club hockey during their years in college.",
+          "source": "live",
+          "total_latency_ms": 1.9,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.9573734673165091,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=237 session=ibm-31 query=I like ice hockey as my sons were great players in the High school and also played for club hockey during their years in college.",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 238,
+          "session_id": "ibm-32",
+          "user_message": "who takes photos of planes in the air",
+          "source": "live",
+          "total_latency_ms": 1.573,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.4759059360635898,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=238 session=ibm-32 query=who takes photos of planes in the air",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 239,
+          "session_id": "ibm-32",
+          "user_message": "No, I meant photos in the air.",
+          "source": "live",
+          "total_latency_ms": 1.494,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.5109285782929086,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=239 session=ibm-32 query=No, I meant photos in the air.",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 240,
+          "session_id": "ibm-32",
+          "user_message": "So does that mean pilot of the second aircraft also acts as a photographer?",
+          "source": "live",
+          "total_latency_ms": 1.652,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.6033991766458561,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=240 session=ibm-32 query=So does that mean pilot of the second aircraft also acts as a photographer?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        }
+      ]
+    },
+    {
+      "name": "openai_embeddings",
+      "semantic_threshold": 0.86,
+      "summary": {
+        "total_rows": 40,
+        "source_counts": {
+          "live": 40
+        },
+        "routing_label_counts": {
+          "THREAD_SCOPED_ONLY": 12,
+          "EXACT_ONLY": 4,
+          "SEMANTIC_OK": 23,
+          "SKIP_CACHE": 1
+        },
+        "semantic_hit_count": 0,
+        "cross_session_semantic_hit_count": 0,
+        "latency_ms_p50": 185.779,
+        "latency_ms_max": 2510.869
+      },
+      "cross_session_semantic_hits": [],
+      "rows": [
+        {
+          "line": 201,
+          "session_id": "ibm-27",
+          "user_message": "archaeological discoveries and colonialists",
+          "source": "live",
+          "total_latency_ms": 2510.869,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.3640950763533396,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 0,
+          "rejected_reasons": [],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=201 session=ibm-27 query=archaeological discoveries and colonialists",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 202,
+          "session_id": "ibm-27",
+          "user_message": "Celts",
+          "source": "live",
+          "total_latency_ms": 736.798,
+          "routing_label": "EXACT_ONLY",
+          "routing_confidence": 0.513587487812628,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 1,
+          "rejected_reasons": [
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=202 session=ibm-27 query=Celts",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 203,
+          "session_id": "ibm-27",
+          "user_message": "Talking about the Celts, what is the importance of them in history?",
+          "source": "live",
+          "total_latency_ms": 397.466,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.6944913050607208,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 2,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=203 session=ibm-27 query=Talking about the Celts, what is the importance of them in history?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 204,
+          "session_id": "ibm-27",
+          "user_message": "Going back to primary source, can it be used in literature",
+          "source": "live",
+          "total_latency_ms": 420.744,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.5767958856357668,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 3,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=204 session=ibm-27 query=Going back to primary source, can it be used in literature",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 205,
+          "session_id": "ibm-27",
+          "user_message": "secondary source",
+          "source": "live",
+          "total_latency_ms": 1038.563,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.4437209749829462,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 4,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=205 session=ibm-27 query=secondary source",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 206,
+          "session_id": "ibm-28",
+          "user_message": "where is bone marrow found what does it do for the body",
+          "source": "live",
+          "total_latency_ms": 362.269,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.45482240045433,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=206 session=ibm-28 query=where is bone marrow found what does it do for the body",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 207,
+          "session_id": "ibm-28",
+          "user_message": "What happens if it does not work well?",
+          "source": "live",
+          "total_latency_ms": 432.246,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.5864337396858429,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=207 session=ibm-28 query=What happens if it does not work well?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 208,
+          "session_id": "ibm-28",
+          "user_message": "How is Sickle cell treated?",
+          "source": "live",
+          "total_latency_ms": 6.035,
+          "routing_label": "SKIP_CACHE",
+          "routing_confidence": 0.4032093913976215,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 0,
+          "rejected_reasons": [],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=208 session=ibm-28 query=How is Sickle cell treated?",
+          "insert_performed": false,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 209,
+          "session_id": "ibm-28",
+          "user_message": "Will it kill me?",
+          "source": "live",
+          "total_latency_ms": 146.206,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.7518998734967102,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=209 session=ibm-28 query=Will it kill me?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 210,
+          "session_id": "ibm-28",
+          "user_message": "How about transplant?",
+          "source": "live",
+          "total_latency_ms": 139.692,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.46767591381600637,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "thread_scope_mismatch",
+            "below_threshold",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=210 session=ibm-28 query=How about transplant?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 211,
+          "session_id": "ibm-28",
+          "user_message": "Is Huntington's disease also inherited?",
+          "source": "live",
+          "total_latency_ms": 133.329,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.5481212439067218,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=211 session=ibm-28 query=Is Huntington's disease also inherited?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 212,
+          "session_id": "ibm-28",
+          "user_message": "Any cures for it?",
+          "source": "live",
+          "total_latency_ms": 158.598,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.8199492837229582,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=212 session=ibm-28 query=Any cures for it?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 213,
+          "session_id": "ibm-29",
+          "user_message": "How many fatalities each year are caused by collisions between motorcycles and other vehicles in New York?",
+          "source": "live",
+          "total_latency_ms": 485.824,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.9408859575494408,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=213 session=ibm-29 query=How many fatalities each year are caused by collisions between motorcycles and other vehicles in New York?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 214,
+          "session_id": "ibm-29",
+          "user_message": "What are the regulations for motorcycle driving?",
+          "source": "live",
+          "total_latency_ms": 111.224,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7178067013040902,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=214 session=ibm-29 query=What are the regulations for motorcycle driving?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 215,
+          "session_id": "ibm-29",
+          "user_message": "Tipsy",
+          "source": "live",
+          "total_latency_ms": 387.519,
+          "routing_label": "EXACT_ONLY",
+          "routing_confidence": 0.49436914866453585,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=215 session=ibm-29 query=Tipsy",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 216,
+          "session_id": "ibm-29",
+          "user_message": "What is OTS?",
+          "source": "live",
+          "total_latency_ms": 209.062,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.35099499053831973,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=216 session=ibm-29 query=What is OTS?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 217,
+          "session_id": "ibm-29",
+          "user_message": "Speed limit",
+          "source": "live",
+          "total_latency_ms": 125.031,
+          "routing_label": "EXACT_ONLY",
+          "routing_confidence": 0.2976873963039133,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=217 session=ibm-29 query=Speed limit",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 218,
+          "session_id": "ibm-29",
+          "user_message": "What about bicycles?",
+          "source": "live",
+          "total_latency_ms": 195.035,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.8802476296345503,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "thread_scope_mismatch",
+            "below_threshold",
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=218 session=ibm-29 query=What about bicycles?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 219,
+          "session_id": "ibm-29",
+          "user_message": "Are the laws the same for pedestrians?",
+          "source": "live",
+          "total_latency_ms": 139.326,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.8122454712501667,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=219 session=ibm-29 query=Are the laws the same for pedestrians?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 220,
+          "session_id": "ibm-29",
+          "user_message": "Fines and penalties",
+          "source": "live",
+          "total_latency_ms": 135.142,
+          "routing_label": "EXACT_ONLY",
+          "routing_confidence": 0.3518142932615992,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=220 session=ibm-29 query=Fines and penalties",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 221,
+          "session_id": "ibm-30",
+          "user_message": "What are the categories of people for which it is especially important to get a flu vaccine?",
+          "source": "live",
+          "total_latency_ms": 174.87,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.9391830255200295,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=221 session=ibm-30 query=What are the categories of people for which it is especially important to get a flu vaccine?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 222,
+          "session_id": "ibm-30",
+          "user_message": "Can you tell me the greatest pandemics worldwide before  COVID in 2020?",
+          "source": "live",
+          "total_latency_ms": 140.564,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7497916032885525,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=222 session=ibm-30 query=Can you tell me the greatest pandemics worldwide before  COVID in 2020?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 223,
+          "session_id": "ibm-30",
+          "user_message": "What about HIV pandemic? did it kill many people?",
+          "source": "live",
+          "total_latency_ms": 214.958,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.9232730702025461,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "thread_scope_mismatch",
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=223 session=ibm-30 query=What about HIV pandemic? did it kill many people?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 224,
+          "session_id": "ibm-30",
+          "user_message": "How did  HIV originated and where did start the first cases?",
+          "source": "live",
+          "total_latency_ms": 334.23,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7112813642432049,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=224 session=ibm-30 query=How did  HIV originated and where did start the first cases?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 225,
+          "session_id": "ibm-30",
+          "user_message": "Is there a cure for HIV?",
+          "source": "live",
+          "total_latency_ms": 440.385,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.5906572711616505,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=225 session=ibm-30 query=Is there a cure for HIV?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 226,
+          "session_id": "ibm-30",
+          "user_message": "Is Herpes a lethal disease and how is it transmitted?",
+          "source": "live",
+          "total_latency_ms": 194.338,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7298197981175155,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=226 session=ibm-30 query=Is Herpes a lethal disease and how is it transmitted?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 227,
+          "session_id": "ibm-30",
+          "user_message": "Is there a vaccine for Herper, how can it be prevent?",
+          "source": "live",
+          "total_latency_ms": 121.498,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7198843410297093,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=227 session=ibm-30 query=Is there a vaccine for Herper, how can it be prevent?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 228,
+          "session_id": "ibm-30",
+          "user_message": "Speaking about vaccines, how are they made?",
+          "source": "live",
+          "total_latency_ms": 135.858,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.4481114780040616,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=228 session=ibm-30 query=Speaking about vaccines, how are they made?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 229,
+          "session_id": "ibm-31",
+          "user_message": "how does the mls all star game work?",
+          "source": "live",
+          "total_latency_ms": 207.713,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.8624354292056428,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=229 session=ibm-31 query=how does the mls all star game work?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 230,
+          "session_id": "ibm-31",
+          "user_message": "When did the MSL All-Star game start?",
+          "source": "live",
+          "total_latency_ms": 176.996,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.38212937986013057,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=230 session=ibm-31 query=When did the MSL All-Star game start?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 231,
+          "session_id": "ibm-31",
+          "user_message": "MSL All-Star game seems to be a big sport event.  Have any teams from Europe played in the MSL All-Star Games ?",
+          "source": "live",
+          "total_latency_ms": 163.544,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.9761611876869998,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=231 session=ibm-31 query=MSL All-Star game seems to be a big sport event.  Have any teams from Europe played in the MSL All-Star Games ?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 232,
+          "session_id": "ibm-31",
+          "user_message": "Talking about soccer, Can you name the best soccer players of all the time?",
+          "source": "live",
+          "total_latency_ms": 136.981,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.8505654686760382,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=232 session=ibm-31 query=Talking about soccer, Can you name the best soccer players of all the time?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 233,
+          "session_id": "ibm-31",
+          "user_message": "What  does it make a good soccer player?",
+          "source": "live",
+          "total_latency_ms": 190.385,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.6029317829314114,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=233 session=ibm-31 query=What  does it make a good soccer player?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 234,
+          "session_id": "ibm-31",
+          "user_message": "Are Soccer still considered the most watched sports around the world?",
+          "source": "live",
+          "total_latency_ms": 390.943,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.7142988213045227,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=234 session=ibm-31 query=Are Soccer still considered the most watched sports around the world?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 235,
+          "session_id": "ibm-31",
+          "user_message": "What can you say about American Football? Is i talso considered a popular sport as soccer?",
+          "source": "live",
+          "total_latency_ms": 181.174,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.8042859748630029,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=235 session=ibm-31 query=What can you say about American Football? Is i talso considered a popular sport as soccer?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 236,
+          "session_id": "ibm-31",
+          "user_message": "Is Basketball also considered a very popular sport in America?",
+          "source": "live",
+          "total_latency_ms": 158.3,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.8740138061484357,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=236 session=ibm-31 query=Is Basketball also considered a very popular sport in America?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 237,
+          "session_id": "ibm-31",
+          "user_message": "I like ice hockey as my sons were great players in the High school and also played for club hockey during their years in college.",
+          "source": "live",
+          "total_latency_ms": 128.323,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.9573734673165091,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=237 session=ibm-31 query=I like ice hockey as my sons were great players in the High school and also played for club hockey during their years in college.",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 238,
+          "session_id": "ibm-32",
+          "user_message": "who takes photos of planes in the air",
+          "source": "live",
+          "total_latency_ms": 173.808,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.4759059360635898,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=238 session=ibm-32 query=who takes photos of planes in the air",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 239,
+          "session_id": "ibm-32",
+          "user_message": "No, I meant photos in the air.",
+          "source": "live",
+          "total_latency_ms": 198.188,
+          "routing_label": "THREAD_SCOPED_ONLY",
+          "routing_confidence": 0.5109285782929086,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch",
+            "thread_scope_mismatch"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=239 session=ibm-32 query=No, I meant photos in the air.",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        },
+        {
+          "line": 240,
+          "session_id": "ibm-32",
+          "user_message": "So does that mean pilot of the second aircraft also acts as a photographer?",
+          "source": "live",
+          "total_latency_ms": 213.392,
+          "routing_label": "SEMANTIC_OK",
+          "routing_confidence": 0.6033991766458561,
+          "top_candidate_similarity": null,
+          "second_candidate_similarity": null,
+          "candidate_count": 5,
+          "rejected_reasons": [
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold",
+            "below_threshold"
+          ],
+          "semantic_post_ann_reject_reason": null,
+          "payload_answer": "live_origin=240 session=ibm-32 query=So does that mean pilot of the second aircraft also acts as a photographer?",
+          "insert_performed": true,
+          "exact_cache_hit": false
+        }
+      ]
+    }
+  ],
+  "openai_threshold_sweep": [
+    {
+      "semantic_threshold": 0.86,
+      "summary": {
+        "source_counts": {
+          "live": 40
+        },
+        "semantic_hit_count": 0,
+        "same_session_semantic_hit_count": 0,
+        "cross_session_semantic_hit_count": 0,
+        "latency_ms_p50": 177.341,
+        "latency_ms_max": 1013.02
+      },
+      "semantic_hits": [],
+      "cross_session_semantic_hits": []
+    },
+    {
+      "semantic_threshold": 0.82,
+      "summary": {
+        "source_counts": {
+          "live": 40
+        },
+        "semantic_hit_count": 0,
+        "same_session_semantic_hit_count": 0,
+        "cross_session_semantic_hit_count": 0,
+        "latency_ms_p50": 1.827,
+        "latency_ms_max": 3.835
+      },
+      "semantic_hits": [],
+      "cross_session_semantic_hits": []
+    },
+    {
+      "semantic_threshold": 0.8,
+      "summary": {
+        "source_counts": {
+          "live": 40
+        },
+        "semantic_hit_count": 0,
+        "same_session_semantic_hit_count": 0,
+        "cross_session_semantic_hit_count": 0,
+        "latency_ms_p50": 1.542,
+        "latency_ms_max": 4.18
+      },
+      "semantic_hits": [],
+      "cross_session_semantic_hits": []
+    },
+    {
+      "semantic_threshold": 0.78,
+      "summary": {
+        "source_counts": {
+          "live": 40
+        },
+        "semantic_hit_count": 0,
+        "same_session_semantic_hit_count": 0,
+        "cross_session_semantic_hit_count": 0,
+        "latency_ms_p50": 1.495,
+        "latency_ms_max": 1.935
+      },
+      "semantic_hits": [],
+      "cross_session_semantic_hits": []
+    },
+    {
+      "semantic_threshold": 0.75,
+      "summary": {
+        "source_counts": {
+          "live": 40
+        },
+        "semantic_hit_count": 0,
+        "same_session_semantic_hit_count": 0,
+        "cross_session_semantic_hit_count": 0,
+        "latency_ms_p50": 1.481,
+        "latency_ms_max": 2.197
+      },
+      "semantic_hits": [],
+      "cross_session_semantic_hits": []
+    }
+  ],
+  "openai_nearest_prior_similarity": {
+    "summary": {
+      "rows_with_prior": 39,
+      "max_any_session_similarity": 0.709,
+      "max_same_session_similarity": 0.709,
+      "any_session_at_or_above_0_75": 0,
+      "same_session_at_or_above_0_75": 0,
+      "any_session_at_or_above_0_86": 0,
+      "same_session_at_or_above_0_86": 0
+    },
+    "top_10_any_session": [
+      {
+        "line": 231,
+        "session_id": "ibm-31",
+        "query": "MSL All-Star game seems to be a big sport event.  Have any teams from Europe played in the MSL All-Star Games ?",
+        "best_prior_any_session": {
+          "line": 230,
+          "session_id": "ibm-31",
+          "query": "When did the MSL All-Star game start?",
+          "similarity": 0.709
+        },
+        "best_prior_same_session": {
+          "line": 230,
+          "session_id": "ibm-31",
+          "query": "When did the MSL All-Star game start?",
+          "similarity": 0.709
+        }
+      },
+      {
+        "line": 230,
+        "session_id": "ibm-31",
+        "query": "When did the MSL All-Star game start?",
+        "best_prior_any_session": {
+          "line": 229,
+          "session_id": "ibm-31",
+          "query": "how does the mls all star game work?",
+          "similarity": 0.7062
+        },
+        "best_prior_same_session": {
+          "line": 229,
+          "session_id": "ibm-31",
+          "query": "how does the mls all star game work?",
+          "similarity": 0.7062
+        }
+      },
+      {
+        "line": 236,
+        "session_id": "ibm-31",
+        "query": "Is Basketball also considered a very popular sport in America?",
+        "best_prior_any_session": {
+          "line": 235,
+          "session_id": "ibm-31",
+          "query": "What can you say about American Football? Is i talso considered a popular sport as soccer?",
+          "similarity": 0.6692
+        },
+        "best_prior_same_session": {
+          "line": 235,
+          "session_id": "ibm-31",
+          "query": "What can you say about American Football? Is i talso considered a popular sport as soccer?",
+          "similarity": 0.6692
+        }
+      },
+      {
+        "line": 240,
+        "session_id": "ibm-32",
+        "query": "So does that mean pilot of the second aircraft also acts as a photographer?",
+        "best_prior_any_session": {
+          "line": 238,
+          "session_id": "ibm-32",
+          "query": "who takes photos of planes in the air",
+          "similarity": 0.6084
+        },
+        "best_prior_same_session": {
+          "line": 238,
+          "session_id": "ibm-32",
+          "query": "who takes photos of planes in the air",
+          "similarity": 0.6084
+        }
+      },
+      {
+        "line": 203,
+        "session_id": "ibm-27",
+        "query": "Talking about the Celts, what is the importance of them in history?",
+        "best_prior_any_session": {
+          "line": 202,
+          "session_id": "ibm-27",
+          "query": "Celts",
+          "similarity": 0.6058
+        },
+        "best_prior_same_session": {
+          "line": 202,
+          "session_id": "ibm-27",
+          "query": "Celts",
+          "similarity": 0.6058
+        }
+      },
+      {
+        "line": 225,
+        "session_id": "ibm-30",
+        "query": "Is there a cure for HIV?",
+        "best_prior_any_session": {
+          "line": 212,
+          "session_id": "ibm-28",
+          "query": "Any cures for it?",
+          "similarity": 0.5609
+        },
+        "best_prior_same_session": {
+          "line": 223,
+          "session_id": "ibm-30",
+          "query": "What about HIV pandemic? did it kill many people?",
+          "similarity": 0.5275
+        }
+      },
+      {
+        "line": 239,
+        "session_id": "ibm-32",
+        "query": "No, I meant photos in the air.",
+        "best_prior_any_session": {
+          "line": 238,
+          "session_id": "ibm-32",
+          "query": "who takes photos of planes in the air",
+          "similarity": 0.539
+        },
+        "best_prior_same_session": {
+          "line": 238,
+          "session_id": "ibm-32",
+          "query": "who takes photos of planes in the air",
+          "similarity": 0.539
+        }
+      },
+      {
+        "line": 233,
+        "session_id": "ibm-31",
+        "query": "What  does it make a good soccer player?",
+        "best_prior_any_session": {
+          "line": 232,
+          "session_id": "ibm-31",
+          "query": "Talking about soccer, Can you name the best soccer players of all the time?",
+          "similarity": 0.5248
+        },
+        "best_prior_same_session": {
+          "line": 232,
+          "session_id": "ibm-31",
+          "query": "Talking about soccer, Can you name the best soccer players of all the time?",
+          "similarity": 0.5248
+        }
+      },
+      {
+        "line": 224,
+        "session_id": "ibm-30",
+        "query": "How did  HIV originated and where did start the first cases?",
+        "best_prior_any_session": {
+          "line": 223,
+          "session_id": "ibm-30",
+          "query": "What about HIV pandemic? did it kill many people?",
+          "similarity": 0.5242
+        },
+        "best_prior_same_session": {
+          "line": 223,
+          "session_id": "ibm-30",
+          "query": "What about HIV pandemic? did it kill many people?",
+          "similarity": 0.5242
+        }
+      },
+      {
+        "line": 223,
+        "session_id": "ibm-30",
+        "query": "What about HIV pandemic? did it kill many people?",
+        "best_prior_any_session": {
+          "line": 222,
+          "session_id": "ibm-30",
+          "query": "Can you tell me the greatest pandemics worldwide before  COVID in 2020?",
+          "similarity": 0.5088
+        },
+        "best_prior_same_session": {
+          "line": 222,
+          "session_id": "ibm-30",
+          "query": "Can you tell me the greatest pandemics worldwide before  COVID in 2020?",
+          "similarity": 0.5088
+        }
+      }
+    ],
+    "top_10_same_session": [
+      {
+        "line": 231,
+        "session_id": "ibm-31",
+        "query": "MSL All-Star game seems to be a big sport event.  Have any teams from Europe played in the MSL All-Star Games ?",
+        "best_prior_any_session": {
+          "line": 230,
+          "session_id": "ibm-31",
+          "query": "When did the MSL All-Star game start?",
+          "similarity": 0.709
+        },
+        "best_prior_same_session": {
+          "line": 230,
+          "session_id": "ibm-31",
+          "query": "When did the MSL All-Star game start?",
+          "similarity": 0.709
+        }
+      },
+      {
+        "line": 230,
+        "session_id": "ibm-31",
+        "query": "When did the MSL All-Star game start?",
+        "best_prior_any_session": {
+          "line": 229,
+          "session_id": "ibm-31",
+          "query": "how does the mls all star game work?",
+          "similarity": 0.7062
+        },
+        "best_prior_same_session": {
+          "line": 229,
+          "session_id": "ibm-31",
+          "query": "how does the mls all star game work?",
+          "similarity": 0.7062
+        }
+      },
+      {
+        "line": 236,
+        "session_id": "ibm-31",
+        "query": "Is Basketball also considered a very popular sport in America?",
+        "best_prior_any_session": {
+          "line": 235,
+          "session_id": "ibm-31",
+          "query": "What can you say about American Football? Is i talso considered a popular sport as soccer?",
+          "similarity": 0.6692
+        },
+        "best_prior_same_session": {
+          "line": 235,
+          "session_id": "ibm-31",
+          "query": "What can you say about American Football? Is i talso considered a popular sport as soccer?",
+          "similarity": 0.6692
+        }
+      },
+      {
+        "line": 240,
+        "session_id": "ibm-32",
+        "query": "So does that mean pilot of the second aircraft also acts as a photographer?",
+        "best_prior_any_session": {
+          "line": 238,
+          "session_id": "ibm-32",
+          "query": "who takes photos of planes in the air",
+          "similarity": 0.6084
+        },
+        "best_prior_same_session": {
+          "line": 238,
+          "session_id": "ibm-32",
+          "query": "who takes photos of planes in the air",
+          "similarity": 0.6084
+        }
+      },
+      {
+        "line": 203,
+        "session_id": "ibm-27",
+        "query": "Talking about the Celts, what is the importance of them in history?",
+        "best_prior_any_session": {
+          "line": 202,
+          "session_id": "ibm-27",
+          "query": "Celts",
+          "similarity": 0.6058
+        },
+        "best_prior_same_session": {
+          "line": 202,
+          "session_id": "ibm-27",
+          "query": "Celts",
+          "similarity": 0.6058
+        }
+      },
+      {
+        "line": 239,
+        "session_id": "ibm-32",
+        "query": "No, I meant photos in the air.",
+        "best_prior_any_session": {
+          "line": 238,
+          "session_id": "ibm-32",
+          "query": "who takes photos of planes in the air",
+          "similarity": 0.539
+        },
+        "best_prior_same_session": {
+          "line": 238,
+          "session_id": "ibm-32",
+          "query": "who takes photos of planes in the air",
+          "similarity": 0.539
+        }
+      },
+      {
+        "line": 225,
+        "session_id": "ibm-30",
+        "query": "Is there a cure for HIV?",
+        "best_prior_any_session": {
+          "line": 212,
+          "session_id": "ibm-28",
+          "query": "Any cures for it?",
+          "similarity": 0.5609
+        },
+        "best_prior_same_session": {
+          "line": 223,
+          "session_id": "ibm-30",
+          "query": "What about HIV pandemic? did it kill many people?",
+          "similarity": 0.5275
+        }
+      },
+      {
+        "line": 233,
+        "session_id": "ibm-31",
+        "query": "What  does it make a good soccer player?",
+        "best_prior_any_session": {
+          "line": 232,
+          "session_id": "ibm-31",
+          "query": "Talking about soccer, Can you name the best soccer players of all the time?",
+          "similarity": 0.5248
+        },
+        "best_prior_same_session": {
+          "line": 232,
+          "session_id": "ibm-31",
+          "query": "Talking about soccer, Can you name the best soccer players of all the time?",
+          "similarity": 0.5248
+        }
+      },
+      {
+        "line": 224,
+        "session_id": "ibm-30",
+        "query": "How did  HIV originated and where did start the first cases?",
+        "best_prior_any_session": {
+          "line": 223,
+          "session_id": "ibm-30",
+          "query": "What about HIV pandemic? did it kill many people?",
+          "similarity": 0.5242
+        },
+        "best_prior_same_session": {
+          "line": 223,
+          "session_id": "ibm-30",
+          "query": "What about HIV pandemic? did it kill many people?",
+          "similarity": 0.5242
+        }
+      },
+      {
+        "line": 223,
+        "session_id": "ibm-30",
+        "query": "What about HIV pandemic? did it kill many people?",
+        "best_prior_any_session": {
+          "line": 222,
+          "session_id": "ibm-30",
+          "query": "Can you tell me the greatest pandemics worldwide before  COVID in 2020?",
+          "similarity": 0.5088
+        },
+        "best_prior_same_session": {
+          "line": 222,
+          "session_id": "ibm-30",
+          "query": "Can you tell me the greatest pandemics worldwide before  COVID in 2020?",
+          "similarity": 0.5088
+        }
+      }
+    ]
+  }
+}

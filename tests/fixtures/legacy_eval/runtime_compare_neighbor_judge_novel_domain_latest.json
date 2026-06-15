@@ -1,0 +1,46 @@
+{
+  "dataset": "novel_domain",
+  "rows": 24,
+  "gatekeeper_backend": "mock",
+  "pipeline": "neighbor_judge",
+  "results": {
+    "hash:canonical:neighbor_judge": {
+      "metrics": {
+        "precision_hit": 0.0,
+        "recall_hit": 0.0,
+        "poison_rate": 0.0,
+        "wrong_cache_answer_rate": 0.0,
+        "unsafe_query_miss_rate": 1.0,
+        "structured_constraint_recovery_coverage": 0.7143,
+        "lookup_latency_ms_p50": 1.542,
+        "lookup_latency_ms_p95": 1.72,
+        "e2e_latency_ms_p50": 1.542,
+        "e2e_latency_ms_p95": 1.72,
+        "cache_hit_rate": 0.0,
+        "follow_up_hit_rate": 0.0
+      },
+      "totals": {
+        "rows": 24,
+        "labeled_rows": 24,
+        "labeled_bypass_rows": 2,
+        "total_hits": 0,
+        "correct_hits": 0,
+        "total_possible_hits": 6,
+        "dispute_turns": 0,
+        "unsafe_query_turns": 2,
+        "unsafe_query_misses": 2,
+        "structured_query_turns": 7,
+        "structured_query_sufficient_turns": 5,
+        "follow_up_turns": 3,
+        "follow_up_hits": 0
+      },
+      "runtime": {
+        "embedder": "hash",
+        "representation": "canonical",
+        "pipeline": "neighbor_judge",
+        "gatekeeper_backend": "mock",
+        "similarity_threshold": 0.995
+      }
+    }
+  }
+}

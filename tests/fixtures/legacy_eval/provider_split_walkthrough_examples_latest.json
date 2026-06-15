@@ -1,0 +1,696 @@
+{
+  "bitext_shipping_1": [
+    {
+      "turn_index": 1,
+      "user_message": "I need to change the shipping address for my order before it goes out.",
+      "source": "llm",
+      "answer": "Answer for support / how_to.",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "c658118b527ae372878540c692d5ebdadf2e26d5fc0199e4e62f92001fe48cf6"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "bitext_shipping_1",
+          "user_message": "I need to change the shipping address for my order before it goes out.",
+          "history_len": 0
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "DYNAMIC_FACT",
+          "scope": "REALTIME",
+          "query_class": "explanatory",
+          "intent": {
+            "action": "how_to",
+            "domain": "support",
+            "constraints": {
+              "filters": {},
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              }
+            },
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 0,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": null,
+          "canonical_query_text": "domain support ; action how_to ; timeframe none",
+          "fingerprint": "c658118b527ae372878540c692d5ebdadf2e26d5fc0199e4e62f92001fe48cf6"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": true,
+          "semantic_text": "domain support ; action how_to ; timeframe none",
+          "exact_fields": {
+            "session_id": "bitext_shipping_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "support",
+            "action": "how_to",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "exact_lookup_miss",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "reason": "local worthiness check after provider intent extraction"
+          },
+          "inserted": true
+        }
+      },
+      "faiss_search_after_response": [
+        {
+          "rank": 1,
+          "similarity": 0.9999999403953552,
+          "key": "c658118b527ae372878540c692d5ebdadf2e26d5fc0199e4e62f92001fe48cf6",
+          "candidate_semantic_text": "domain support ; action how_to ; timeframe none",
+          "candidate_exact_fields": {
+            "session_id": "bitext_shipping_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "support",
+            "action": "how_to",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          },
+          "exact_match": true,
+          "answer": "Answer for support / how_to."
+        }
+      ]
+    },
+    {
+      "turn_index": 2,
+      "user_message": "Can I update the delivery address on an order that hasn't shipped yet?",
+      "source": "cache",
+      "answer": "Answer for support / how_to.",
+      "cache": {
+        "hit": true,
+        "similarity": 0.9999999403953552,
+        "fingerprint": "c658118b527ae372878540c692d5ebdadf2e26d5fc0199e4e62f92001fe48cf6"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "bitext_shipping_1",
+          "user_message": "Can I update the delivery address on an order that hasn't shipped yet?",
+          "history_len": 2
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "DYNAMIC_FACT",
+          "scope": "REALTIME",
+          "query_class": "mutation",
+          "intent": {
+            "action": "how_to",
+            "constraints": {
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              },
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "filters": {}
+            },
+            "domain": "support",
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 0,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "query_class": "explanatory",
+            "normalized_query": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": [],
+              "mutation_patch": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "sufficient",
+              "raw_constraint_cues": 0,
+              "recovered_constraints": 0
+            },
+            "canonical_query_text": "domain support ; action how_to ; timeframe none",
+            "intent": {
+              "domain": "support",
+              "action": "how_to",
+              "entities": [],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "none",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "other",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain support ; action how_to ; timeframe none",
+          "fingerprint": "c658118b527ae372878540c692d5ebdadf2e26d5fc0199e4e62f92001fe48cf6"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": true,
+          "semantic_text": "domain support ; action how_to ; timeframe none",
+          "exact_fields": {
+            "session_id": "bitext_shipping_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "support",
+            "action": "how_to",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "exact_lookup_hit",
+          "source": "cache",
+          "similarity": 0.9999999403953552
+        },
+        "insert": null
+      },
+      "faiss_search_after_response": [
+        {
+          "rank": 1,
+          "similarity": 0.9999999403953552,
+          "key": "c658118b527ae372878540c692d5ebdadf2e26d5fc0199e4e62f92001fe48cf6",
+          "candidate_semantic_text": "domain support ; action how_to ; timeframe none",
+          "candidate_exact_fields": {
+            "session_id": "bitext_shipping_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "support",
+            "action": "how_to",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          },
+          "exact_match": true,
+          "answer": "Answer for support / how_to."
+        }
+      ]
+    }
+  ],
+  "bitext_order_1": [
+    {
+      "turn_index": 1,
+      "user_message": "Can I cancel an online order I placed this morning?",
+      "source": "llm",
+      "answer": "Answer for ecommerce / lookup.",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "444b7c8a1462542ccc996ac5b046e52aa87f29966b2aa9ed4091371edd32de32"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "bitext_order_1",
+          "user_message": "Can I cancel an online order I placed this morning?",
+          "history_len": 0
+        },
+        "analysis": {
+          "gatekeeper_ok": true,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "STATIC_KNOWLEDGE",
+          "scope": "SLOW_MOVING",
+          "query_class": "generic",
+          "intent": {
+            "action": "lookup",
+            "domain": "ecommerce",
+            "constraints": {
+              "filters": {},
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              }
+            },
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 0,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": null,
+          "canonical_query_text": "domain ecommerce ; action lookup ; timeframe none",
+          "fingerprint": "444b7c8a1462542ccc996ac5b046e52aa87f29966b2aa9ed4091371edd32de32"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": true,
+          "semantic_text": "domain ecommerce ; action lookup ; timeframe none",
+          "exact_fields": {
+            "session_id": "bitext_order_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "domain": "ecommerce",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "exact_lookup_miss",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": true,
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "reason": "local worthiness check after provider intent extraction"
+          },
+          "inserted": true
+        }
+      },
+      "faiss_search_after_response": [
+        {
+          "rank": 1,
+          "similarity": 1.0000001192092896,
+          "key": "444b7c8a1462542ccc996ac5b046e52aa87f29966b2aa9ed4091371edd32de32",
+          "candidate_semantic_text": "domain ecommerce ; action lookup ; timeframe none",
+          "candidate_exact_fields": {
+            "session_id": "bitext_order_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "domain": "ecommerce",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          },
+          "exact_match": true,
+          "answer": "Answer for ecommerce / lookup."
+        },
+        {
+          "rank": 2,
+          "similarity": 0.7430400848388672,
+          "key": "c658118b527ae372878540c692d5ebdadf2e26d5fc0199e4e62f92001fe48cf6",
+          "candidate_semantic_text": "domain support ; action how_to ; timeframe none",
+          "candidate_exact_fields": {
+            "session_id": "bitext_shipping_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "support",
+            "action": "how_to",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          },
+          "exact_match": false,
+          "answer": "Answer for support / how_to."
+        }
+      ]
+    },
+    {
+      "turn_index": 2,
+      "user_message": "Is it still possible to cancel an order I submitted earlier today?",
+      "source": "llm",
+      "answer": "I can help with summaries, lookups, comparisons, and explanations.",
+      "cache": {
+        "hit": false,
+        "similarity": null,
+        "fingerprint": "4f0f8a02b187fa8688aa6416a911c375407974bc0cef46c67b87dcb29a97465a"
+      },
+      "trace": {
+        "pipeline": "baseline",
+        "embedder": "hash",
+        "retrieval_representation": "canonical",
+        "request": {
+          "session_id": "bitext_order_1",
+          "user_message": "Is it still possible to cancel an order I submitted earlier today?",
+          "history_len": 2
+        },
+        "analysis": {
+          "gatekeeper_ok": false,
+          "logic": "NEW",
+          "relation_to_previous": "INDEPENDENT",
+          "answer_class": "META",
+          "scope": "STATIC",
+          "query_class": "generic",
+          "intent": {
+            "action": "how_to",
+            "constraints": {
+              "timeframe": {
+                "type": "none",
+                "tz": "america/los_angeles"
+              },
+              "filters": {},
+              "sort": {
+                "by": "other",
+                "direction": "desc"
+              }
+            },
+            "domain": "unknown",
+            "entities": []
+          },
+          "normalized_query": {
+            "subject": {},
+            "filters": {},
+            "attributes": {},
+            "predicates": [],
+            "mutation_patch": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": []
+            }
+          },
+          "context_dependencies": {
+            "user_location_required": false,
+            "location_resolved": true
+          },
+          "constraint_recovery": {
+            "status": "sufficient",
+            "raw_constraint_cues": 0,
+            "recovered_constraints": 0
+          },
+          "prior_intent_summary": {
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "query_class": "generic",
+            "normalized_query": {
+              "subject": {},
+              "filters": {},
+              "attributes": {},
+              "predicates": [],
+              "mutation_patch": {
+                "subject": {},
+                "filters": {},
+                "attributes": {},
+                "predicates": []
+              }
+            },
+            "context_dependencies": {
+              "user_location_required": false,
+              "location_resolved": true
+            },
+            "constraint_recovery": {
+              "status": "sufficient",
+              "raw_constraint_cues": 0,
+              "recovered_constraints": 0
+            },
+            "canonical_query_text": "domain ecommerce ; action lookup ; timeframe none",
+            "intent": {
+              "domain": "ecommerce",
+              "action": "lookup",
+              "entities": [],
+              "constraints": {
+                "limit": null,
+                "timeframe": {
+                  "type": "none",
+                  "tz": "america/los_angeles"
+                },
+                "filters": {},
+                "sort": {
+                  "by": "other",
+                  "direction": "desc"
+                }
+              }
+            }
+          },
+          "canonical_query_text": "domain unknown ; action how_to ; timeframe none",
+          "fingerprint": "4f0f8a02b187fa8688aa6416a911c375407974bc0cef46c67b87dcb29a97465a"
+        },
+        "lookup": {
+          "bypass": false,
+          "lookup_allowed": false,
+          "semantic_text": "domain unknown ; action how_to ; timeframe none",
+          "exact_fields": {
+            "session_id": "bitext_order_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "META",
+            "scope": "STATIC",
+            "domain": "unknown",
+            "action": "how_to",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          }
+        },
+        "decision": {
+          "kind": "lookup_blocked",
+          "source": "llm",
+          "similarity": null
+        },
+        "insert": {
+          "worthiness": {
+            "cache_worthy": false,
+            "answer_class": "META",
+            "scope": "STATIC",
+            "reason": "local worthiness check after provider intent extraction"
+          },
+          "inserted": false
+        }
+      },
+      "faiss_search_after_response": [
+        {
+          "rank": 1,
+          "similarity": 0.9250369071960449,
+          "key": "c658118b527ae372878540c692d5ebdadf2e26d5fc0199e4e62f92001fe48cf6",
+          "candidate_semantic_text": "domain support ; action how_to ; timeframe none",
+          "candidate_exact_fields": {
+            "session_id": "bitext_shipping_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "DYNAMIC_FACT",
+            "scope": "REALTIME",
+            "domain": "support",
+            "action": "how_to",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          },
+          "exact_match": false,
+          "answer": "Answer for support / how_to."
+        },
+        {
+          "rank": 2,
+          "similarity": 0.8138091564178467,
+          "key": "444b7c8a1462542ccc996ac5b046e52aa87f29966b2aa9ed4091371edd32de32",
+          "candidate_semantic_text": "domain ecommerce ; action lookup ; timeframe none",
+          "candidate_exact_fields": {
+            "session_id": "bitext_order_1",
+            "logic": "NEW",
+            "relation_to_previous": "INDEPENDENT",
+            "answer_class": "STATIC_KNOWLEDGE",
+            "scope": "SLOW_MOVING",
+            "domain": "ecommerce",
+            "action": "lookup",
+            "limit": null,
+            "timeframe": {
+              "type": "none",
+              "tz": "america/los_angeles"
+            },
+            "filters": {},
+            "normalized_subject": {},
+            "normalized_filters": {},
+            "normalized_attributes": {},
+            "normalized_predicates": [],
+            "strict_entities": []
+          },
+          "exact_match": false,
+          "answer": "Answer for ecommerce / lookup."
+        }
+      ]
+    }
+  ]
+}

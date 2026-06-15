@@ -1,0 +1,229 @@
+{
+  "date": "2026-03-25",
+  "dataset": "retrieval",
+  "rows": 86,
+  "command": "EMBEDDER_PROVIDER_MODEL=text-embedding-3-small python -m eval.retriever_ablation --dataset retrieval --embedder hash --embedder provider:0.9 --representation raw --representation canonical --representation resolved --representation hybrid",
+  "results": {
+    "hash|raw": {
+      "embedder": "hash",
+      "representation": "raw",
+      "similarity_threshold": 0.995,
+      "metrics": {
+        "precision_hit": 1.0,
+        "recall_hit": 0.303,
+        "cache_hit_rate": 0.1163,
+        "retrieval_target_recall_top_k": 1.0,
+        "retrieval_target_recall_threshold": 0.3226,
+        "retrieval_false_positive_pressure_rate": 0.1299,
+        "follow_up_hit_rate": 0.4444,
+        "follow_up_target_recall_threshold": 0.8889
+      },
+      "totals": {
+        "rows": 86,
+        "total_hits": 10,
+        "correct_hits": 10,
+        "total_possible_hits": 33,
+        "lookup_allowed_turns": 77,
+        "retrieval_target_turns": 31,
+        "retrieval_target_above_threshold": 10,
+        "follow_up_turns": 18,
+        "follow_up_hits": 8,
+        "follow_up_target_turns": 9
+      }
+    },
+    "hash|canonical": {
+      "embedder": "hash",
+      "representation": "canonical",
+      "similarity_threshold": 0.995,
+      "metrics": {
+        "precision_hit": 0.9032,
+        "recall_hit": 0.8485,
+        "cache_hit_rate": 0.3605,
+        "retrieval_target_recall_top_k": 1.0,
+        "retrieval_target_recall_threshold": 1.0,
+        "retrieval_false_positive_pressure_rate": 0.1818,
+        "follow_up_hit_rate": 0.5,
+        "follow_up_target_recall_threshold": 1.0
+      },
+      "totals": {
+        "rows": 86,
+        "total_hits": 31,
+        "correct_hits": 28,
+        "total_possible_hits": 33,
+        "lookup_allowed_turns": 77,
+        "retrieval_target_turns": 31,
+        "retrieval_target_above_threshold": 31,
+        "follow_up_turns": 18,
+        "follow_up_hits": 9,
+        "follow_up_target_turns": 9
+      }
+    },
+    "hash|resolved": {
+      "embedder": "hash",
+      "representation": "resolved",
+      "similarity_threshold": 0.995,
+      "metrics": {
+        "precision_hit": 1.0,
+        "recall_hit": 0.0606,
+        "cache_hit_rate": 0.0233,
+        "retrieval_target_recall_top_k": 1.0,
+        "retrieval_target_recall_threshold": 0.0645,
+        "retrieval_false_positive_pressure_rate": 0.039,
+        "follow_up_hit_rate": 0.0,
+        "follow_up_target_recall_threshold": 0.0
+      },
+      "totals": {
+        "rows": 86,
+        "total_hits": 2,
+        "correct_hits": 2,
+        "total_possible_hits": 33,
+        "lookup_allowed_turns": 77,
+        "retrieval_target_turns": 31,
+        "retrieval_target_above_threshold": 2,
+        "follow_up_turns": 18,
+        "follow_up_hits": 0,
+        "follow_up_target_turns": 9
+      }
+    },
+    "hash|hybrid": {
+      "embedder": "hash",
+      "representation": "hybrid",
+      "similarity_threshold": 0.995,
+      "metrics": {
+        "precision_hit": 1.0,
+        "recall_hit": 0.0606,
+        "cache_hit_rate": 0.0233,
+        "retrieval_target_recall_top_k": 1.0,
+        "retrieval_target_recall_threshold": 0.0645,
+        "retrieval_false_positive_pressure_rate": 0.039,
+        "follow_up_hit_rate": 0.0,
+        "follow_up_target_recall_threshold": 0.0
+      },
+      "totals": {
+        "rows": 86,
+        "total_hits": 2,
+        "correct_hits": 2,
+        "total_possible_hits": 33,
+        "lookup_allowed_turns": 77,
+        "retrieval_target_turns": 31,
+        "retrieval_target_above_threshold": 2,
+        "follow_up_turns": 18,
+        "follow_up_hits": 0,
+        "follow_up_target_turns": 9
+      }
+    },
+    "provider|raw": {
+      "embedder": "provider",
+      "representation": "raw",
+      "similarity_threshold": 0.9,
+      "provider_model": "text-embedding-3-small",
+      "metrics": {
+        "precision_hit": 0.8889,
+        "recall_hit": 0.7273,
+        "cache_hit_rate": 0.314,
+        "retrieval_target_recall_top_k": 1.0,
+        "retrieval_target_recall_threshold": 0.871,
+        "retrieval_false_positive_pressure_rate": 0.2338,
+        "follow_up_hit_rate": 0.5,
+        "follow_up_target_recall_threshold": 1.0
+      },
+      "totals": {
+        "rows": 86,
+        "total_hits": 27,
+        "correct_hits": 24,
+        "total_possible_hits": 33,
+        "lookup_allowed_turns": 77,
+        "retrieval_target_turns": 31,
+        "retrieval_target_above_threshold": 27,
+        "follow_up_turns": 18,
+        "follow_up_hits": 9,
+        "follow_up_target_turns": 9
+      }
+    },
+    "provider|canonical": {
+      "embedder": "provider",
+      "representation": "canonical",
+      "similarity_threshold": 0.9,
+      "provider_model": "text-embedding-3-small",
+      "metrics": {
+        "precision_hit": 0.9032,
+        "recall_hit": 0.8485,
+        "cache_hit_rate": 0.3605,
+        "retrieval_target_recall_top_k": 1.0,
+        "retrieval_target_recall_threshold": 1.0,
+        "retrieval_false_positive_pressure_rate": 0.5714,
+        "follow_up_hit_rate": 0.5,
+        "follow_up_target_recall_threshold": 1.0
+      },
+      "totals": {
+        "rows": 86,
+        "total_hits": 31,
+        "correct_hits": 28,
+        "total_possible_hits": 33,
+        "lookup_allowed_turns": 77,
+        "retrieval_target_turns": 31,
+        "retrieval_target_above_threshold": 31,
+        "follow_up_turns": 18,
+        "follow_up_hits": 9,
+        "follow_up_target_turns": 9
+      }
+    },
+    "provider|resolved": {
+      "embedder": "provider",
+      "representation": "resolved",
+      "similarity_threshold": 0.9,
+      "provider_model": "text-embedding-3-small",
+      "metrics": {
+        "precision_hit": 0.9032,
+        "recall_hit": 0.8485,
+        "cache_hit_rate": 0.3605,
+        "retrieval_target_recall_top_k": 1.0,
+        "retrieval_target_recall_threshold": 1.0,
+        "retrieval_false_positive_pressure_rate": 0.7013,
+        "follow_up_hit_rate": 0.5,
+        "follow_up_target_recall_threshold": 1.0
+      },
+      "totals": {
+        "rows": 86,
+        "total_hits": 31,
+        "correct_hits": 28,
+        "total_possible_hits": 33,
+        "lookup_allowed_turns": 77,
+        "retrieval_target_turns": 31,
+        "retrieval_target_above_threshold": 31,
+        "follow_up_turns": 18,
+        "follow_up_hits": 9,
+        "follow_up_target_turns": 9
+      }
+    },
+    "provider|hybrid": {
+      "embedder": "provider",
+      "representation": "hybrid",
+      "similarity_threshold": 0.9,
+      "provider_model": "text-embedding-3-small",
+      "metrics": {
+        "precision_hit": 0.9032,
+        "recall_hit": 0.8485,
+        "cache_hit_rate": 0.3605,
+        "retrieval_target_recall_top_k": 1.0,
+        "retrieval_target_recall_threshold": 1.0,
+        "retrieval_false_positive_pressure_rate": 0.4286,
+        "follow_up_hit_rate": 0.5,
+        "follow_up_target_recall_threshold": 1.0
+      },
+      "totals": {
+        "rows": 86,
+        "total_hits": 31,
+        "correct_hits": 28,
+        "total_possible_hits": 33,
+        "lookup_allowed_turns": 77,
+        "retrieval_target_turns": 31,
+        "retrieval_target_above_threshold": 31,
+        "follow_up_turns": 18,
+        "follow_up_hits": 9,
+        "follow_up_target_turns": 9
+      }
+    }
+  },
+  "headline_takeaway": "Provider-backed retrieval with a hybrid representation currently offers the best balance on the widened curated workload: it matches the best end-to-end recall while lowering false-positive pressure relative to provider canonical and provider resolved."
+}

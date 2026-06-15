@@ -1,0 +1,80 @@
+{
+  "date": "2026-03-25",
+  "provider_model": "text-embedding-3-small",
+  "gatekeeper_backend": "mock",
+  "comparison": [
+    {
+      "trace": "trace1_labeled.jsonl",
+      "rows": 2,
+      "hash:canonical": {
+        "precision_hit": 0.0,
+        "recall_hit": 0.0,
+        "cache_hit_rate": 0.0,
+        "e2e_latency_ms_p50": 5.762,
+        "e2e_latency_ms_p95": 21.573
+      },
+      "provider:hybrid": {
+        "precision_hit": 0.0,
+        "recall_hit": 0.0,
+        "cache_hit_rate": 0.0,
+        "e2e_latency_ms_p50": 5.002,
+        "e2e_latency_ms_p95": 387.511
+      }
+    },
+    {
+      "trace": "trace2_labeled.jsonl",
+      "rows": 20,
+      "hash:canonical": {
+        "precision_hit": 1.0,
+        "recall_hit": 0.5714,
+        "cache_hit_rate": 0.2,
+        "e2e_latency_ms_p50": 4.504,
+        "e2e_latency_ms_p95": 10.166
+      },
+      "provider:hybrid": {
+        "precision_hit": 1.0,
+        "recall_hit": 0.5714,
+        "cache_hit_rate": 0.2,
+        "e2e_latency_ms_p50": 226.649,
+        "e2e_latency_ms_p95": 741.381
+      }
+    },
+    {
+      "trace": "trace2_topicshift_labeled.jsonl",
+      "rows": 4,
+      "hash:canonical": {
+        "precision_hit": 0.0,
+        "recall_hit": 0.0,
+        "cache_hit_rate": 0.0,
+        "e2e_latency_ms_p50": 9.977,
+        "e2e_latency_ms_p95": 20.985
+      },
+      "provider:hybrid": {
+        "precision_hit": 0.0,
+        "recall_hit": 0.0,
+        "cache_hit_rate": 0.0,
+        "e2e_latency_ms_p50": 372.109,
+        "e2e_latency_ms_p95": 495.033
+      }
+    },
+    {
+      "trace": "trace2_weird_labeled.jsonl",
+      "rows": 11,
+      "hash:canonical": {
+        "precision_hit": 1.0,
+        "recall_hit": 0.5,
+        "cache_hit_rate": 0.1818,
+        "e2e_latency_ms_p50": 4.686,
+        "e2e_latency_ms_p95": 20.887
+      },
+      "provider:hybrid": {
+        "precision_hit": 1.0,
+        "recall_hit": 0.5,
+        "cache_hit_rate": 0.1818,
+        "e2e_latency_ms_p50": 243.138,
+        "e2e_latency_ms_p95": 658.786
+      }
+    }
+  ],
+  "headline_takeaway": "On the labeled replay traces currently in the repository, provider:hybrid did not improve hit quality over hash:canonical, while remaining far slower in end-to-end latency."
+}
