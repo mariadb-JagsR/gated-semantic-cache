@@ -91,39 +91,181 @@ See also [`docs/eval_summary_report.md`](docs/eval_summary_report.md) for health
 python -m pip install -e '.[dev]'
 ```
 
-**CLI** (`gated-semantic-cache` or `python -m gated_semantic_cache`):
+Copy the sample environment file and add your OpenAI key:
 
 ```bash
-gated-semantic-cache query -q "Explain what semantic caching is"
-gated-semantic-cache route "question one" "question two"
-gated-semantic-cache eval routing
-gated-semantic-cache cache put -q "What is semantic caching?" \
-  --response-json '{"answer":"Reuse of prior answers","success":true}'
-gated-semantic-cache cache get -q "What is semantic caching?" --no-judge
+cp env.example .env
+$EDITOR .env
 ```
 
-Persistent cache: `$GATED_SEMANTIC_CACHE_DB` or `./.gated-semantic-cache/cache.sqlite3`. Full CLI reference: [`docs/cli_user_guide.md`](docs/cli_user_guide.md).
+At minimum, set:
 
-**Python API:**
+```bash
+OPENAI_API_KEY=...
+```
+
+The CLI reads `.env` automatically. You can also pass `--openai-api-key` for one-off runs.
+
+### 1. Start with the REPL
+
+The REPL is the easiest way to learn the cache behavior. It keeps one pipeline alive in memory, so repeated prompts can hit the exact cache or semantic cache while you experiment.
+
+```bash
+gated-semantic-cache repl
+```
+
+Try these:
+
+```text
+query> What is semantic caching?
+query> What is semantic caching?
+```
+
+The second query should show an exact-cache hit.
+
+Now try a safe paraphrase:
+
+```text
+query> instructions for getting from JFK to Manhattan
+query> how to get from JFK airport to manhattan
+```
+
+The second query should be eligible for semantic reuse if it clears the threshold and gates.
+
+Then try queries that should go live instead of reusing unsafe cache entries:
+
+```text
+query> Explain account fees
+query> Explain account fees but not overdraft fees
+query> what? that is wrong
+query> Show today's revenue in apac
+```
+
+Look at the JSON trace fields:
+
+- `routing_label`
+- `exact_cache_hit`
+- `semantic_lookup_attempted`
+- `top_candidate_similarity`
+- `semantic_post_ann_reject_reason`
+- `neighbor_judge_invoked`
+- `insert_performed`
+
+Important: `gated-semantic-cache repl` is **in-memory only**. It is for learning and debugging. Its cache disappears when the process exits.
+
+### 2. Tweak `.env`
+
+Useful knobs while experimenting:
+
+```bash
+# Embeddings
+OPENAI_MODEL=text-embedding-3-small
+
+# Main semantic reuse threshold
+SEMANTIC_THRESHOLD=0.86
+
+# Optional low-confidence route downgrade
+SEMANTIC_OK_MIN_ROUTE_CONFIDENCE=0.55
+EXACT_ONLY_MIN_ROUTE_CONFIDENCE=0.55
+
+# Enable the optional post-retrieval neighbor judge path
+NEIGHBOR_JUDGE_ENABLED=1
+
+# Configure the LLM-backed judge used by that path
+SEMANTIC_CACHE_DEFAULT_JUDGE=1
+SEMANTIC_CACHE_JUDGE_MODEL=gpt-5-mini
+SEMANTIC_CACHE_JUDGE_TIMEOUT_SECONDS=5.0
+SEMANTIC_CACHE_JUDGE_REASONING_EFFORT=low
+SEMANTIC_CACHE_JUDGE_MAX_OUTPUT_TOKENS=128
+
+# Durable cache location for `gated-semantic-cache cache ...`
+GATED_SEMANTIC_CACHE_DB=.gated-semantic-cache/cache.sqlite3
+```
+
+See `env.example` for the full list.
+
+### 3. Use the durable cache CLI
+
+Use the `cache` subcommands when you want data to survive restarts. They persist rows in SQLite and store a FAISS vector snapshot beside the database.
+
+SQLite + FAISS is the local developer backend. A production persistent distributed cache backend and MariaDB Vector integration for larger scale, shared storage, and better operational performance are planned next.
+
+Default database path:
+
+1. `$GATED_SEMANTIC_CACHE_DB`, if set
+2. Otherwise `./.gated-semantic-cache/cache.sqlite3` under the current directory
+
+Write one answer:
+
+```bash
+gated-semantic-cache cache put \
+  -q "What is semantic caching?" \
+  --response-json '{"answer":"Reuse of stored responses.","success":true}'
+```
+
+Read it back, even from a new shell:
+
+```bash
+gated-semantic-cache cache get \
+  -q "What is semantic caching?" \
+  --no-judge
+```
+
+Inspect or clear the durable store:
+
+```bash
+gated-semantic-cache cache stats
+gated-semantic-cache cache clear --yes
+```
+
+Full CLI reference: [`docs/cli_user_guide.md`](docs/cli_user_guide.md).
+
+### 4. Use it from Python
+
+For app code, start with `SemanticCache.from_sqlite(...)` so exact rows, semantic entries, and the FAISS snapshot persist across processes.
 
 ```python
-from gated_semantic_cache import JudgePolicy, SemanticCache
+from gated_semantic_cache import JudgePolicy, PutPolicy, SemanticCache
 
-cache = SemanticCache.from_components(
+cache = SemanticCache.from_sqlite(
+    db_path=".gated-semantic-cache/cache.sqlite3",
     namespace="product-support",
-    router=router,
-    exact_cache=exact_cache,
-    semantic_store=semantic_store,
-    embedder=embedder,
+    default_judge_policy=JudgePolicy(enabled=False),
 )
 
-hit = cache.get("Does the product support namespace isolation?")
-if hit is None:
-    response = app_fetches_answer()
-    cache.put("Does the product support namespace isolation?", response)
+try:
+    query = "Does the product support namespace isolation?"
+    hit = cache.get(query, judge_policy=JudgePolicy(enabled=False))
+    if hit is None:
+        response = app_fetches_answer(query)
+        cache.put(query, response, policy=PutPolicy(semantic_mode="auto"))
+        answer = response
+    else:
+        answer = hit.payload
+finally:
+    cache.close()
 ```
 
-**Tests:**
+`SemanticCache.from_components(...)` is useful for tests and custom backends. If you pass `ExactCache()` and `SemanticStore()` directly, that cache is in-memory unless you add your own persistence.
+
+### 5. Exercise specific pieces
+
+These commands are useful once the basics make sense:
+
+```bash
+# Classifier only; no OpenAI key required.
+gated-semantic-cache route "Show today's revenue in apac" "Explain semantic caching"
+
+# One-shot live/demo path. This is not the durable cache workflow.
+gated-semantic-cache query -q "Explain what semantic caching is"
+
+# Offline checks.
+gated-semantic-cache eval routing
+python3 -m gated_semantic_cache.eval.banking_adversarial_eval --suite full100 \
+  --report-json docs/banking_adversarial_report_full100.json
+```
+
+### Tests
 
 ```bash
 pytest -q
