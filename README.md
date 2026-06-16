@@ -248,6 +248,31 @@ finally:
 
 `SemanticCache.from_components(...)` is useful for tests and custom backends. If you pass `ExactCache()` and `SemanticStore()` directly, that cache is in-memory unless you add your own persistence.
 
+### 4a. Drop into a LangChain app
+
+`GatedLangChainCache` implements LangChain's `BaseCache`, so any LangChain app routes its LLM calls through the full gated pipeline by setting the cache once — nothing else in the app changes. Install the extra:
+
+```bash
+pip install "gated-semantic-cache[langchain]"
+```
+
+```python
+from langchain_core.globals import set_llm_cache
+from gated_semantic_cache.integrations.langchain import GatedLangChainCache
+
+set_llm_cache(GatedLangChainCache.from_sqlite(
+    db_path=".gated-semantic-cache/cache.sqlite3",
+    namespace="product-support",
+    # similarity_threshold=0.88,   # defaults to $SEMANTIC_THRESHOLD, then 0.86
+    # enable_llm_judge=True,       # gray-zone judge on by default (uses a cheap/fast model)
+    # ttl_seconds=3600,
+))
+```
+
+The constructor surfaces the few knobs LangChain can't pass per call: `namespace`, `similarity_threshold`, `enable_llm_judge`, `ttl_seconds`. Judge internals (model, timeout, similarity ceiling, ambiguity margin, max calls) come from the environment, the same as `SemanticCache` — see [env.example](env.example).
+
+Pass a LangChain `embeddings=` object (Redis-style) to reuse your app's embedder, or let it build OpenAI embeddings from the environment. `llm_string` (LangChain's serialized model + params) is ignored by default so the same question reuses across models; set `isolate_by_llm=True` to scope per model config. For full control, wrap a pre-built cache directly: `GatedLangChainCache(cache=SemanticCache.from_sqlite(...), semantic_mode="auto")`.
+
 ### 5. Exercise specific pieces
 
 These commands are useful once the basics make sense:

@@ -123,6 +123,21 @@ class SemanticCache:
         if self._entry_persistence is not None:
             self._entry_persistence.close()
 
+    def clear(self, *, namespace: str | None = None) -> None:
+        """Remove all cached entries for a namespace (exact rows, semantic entries, anchors, FAISS snapshot).
+
+        Clears the durable store (when persistence is configured) and the in-memory stores hydrated for
+        this instance's namespace. ``namespace`` defaults to the instance namespace.
+        """
+        ns = namespace or self.namespace
+        if not ns.strip():
+            raise ValueError("namespace must be non-empty")
+        if ns == self.namespace:
+            self._pipeline.exact_cache.replace_all({})
+            self._pipeline.semantic_store.clear()
+        if self._entry_persistence is not None:
+            self._entry_persistence.clear_namespace(ns)
+
     @classmethod
     def from_sqlite(
         cls,

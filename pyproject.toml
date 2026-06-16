@@ -23,6 +23,9 @@ dependencies = [
 dev = [
   "pytest>=8.3.0",
 ]
+langchain = [
+  "langchain-core>=0.3.0",
+]
 
 [project.scripts]
 gated-semantic-cache = "gated_semantic_cache.cli:main"
@@ -30,6 +33,7 @@ gated-semantic-cache = "gated_semantic_cache.cli:main"
 [tool.setuptools]
 packages = [
   "gated_semantic_cache",
+  "gated_semantic_cache.integrations",
   "gated_semantic_cache.cache",
   "gated_semantic_cache.eval",
   "gated_semantic_cache.models",
